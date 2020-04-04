@@ -11,6 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   providedIn: 'root'
 })
 export class HttpService {
+  
 
 
   public serverUrlDemo2 =  environment["API_URL2"];
