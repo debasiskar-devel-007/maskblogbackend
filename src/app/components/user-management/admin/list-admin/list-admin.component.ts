@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router,ActivatedRoute } from '@angular/router';
 import { HttpService } from '../../../../services/http.service';
 import {environment} from '../../../../../environments/environment';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @Component({
@@ -127,6 +128,7 @@ sortdata:any={
   adminlist: any = [];
 
   editroute1:any='modeledit';
+    jwttoken:any;
   
   status_gretterthan_zero_skip: any= ['_id','username','phone','city','state','ethnicity','height','haircolor','eyecolor','weight','bust','waist','hips','slim','toned','tattoos','athletic','piercings','retail','voluptuous','promotions','sales','descriptionbox','facebooklink','twitterlink','instagramlink','modelmayhemlink','type','images'];
   status_gretterthan_zero_modify_header: any = { 'dateformat': 'Date','status':'Status','email':'Email', 'name':'Full Name', 'bodytype' : 'Bodytype', 'shatterblok agreement date': 'Shatterblok Agreement Date', 'audiodeadline agreement date': 'Audiodeadline Agreement Date' };
@@ -134,7 +136,9 @@ sortdata:any={
   // status_gretterthan_zero_detail_datatype:any=[{key:"images",value:'image',fileurl:this.httpService }];
 
 
-  constructor(public activatedRoute:ActivatedRoute,public httpService:HttpService) { 
+  constructor(public activatedRoute:ActivatedRoute,public httpService:HttpService,private cookieService: CookieService) {
+      this.cookieService.set('jwttoken','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJleHAiOjE1ODU2NTM1MzksImlhdCI6MTU4NTU2NzEzOX0.ErmNEt1IOnbKQMfTveF2Tt0PY0TprflzQ1DngaGGUhA');
+      this.jwttoken=this.cookieService.get('jwttoken');
 
 
   }

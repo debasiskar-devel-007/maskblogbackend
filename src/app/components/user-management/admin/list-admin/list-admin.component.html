@@ -1,30 +1,31 @@
 
 <div>
-<button mat-raised-button color="accent" [routerLink]="['/admin/add']">Add Admin</button>
+    <button mat-raised-button color="accent" [routerLink]="['/admin/add']">Add Admin</button>
 </div>
 
 <br>
 
 <div>
     <lib-listing *ngIf="adminDataList!=null && adminDataList.length>0" 
-        [datasource]="adminDataList"
-        [skip]="pendingmodelapplicationarray_skip"
-        [modify_header_array]="modify_header_array"
-        [apiurl]="apiurl"
-        [deleteendpoint]="deleteendpoint"
-        [updateendpoint]="updateendpoint"
-        [date_search_source]="date_search_source"
-        [date_search_endpoint]="date_search_endpoint"
-        [sourcedata]="tablename"
-        [detail_datatype]="pendingmodelapplicationarray_detail_datatype"
-        [editroute]="editroute"
-        [detail_skip_array]="pendingmodelapplicationarray_detail_skip"
-        [url]="custom_link"
-        [search_settings]="search_settings"
-        [searchendpoint]="searchendpoint"
-        [sortdata]="sortdata"
-        [datacollection]="datacollection"
-        [date_search_source_count]="date_search_source_count"
-        [limitcond]="limitcond"></lib-listing>
+                 [datasource]="adminDataList"
+                 [skip]="pendingmodelapplicationarray_skip"
+                 [modify_header_array]="modify_header_array"
+                 [apiurl]="apiurl"
+                 [deleteendpoint]="deleteendpoint"
+                 [updateendpoint]="updateendpoint"
+                 [date_search_source]="date_search_source"
+                 [date_search_endpoint]="date_search_endpoint"
+                 [sourcedata]="tablename"
+                 [detail_datatype]="pendingmodelapplicationarray_detail_datatype"
+                 [editroute]="editroute"
+                 [detail_skip_array]="pendingmodelapplicationarray_detail_skip"
+                 [url]="custom_link"
+                 [jwttoken]="jwttoken"
+                 [search_settings]="search_settings"
+                 [searchendpoint]="searchendpoint"
+                 [sortdata]="sortdata"
+                 [datacollection]="datacollection"
+                 [date_search_source_count]="date_search_source_count"
+                 [limitcond]="limitcond"></lib-listing>
 
 </div>
