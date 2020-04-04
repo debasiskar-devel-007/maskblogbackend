@@ -1,5 +1,5 @@
 
-<lib-listing 
+<lib-listing *ngIf="adminDataList !=null && adminDataList.length >0"
     [datasource]="adminDataList"
     [skip]="adminDataList_skip" 
     [modify_header_array]="modify_header_array" 
@@ -14,10 +14,9 @@
     [detail_datatype]="adminDataList_detail_datatype"
     [editroute]="editroute"
     [detail_skip_array]="adminDataList_detail_skip" 
-    [url]="custom_link" 
     [search_settings]="search_settings"
     [searchendpoint]="searchendpoint"
     [sortdata]="sortdata"
     [datacollection]="datacollection"
-   [date_search_source_count]="date_search_source_count"
-   [limitcond]="limitcond"></lib-listing>
+    [date_search_source_count]="date_search_source_count"
+    [limitcond]="limitcond"></lib-listing>
