@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,10 @@ import { LoginComponent } from './components/login/login.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import {ListingModule} from 'listing-angular7';
+import { AddEditComponent } from './components/blog-management/blog-category/add-edit/add-edit.component';
+import { CategoryListComponent } from './components/blog-management/blog-category/category-list/category-list.component';
+import { AddEditBlogComponent } from './components/blog-management/blog/add-edit-blog/add-edit-blog.component';
+import { ListBlogsComponent } from './components/blog-management/blog/list-blogs/list-blogs.component';
 
 
 @NgModule({
@@ -24,14 +29,19 @@ import {ListingModule} from 'listing-angular7';
     ListAdminComponent,
     LoginComponent,
     ResetPasswordComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+    AddEditComponent,
+    CategoryListComponent,
+    AddEditBlogComponent,
+    ListBlogsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     DemoMaterialModule,
-    ListingModule
+    ListingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
