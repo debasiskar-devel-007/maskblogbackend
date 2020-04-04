@@ -12,22 +12,20 @@ import {environment} from '../../../../../environments/environment';
 export class ListAdminComponent implements OnInit {
 
   public adminDataList:any;
-  public adminDataList_skip:any;
-  public modify_header_array  :any;
+  public adminDataList_skip:any=["_id","password"];
+  public modify_header_array  :any=[''];
   public apiUrl:any=environment['API_URL2'];
   public deleteendpoint:any='';
-  public updateendpoint:any='';
-  public token:any='';
-  public date_search_source:any;
+  // public token:any='';
+  public date_search_source:any='data_user';
   public date_search_endpoint:any='datalist';
   public tablename:any='data_user';
-  public statusarray:any;
   public adminDataList_detail_datatype:any;
-  public editroute:any='';
+  public editroute:any='admin/edit';
   public adminDataList_detail_skip:any='';
  
   public searchendpoint :any='datalist';
-  public datacollection :any="data_user";
+  public datacollection :any="getadminlistdata";
   date_search_source_count: any=0;
   datasource: any; 
 
@@ -49,9 +47,10 @@ export class ListAdminComponent implements OnInit {
 
     datesearch:[{startdatelabel:"Start Date",enddatelabel:"End Date",submit:"Search",  field:"created_at"}],   // this is use for  date search
 
-    selectsearch:[{ label: 'Search By Status', field: 'status', values: this.status }], // this is use for  select search
+    selectsearch:[{ label: 'Search By Status', field: 'status', values: this.status }], 
+    // this is use for  select search
 
-     textsearch:[{label:"Search By Title",field:'blogtitle_search'},{label:"Search by auther",field:"author_search"}],  // this is use for  text search
+     textsearch:[{label:"Search email",field:'email'}],  // this is use for  text search
 
 };
 
@@ -64,8 +63,7 @@ export class ListAdminComponent implements OnInit {
         let data:any={
             "condition":{
                 "limit":10,
-                "skip":0,
-                "searchcondition":""
+                "skip":0
             },
         sort:{
             "type":'desc',
@@ -74,6 +72,7 @@ export class ListAdminComponent implements OnInit {
 
         }
         this.httpService.getDataWithoutToken(data,endpointforcount).subscribe((res:any) => {
+          // console.log(res)
            
             this.date_search_source_count =res.count;
 
@@ -83,7 +82,7 @@ export class ListAdminComponent implements OnInit {
 
         this.httpService.getDataWithoutToken(data,endpointforlist).subscribe((res:any) => {
 
-            this.adminDataList =res.results.res;
+            this.adminDataList =res.results.admin_list;
 
         }, error => {
             console.log('Oooops!');

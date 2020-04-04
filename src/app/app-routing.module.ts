@@ -14,6 +14,7 @@ import { AddEditComponent } from './components/blog-management/blog-category/add
 //blog-management
 import { ListBlogsComponent } from './components/blog-management/blog/list-blogs/list-blogs.component';
 import { AddEditBlogComponent } from './components/blog-management/blog/add-edit-blog/add-edit-blog.component';
+import { AddEditAdminComponent } from './components/user-management/admin/add-edit-admin/add-edit-admin.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,11 @@ const routes: Routes = [
   {path:'reset-password/:token',component:ResetPasswordComponent},
 
   {path:'forget-password',component:ForgetPasswordComponent},
+
+  //admin section route
+
+  {path:'admin/add',component:AddEditAdminComponent},
+
   {path:'admin/list',component:ListAdminComponent ,resolve: { adminlist: ResolveService },
   data: {
     requestcondition: {
@@ -31,7 +37,18 @@ const routes: Routes = [
       condition: {}
     },
     endpoint: 'datalist'
-  },},
+  },
+},
+{path:'admin/edit/:_id',component:ListAdminComponent ,
+resolve: { admin_data: ResolveService },
+data: {
+  requestcondition: {
+    source: 'data_user',
+    condition: {_id:"_id"}
+  },
+  endpoint: 'datalist'
+},
+},
 
   // blog management route 
   {

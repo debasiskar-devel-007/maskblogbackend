@@ -19,6 +19,8 @@ import { CategoryListComponent } from './components/blog-management/blog-categor
 import { AddEditBlogComponent } from './components/blog-management/blog/add-edit-blog/add-edit-blog.component';
 import { ListBlogsComponent } from './components/blog-management/blog/list-blogs/list-blogs.component';
 import { LoginModule } from 'login-lib-influxiq';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { LoginModule } from 'login-lib-influxiq';
     DemoMaterialModule,
     ListingModule,
     HttpClientModule,
-    LoginModule
+    LoginModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
