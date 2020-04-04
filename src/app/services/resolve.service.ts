@@ -68,6 +68,14 @@ export class ResolveService implements Resolve<any> {
                         return true;
                     }
                 })
+              //   this._apiService.getDataForResolveAp1(route.data).subscribe(api_object =>{
+              //     if (api_object) {
+              //         return resolve(api_object);
+              //     } else { 
+              //         this.router.navigateByUrl('/home');
+              //         return true;
+              //     }
+              // })
             });
             // }
 

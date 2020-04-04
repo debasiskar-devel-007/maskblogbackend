@@ -19,7 +19,9 @@ import { CategoryListComponent } from './components/blog-management/blog-categor
 import { AddEditBlogComponent } from './components/blog-management/blog/add-edit-blog/add-edit-blog.component';
 import { ListBlogsComponent } from './components/blog-management/blog/list-blogs/list-blogs.component';
 
-
+import { CKEditorModule } from 'ngx-ckeditor';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,11 @@ import { ListBlogsComponent } from './components/blog-management/blog/list-blogs
     BrowserAnimationsModule,
     DemoMaterialModule,
     ListingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    CommonModule,
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -25,6 +25,7 @@
     "listing-angular7": "^0.1.5",
     "moment": "^2.24.0",
     "nan": "^2.14.0",
+    "ngx-ckeditor": "^8.0.0",
     "ngx-cookie-service": "^3.0.3",
     "ngx-moment": "^3.5.0",
     "ngx-uploader": "^8.0.0",
