@@ -12,6 +12,8 @@ import { ListAdminComponent } from './components/user-management/admin/list-admi
 import { LoginComponent } from './components/login/login.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import {ListingModule} from 'listing-angular7';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DemoMaterialModule
+    DemoMaterialModule,
+    ListingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
