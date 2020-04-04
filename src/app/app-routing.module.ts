@@ -30,16 +30,18 @@ const routes: Routes = [
 
   {path:'admin/add',component:AddEditAdminComponent},
 
-  {path:'admin/list',component:ListAdminComponent ,resolve: { adminlist: ResolveService },
-  data: {
-    requestcondition: {
-      source: 'data_user',
-      condition: {}
-    },
-    endpoint: 'datalist'
-  },
-},
-{path:'admin/edit/:_id',component:ListAdminComponent ,
+  {path:'admin/list',component:ListAdminComponent},
+
+// ,resolve: { adminlist: ResolveService },
+//   data: {
+//     requestcondition: {
+//       source: 'data_user',
+//       condition: {}
+//     },
+//     endpoint: 'datalist'
+//   },
+
+{path:'admin/edit/:_id',component:AddEditAdminComponent ,
 resolve: { admin_data: ResolveService },
 data: {
   requestcondition: {
