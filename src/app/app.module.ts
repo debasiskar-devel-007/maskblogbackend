@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import {ListingModule} from 'listing-angular7';
+import { HttpClientModule } from '@angular/common/http'; 
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {ListingModule} from 'listing-angular7';
     AppRoutingModule,
     BrowserAnimationsModule,
     DemoMaterialModule,
-    ListingModule
+    ListingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
