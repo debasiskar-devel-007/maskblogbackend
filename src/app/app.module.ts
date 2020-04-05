@@ -18,6 +18,8 @@ import { AddEditComponent } from './components/blog-management/blog-category/add
 import { CategoryListComponent } from './components/blog-management/blog-category/category-list/category-list.component';
 import { AddEditBlogComponent } from './components/blog-management/blog/add-edit-blog/add-edit-blog.component';
 import { ListBlogsComponent } from './components/blog-management/blog/list-blogs/list-blogs.component';
+import { LoginModule } from 'login-lib-influxiq';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { CKEditorModule } from 'ngx-ckeditor';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -44,10 +46,16 @@ import { CommonModule } from '@angular/common';
     DemoMaterialModule,
     ListingModule,
     HttpClientModule,
+<<<<<<< HEAD
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
     CKEditorModule
+=======
+    LoginModule,
+    FormsModule,
+    ReactiveFormsModule
+>>>>>>> 443f96387a6543f358d113e41a26106e45e8942f
   ],
   providers: [],
   bootstrap: [AppComponent]
