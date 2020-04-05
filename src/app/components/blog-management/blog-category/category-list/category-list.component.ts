@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-category-list',
@@ -8,15 +9,32 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CategoryListComponent implements OnInit {
 
-  constructor(public activatedRoute : ActivatedRoute) { }
+    /************** lib list setup start here *************/
+    public blogListConfig:any = {
+
+    apiBaseUrl: "https://hntm6xe6of.execute-api.us-east-1.amazonaws.com/dev/api1/",
+    endpoint: "https://hntm6xe6of.execute-api.us-east-1.amazonaws.com/dev/api1/getbloglistdata",
+    endpointc: "https://hntm6xe6of.execute-api.us-east-1.amazonaws.com/dev/api1/getbloglistdata-count",
+      // apiBaseUrl: environment.apiBaseUrl,
+
+      listEndPoint: "datalist",
+      datasource: "",
+      tableName: "blog_category",
+      updateurl: "addorupdatedata",
+      editUrl: "blog/category/edit",
+      jwtToken: "",
+      deleteEndPoint: "deletesingledata",
+      addLink: "/blog/category/add",
+      view: "blog_category"
+      
+    }
+  constructor(public activatedRoute : ActivatedRoute,public cookieService : CookieService) { }
 
   ngOnInit() {
-    this.activatedRoute.data.forEach(data => {
-      console.log("hggsjhdg",data);
-      let result: any;
-      // result = data.lessionData.res;
-      // this.manageLessionList = result;      
-    })
+    this.activatedRoute.data.subscribe(resolveData => {
+      this.blogListConfig.datasource = resolveData.trainingdata.res;
+      this.blogListConfig.jwtToken = this.cookieService.get('jwtToken');     
+    });
   }
 
 }

@@ -1,1 +1,21 @@
-<p>category-list works!</p>
+<mat-card>
+    <mat-toolbar color="primary" style="justify-content: center; align-items: center;">
+        <h2 class="headerSpan">Blog Categories</h2>
+    </mat-toolbar>
+
+    <!-- ---------------------Button for adding new role------------------------------ -->
+    <mat-toolbar class="buttonsetToolbar">
+        <button class="singleButton" mat-raised-button color="primary"
+         [routerLink]="['/blog-category/add']">Add Blog Category </button>
+    </mat-toolbar>
+<!-- blog management -->
+    <mat-toolbar class="buttonsetToolbar">
+        <button class="singleButton" mat-raised-button color="primary"
+         [routerLink]="['/blog-management/list']">Blog Managment </button>
+    </mat-toolbar>
+
+
+    <!-- to listing library -->
+
+    <lib-Blog [config]="blogListConfig"></lib-Blog>
+</mat-card>

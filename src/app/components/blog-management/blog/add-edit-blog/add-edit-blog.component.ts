@@ -1,13 +1,6 @@
 import { Component, OnInit ,ViewChild,Inject} from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormControl, FormGroupDirective, AbstractControl } from '@angular/forms';
-import { DatePipe } from '@angular/common';
-import { HttpService } from '../../../../services/http.service';
-import { CookieService } from 'ngx-cookie-service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MatSnackBar } from '@angular/material';
-import { MAT_DIALOG_DATA, MatDialogRef, MatDialog } from "@angular/material";
-import { Observable } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-add-edit-blog',
@@ -15,68 +8,57 @@ import { map, startWith } from 'rxjs/operators';
   styleUrls: ['./add-edit-blog.component.css']
 })
 export class AddEditBlogComponent implements OnInit {
-  public blogManagementForm: FormGroup;
-  public headerText:any="Add"
-  public statuschecked:boolean=true;
-  public buttonText:any="Submit" ; 
-  public tags_array:any=[];
-  filteredOptions: Observable<string[]>;
-  myControl = new FormControl();
- 
-  constructor(public apiService : HttpService,public fb: FormBuilder,public router:Router,public activatedRoute:ActivatedRoute) {
+  server: any ='https://hntm6xe6of.execute-api.us-east-1.amazonaws.com/dev/api1/';
 
-    this.blogManagementForm = this.fb.group({                                                               
-      blog_title:['',Validators.required],
-      blog_cat:['',Validators.required],
-      description: ["", Validators.required],
-      priority: ["", Validators.required],
-      status  :[""],
-      author  :[""],
-      tag:[""],
-      youtube_url:[""],
-      website:[],
-      features:[]
-    })
+  // server: any =environment.apiBaseUrl;
+
+  addUrl: any = 'addorupdatedata';
+  getDataUrl: any= 'datalist';
+  public editdata: any = [];
+  action:any="add";
+  listURL:any="blog-management/list";
+  public configData: any = {
+    baseUrl: "https://fileupload.influxhostserver.com/",
+    endpoint: "uploads",
+    size: "51200", // kb
+    format: ["jpg", "jpeg","png"], // use all small font
+    type: "blogs-image",
+    path: "blogs",
+    prefix: "blogs-image_",
+    formSubmit: false,
+    conversionNeeded: 0,
+    bucketName: "crmfiles.influxhostserver"
+  }
+
+
+  public configFileData: any = {
+    baseUrl: "https://fileupload.influxhostserver.com/",
+    endpoint: "uploads",
+    size: "51200", // kb
+    format: ["pdf", "doc", "docx","docxx"],  // use all small font
+    type: "blogs-file",
+    path: "blogs",
+    prefix: "blogs-file",
+    formSubmit: false,
+    conversionNeeded: 0,
+    bucketName: "crmfiles.influxhostserver"
+  }
+  constructor(public router:Router,public activatedRoute:ActivatedRoute) {
+
+    
    }
 
   ngOnInit() {
-    this.filteredOptions = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value))
-    );
-  }
-  inputUntouch(form: any, val: any) {
-    form.controls[val].markAsUntouched();
-  }
-  blogManagementFormSubmit(){
-    for (let x in this.blogManagementForm.controls) {
-      this.blogManagementForm.controls[x].markAsTouched();
-    }
-    if(this.blogManagementForm.valid){
-      let endpoint:any="blog-add";
-      let data : any={
-        "source": "blog_management",
-        "data":this.blogManagementForm.value,
-        "sourceobj": ["blog_cat"]
+    this.activatedRoute.params.subscribe(params => {
+      if (params._id) {
+        this.activatedRoute.data.subscribe(resolveData => {         
+          this.editdata= resolveData.blogList.res[0];  
+          this.action="edit";    
+        });
       }
-      this.apiService.postDatawithoutToken(endpoint,data).subscribe((response)=>{
-        console.log(response);
-      })
-      
-    }
+    });
+   
   }
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-    return 
-  }
-  showval(event: any) {
-    
-    if (event.keyCode == 13 || event.keyCode == 32) {
-      this.tags_array.push(event.target.value);
-      this.blogManagementForm.controls['tags'].patchValue("");
-      return;
-    }
-
-  }
+  
 
 }
