@@ -12,25 +12,19 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class ListAdminComponent implements OnInit {
 
-  pendingmodelapplicationarray: any = [];
    
   public status: any = [{ val: 1, 'name': 'Active' }, { val: 0, 'name': 'Inactive' }];
 
    // use for status search
+   statusarray: any = [{val: 1, name: 'Approve'}, {val: 4, name: 'Decline'}, {val: 3, name: 'Lock'}]; 
 
-  // statusarray: any = [{val: 1, name: 'Approve'}, {val: 4, name: 'Decline'}, {val: 3, name: 'Lock'}]; 
-
-   // use for ststic email search
-  //  Example like this
-  emailarray: any = [{val: 'sourotest222@gmail.com', name: 'sourotest222@gmail.com'}, {val: 'octtest@yopmail.com', name: 'octtest@yopmail.com'}, {val: 'septest@yopmail.com', name: 'septest@yopmail.com'}];
-
-  // use for edit any field Navigate that page And you should be import the app-routing.module.ts   ex:- {path: 'editroute/:id', component: < "Write the class name"> },
 
   //  Example like this
-  editroute: any = 'editroute';
+  editroute: any = 'admin/edit';
 
   datasource: any; 
   adminDataList:any=[];
+
 
   // use for Table Header modification 
 
@@ -40,27 +34,27 @@ export class ListAdminComponent implements OnInit {
       'email': 'Email Id',
       'lastname': 'Last Name',
       'name': "Full Name",
-      'blogtitle':"Blog Title"
+      'phone':"Phone Number",
+      'state':'State',
+      'city':'City',
+      'zip':"Zip Code"
   };
 
-
-  // use for Table Header Skip 
-  pendingmodelapplicationarray_skip: any = ['_id','video_thamnail','type', 'password','description','blogs_image','created_at'];
-
+//   api url from environment
   apiurl:any=environment.API_URL2
 
 
 
     // use for Table Detail Field Skip 
-  pendingmodelapplicationarray_detail_skip: any = ['_id', 'email', 'name'];
+  adminDataList_skip: any = ['_id', 'name','type', 'password','created_at'];
 
 
    // use for Table Detail inside the modal image path 
-  pendingmodelapplicationarray_detail_datatype: any = [{
-      key: "images",
-      value: 'image',
-      fileurl: "http://18.222.26.198/upload/brandimages/"             // Image path 
-  }];
+//    adminDataList_skip_detail_datatype: any = [{
+//       key: "images",
+//       value: 'image',
+//       fileurl: "http://18.222.26.198/upload/brandimages/"             // Image path 
+//   }];
 
   // updateendpoint is use for data update endpoint
   updateendpoint = 'addorupdatedata';
@@ -69,7 +63,7 @@ export class ListAdminComponent implements OnInit {
   deleteendpoint = 'deletesingledata';
 
   // this is a database collection name
-  tablename = 'users';
+  tablename = 'data_user';
 
   // searchendpoint is use for data search endpoint
   searchendpoint = 'datalist';
@@ -91,7 +85,7 @@ export class ListAdminComponent implements OnInit {
 sortdata:any={
     "type":'desc',
     "field":'firstname',
-    "options":['firstname','email']
+    "options":['firstname','email','lastname','email','state','city']
 };
 
   // this is a database collection or view name
@@ -101,13 +95,7 @@ sortdata:any={
   //source count
   date_search_source_count: any=0;
 
-  // this is use for  All type of search
-  //  authval:any= [
-  //     { val: 'YmattZ', 'name': 'YmattZ A' },
-  //     { val: 'YmattZ', 'name': 'YmattZ A' },
-  //     { val: 'Ymatt', 'name': 'YmattZ AB' },
-  //     { val: 'Jessica', 'name': 'A Jessica' }
-  //     ];
+
   search_settings:any={
 
       datesearch:[{startdatelabel:"Start Date",enddatelabel:"End Date",submit:"Search",  field:"created_at"}],   // this is use for  date search
@@ -130,15 +118,15 @@ sortdata:any={
   editroute1:any='modeledit';
     jwttoken:any;
   
-  status_gretterthan_zero_skip: any= ['_id','username','phone','city','state','ethnicity','height','haircolor','eyecolor','weight','bust','waist','hips','slim','toned','tattoos','athletic','piercings','retail','voluptuous','promotions','sales','descriptionbox','facebooklink','twitterlink','instagramlink','modelmayhemlink','type','images'];
-  status_gretterthan_zero_modify_header: any = { 'dateformat': 'Date','status':'Status','email':'Email', 'name':'Full Name', 'bodytype' : 'Bodytype', 'shatterblok agreement date': 'Shatterblok Agreement Date', 'audiodeadline agreement date': 'Audiodeadline Agreement Date' };
-  status_gretterthan_zero_detail_skip:any=['_id','email','name','type','status'];
+//   status_gretterthan_zero_skip: any= ['_id','username','phone','city','state','ethnicity','height','haircolor','eyecolor','weight','bust','waist','hips','slim','toned','tattoos','athletic','piercings','retail','voluptuous','promotions','sales','descriptionbox','facebooklink','twitterlink','instagramlink','modelmayhemlink','type','images'];
+//   status_gretterthan_zero_modify_header: any = { 'dateformat': 'Date','status':'Status','email':'Email', 'name':'Full Name', 'bodytype' : 'Bodytype', 'shatterblok agreement date': 'Shatterblok Agreement Date', 'audiodeadline agreement date': 'Audiodeadline Agreement Date' };
+//   status_gretterthan_zero_detail_skip:any=['_id','email','name','type','status'];
   // status_gretterthan_zero_detail_datatype:any=[{key:"images",value:'image',fileurl:this.httpService }];
 
 
   constructor(public activatedRoute:ActivatedRoute,public httpService:HttpService,private cookieService: CookieService) {
-      this.cookieService.set('jwttoken','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJleHAiOjE1ODU2NTM1MzksImlhdCI6MTU4NTU2NzEzOX0.ErmNEt1IOnbKQMfTveF2Tt0PY0TprflzQ1DngaGGUhA');
-      this.jwttoken=this.cookieService.get('jwttoken');
+    //   this.cookieService.set('jwttoken','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJleHAiOjE1ODU2NTM1MzksImlhdCI6MTU4NTU2NzEzOX0.ErmNEt1IOnbKQMfTveF2Tt0PY0TprflzQ1DngaGGUhA');
+      this.jwttoken=this.cookieService.get('jwtToken');
 
 
   }
@@ -176,6 +164,16 @@ sortdata:any={
         }, error => {
             console.log('Oooops!');
         });
+
+
+
+
+        this.activatedRoute.data.forEach(res=>{
+            let result:any=res;
+            this.adminDataList=result.adminlist.res; 
+            // console.log(this.adminDataList)    
+        
+        })
 
 
   }
