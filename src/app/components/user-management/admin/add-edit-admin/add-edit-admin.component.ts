@@ -36,7 +36,7 @@ export class AddEditAdminComponent implements OnInit {
         this.condition = { id: params._id };
         this.activatedRoute.data.subscribe(resolveData => {
           this.adminData = resolveData.admin_data.res[0];
-          console.log('++++++++++++++++',this.adminData);
+          // console.log('++++++++++++++++',this.adminData);
         });
       }
       else
@@ -99,6 +99,7 @@ export class AddEditAdminComponent implements OnInit {
         break;
       case 'edit':
         /* Button text */
+        this.getStateList();
         this.btn_text = "Update ";
         this.message ='Admin Updated Successfully';
         this.setDefaultValue(this.adminData);
@@ -148,6 +149,8 @@ export class AddEditAdminComponent implements OnInit {
     }
 
 
+
+
       /**Submit function */
   addAdminFormSubmit() {
     for (let x in this.addAdminForm.controls) {
@@ -167,7 +170,7 @@ export class AddEditAdminComponent implements OnInit {
         /**Api service for insert form */
 
         var data = { source: "data_user", 
-                    data: this.addAdminForm.value }
+                    data: Object.assign(this.addAdminForm.value,this.condition) }
         this.httpService.CustomRequest(data, 'addorupdatedata').subscribe((data: any) => {
           // console.log(data);
           if (data.status == 'success') {
@@ -189,13 +192,18 @@ export class AddEditAdminComponent implements OnInit {
 
 
   setDefaultValue(defaultValue:any){
+
+    setTimeout(() => {
+      this.getCity(this.adminData.state)
+
+    }, 500);
     this.addAdminForm.patchValue({
       firstname:defaultValue.firstname,
       lastname:defaultValue.lastname,
       email:defaultValue.email,
       phone:defaultValue.phone,
-      city:defaultValue.city,
       state:defaultValue.state,
+      city:defaultValue.city,
       zip:defaultValue.zip,
       status:defaultValue.status,
       type:defaultValue.type

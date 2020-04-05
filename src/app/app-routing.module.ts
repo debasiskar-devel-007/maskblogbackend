@@ -26,11 +26,13 @@ const routes: Routes = [
 
   {path:'forget-password',component:ForgetPasswordComponent},
 
-  //admin section route
+
+  //..............admin section route...................//
 
   {path:'admin/add',component:AddEditAdminComponent},
 
-  {path:'admin/list',component:ListAdminComponent ,resolve: { adminlist: ResolveService },
+  {path:'admin/list',component:ListAdminComponent,
+  resolve: { adminlist: ResolveService },
   data: {
     requestcondition: {
       source: 'data_user',
@@ -39,7 +41,9 @@ const routes: Routes = [
     endpoint: 'datalist'
   },
 },
-{path:'admin/edit/:_id',component:ListAdminComponent ,
+
+
+{path:'admin/edit/:_id',component:AddEditAdminComponent ,
 resolve: { admin_data: ResolveService },
 data: {
   requestcondition: {
@@ -49,6 +53,9 @@ data: {
   endpoint: 'datalist'
 },
 },
+
+
+
 
   // blog management route 
   {

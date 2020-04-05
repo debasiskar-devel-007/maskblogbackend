@@ -344,4 +344,18 @@ postdata(requestdata: any) {
   }
 
 
+  getDataforAdminList(endpoint:any,requestdata: any) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    var result = this._http.post(this.serverUrlDemo2 + endpoint, JSON.stringify(requestdata), httpOptions).pipe(map(res => res));
+    return result;
+  }
+
+
+  
+
+
 }
