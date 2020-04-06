@@ -13,7 +13,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class HttpService {
   
 
-
+  public serverUrlDemo1 =  environment["API_URL1"];
   public serverUrlDemo2 =  environment["API_URL2"];
 
 
@@ -46,7 +46,9 @@ export class HttpService {
   
   public tokenVal: any;
 
-  constructor(private _http: HttpClient, private cookieService :CookieService,public router:Router,public activatedRoute:ActivatedRoute) { }
+  constructor(private _http: HttpClient, private cookieService :CookieService,public router:Router,public activatedRoute:ActivatedRoute) {
+
+   }
   isTokenExpired() {}
   /* read site setting data */
   public getSiteSettingData(url): Observable<any> {
@@ -58,27 +60,23 @@ postDatawithoutToken(endpoint:any, data:any) {
   const httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json',
-      'Authorization': this.cookieService.get('jwtToken') 
+      
     })
   };
-  // console.log('endpoint');
-  // console.log(endpoint);
-  var result = this._http.post(this.serverUrlDemo+endpoint, JSON.stringify(data), httpOptions).pipe(map(res => res));
+  var result = this._http.post(this.serverUrlDemo1+endpoint, JSON.stringify(data), httpOptions).pipe(map(res => res));
   return result;
 }
 
 
-  addData(requestdata: any) {
+  addDataApi1(requestdata: any) {
     // console.log('in adddata apiservice');
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': this.cookieService.get('jwtToken')          //hard code written access-token(temp)
+        // 'Authorization': this.cookieService.get('jwtToken')          //hard code written access-token(temp)
       })
     };
-
-    // console.log('httpoptions',httpOptions,this.serverUrl,requestdata);
-    var result = this._http.post(this.serverUrl + this.addendpointUrl, JSON.stringify(requestdata), httpOptions).pipe(map(res => res));
+    var result = this._http.post(this.serverUrlDemo1 + this.addendpointUrl, JSON.stringify(requestdata), httpOptions).pipe(map(res => res));
     return result;
   }
 
@@ -155,8 +153,17 @@ getDataForResolve(requestdata: any) {
   
   var result = this._http.post(this.serverUrlDemo2 + requestdata.endpoint, JSON.stringify(requestdata.requestcondition), httpOptions).pipe(map(res => res));
   return result;
-
-
+}
+getDataForResolveAp1(requestdata: any) {
+  const httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  };
+  // console.log(requestdata)
+  
+  var result = this._http.post(this.serverUrlDemo1 + requestdata.endpoint, JSON.stringify(requestdata.requestcondition), httpOptions).pipe(map(res => res));
+  return result;
 }
 
 

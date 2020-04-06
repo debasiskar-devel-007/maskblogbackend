@@ -61,22 +61,28 @@ data: {
   {
     path : 'blog/category/list',component : CategoryListComponent,
     resolve: { trainingdata: ResolveService }, 
-    data: { requestcondition: { source: 'blog_category', condition: {} }, endpoint: 'datalist' }
+    data: { requestcondition: { source: 'blog_category_view', condition: {} }, endpoint: 'datalist' }
   },
   {
     path : 'blog/category/add',component : AddEditComponent
   },
   {
-    path : 'blog/category/edit',component : AddEditComponent
+    path : 'blog/category/edit/:_id',component : AddEditComponent,
+    resolve: { blogCatList: ResolveService },
+    data: { requestcondition: { source: 'blog_category', condition: {} }, endpoint: 'datalist' }
   },
   {
-    path : 'blog/list',component :  ListBlogsComponent
+    path : 'blog-management/list',component :  ListBlogsComponent,
+    resolve: { blogList: ResolveService }, 
+    data: { requestcondition: { source: 'blogs_desc_priority', condition: {} }, endpoint: 'datalist' }
   },
   {
-    path : 'blog/add',component : AddEditBlogComponent
+    path : 'blog-management/add',component : AddEditBlogComponent
   },
   {
-    path : 'blog/edit',component : AddEditBlogComponent
+    path : 'blog-management/edit/:_id',component : AddEditBlogComponent,
+    resolve: { blogList: ResolveService },
+    data: { requestcondition: { source: 'blogs', condition: {} }, endpoint: 'datalist' }
   }
 ];
 
