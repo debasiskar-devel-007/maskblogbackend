@@ -10,8 +10,12 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  public cookies:any='';
 
-  constructor(public router: Router, private cookieService: CookieService) { }
+  constructor(public router: Router, private cookieService: CookieService) {
+    // this.cookieService.deleteAll();
+
+   }
 
   ngOnInit() {
 
@@ -20,7 +24,12 @@ export class HeaderComponent implements OnInit {
 
       /**logout function start here**/
       logout() {
+        // this.cookies=this.cookieService.getAll()
+        // console.log(this.cookies)
 
+        this.cookieService.deleteAll();
+
+        // console.log(this.cookies)
         setTimeout(() => {
         this.cookieService.deleteAll();
           this.router.navigate(['/']);
