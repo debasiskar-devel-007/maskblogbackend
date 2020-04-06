@@ -13,10 +13,10 @@ import { CookieService } from 'ngx-cookie-service';
 export class ListAdminComponent implements OnInit {
 
    
-  public status: any = [{val: 1, name: 'Approve'}, {val: 4, name: 'Decline'}, {val: 3, name: 'Lock'}];
+  public status: any = [{val: 1, name: 'Active'}, {val: 0, name: 'Inactive'}];
 
    // use for status search
-   statusarray: any = [{val: 1, name: 'Approve'}, {val: 4, name: 'Decline'}, {val: 3, name: 'Lock'}]; 
+   statusarray: any = [{val: 1, name: 'Active'}, {val: 0, name: 'Inactive'}]; 
 
 
   //  Example like this
@@ -110,9 +110,10 @@ sortdata:any={
   };
 
   // this is search block 
+  adminDataList_detail_datatype:any;
 
-
-
+  custom_link:any;
+  adminDataList_detail_skip:any=['_id','password']
   brandarray: any = [];
   notpendingapplication_view: any = [];
   adminlist: any = [];

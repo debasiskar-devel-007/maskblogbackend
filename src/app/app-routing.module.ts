@@ -18,7 +18,9 @@ import { AddEditAdminComponent } from './components/user-management/admin/add-ed
 
 
 const routes: Routes = [
-  {path:'',component:HeaderComponent},
+  {path:'',component:LoginComponent},
+
+  {path:'dashboard',component:HeaderComponent},
 
   {path:'login',component:LoginComponent},
 

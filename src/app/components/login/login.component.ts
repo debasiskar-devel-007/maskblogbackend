@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   public fullUrl: any = environment["API_URL"];  // server url
   public endpoint: any = "login";
   public buttonName:any= 'Login';
-  public defaultLoginUrl = '/login';
+  public defaultLoginUrl = '/';
 
   loading: boolean;
  
@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
       "data": [
         {
           "type": "admin",
-          "routerNav": "admin/list"
+          "routerNav": "dashboard"
         },
         {
           "type": "rep",
