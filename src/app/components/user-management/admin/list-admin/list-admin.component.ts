@@ -13,7 +13,7 @@ import { CookieService } from 'ngx-cookie-service';
 export class ListAdminComponent implements OnInit {
 
    
-  public status: any = [{ val: 1, 'name': 'Active' }, { val: 0, 'name': 'Inactive' }];
+  public status: any = [{val: 1, name: 'Approve'}, {val: 4, name: 'Decline'}, {val: 3, name: 'Lock'}];
 
    // use for status search
    statusarray: any = [{val: 1, name: 'Approve'}, {val: 4, name: 'Decline'}, {val: 3, name: 'Lock'}]; 
@@ -46,7 +46,7 @@ export class ListAdminComponent implements OnInit {
 
 
     // use for Table Detail Field Skip 
-  adminDataList_skip: any = ['_id', 'name','type', 'password','created_at'];
+  adminDataList_skip: any = ['_id', 'name','type', 'password','created_at','updated_at','id'];
 
 
    // use for Table Detail inside the modal image path 
@@ -102,9 +102,11 @@ sortdata:any={
 
       selectsearch:[{ label: 'Search By Status', field: 'status', values: this.status }], // this is use for  select search
 
-       textsearch:[{label:"Search By name",field:'firstname'}],  // this is use for  text search
+       textsearch:[{label:"Search By name",field:'firstname'},{label:"Search By Email",field:'email'}],  // this is use for  text search
 
-       search:[{label:"Search By status",field:status,}]     // this is use for  Autocomplete search
+       // this is use for  Autocomplete search
+    //    search:[{label:"Search By status",field:this.status}]     
+
   };
 
   // this is search block 
