@@ -15,10 +15,10 @@ import { AddEditComponent } from './components/blog-management/blog-category/add
 import { ListBlogsComponent } from './components/blog-management/blog/list-blogs/list-blogs.component';
 import { AddEditBlogComponent } from './components/blog-management/blog/add-edit-blog/add-edit-blog.component';
 import { AddEditAdminComponent } from './components/user-management/admin/add-edit-admin/add-edit-admin.component';
-
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
-  {path:'',component:HeaderComponent},
+  {path:'',component:LoginComponent},
 
   {path:'login',component:LoginComponent},
 
@@ -29,9 +29,9 @@ const routes: Routes = [
 
   //..............admin section route...................//
 
-  {path:'admin/add',component:AddEditAdminComponent},
+  {path:'admin/add',component:AddEditAdminComponent,canActivate: [AuthGuard]},
 
-  {path:'admin/list',component:ListAdminComponent,
+  {path:'admin/list',component:ListAdminComponent,canActivate: [AuthGuard],
   resolve: { adminlist: ResolveService },
   data: {
     requestcondition: {
@@ -43,7 +43,7 @@ const routes: Routes = [
 },
 
 
-{path:'admin/edit/:_id',component:AddEditAdminComponent ,
+{path:'admin/edit/:_id',component:AddEditAdminComponent ,canActivate: [AuthGuard],
 resolve: { admin_data: ResolveService },
 data: {
   requestcondition: {
@@ -59,28 +59,28 @@ data: {
 
   // blog management route 
   {
-    path : 'blog/category/list',component : CategoryListComponent,
+    path : 'blog/category/list',component : CategoryListComponent,canActivate: [AuthGuard],
     resolve: { trainingdata: ResolveService }, 
     data: { requestcondition: { source: 'blog_category_view', condition: {} }, endpoint: 'datalist' }
   },
   {
-    path : 'blog/category/add',component : AddEditComponent
+    path : 'blog/category/add',component : AddEditComponent,canActivate: [AuthGuard]
   },
   {
-    path : 'blog/category/edit/:_id',component : AddEditComponent,
+    path : 'blog/category/edit/:_id',component : AddEditComponent,canActivate: [AuthGuard],
     resolve: { blogCatList: ResolveService },
     data: { requestcondition: { source: 'blog_category', condition: {} }, endpoint: 'datalist' }
   },
   {
-    path : 'blog-management/list',component :  ListBlogsComponent,
+    path : 'blog-management/list',component :  ListBlogsComponent,canActivate: [AuthGuard],
     resolve: { blogList: ResolveService }, 
     data: { requestcondition: { source: 'blogs_desc_priority', condition: {} }, endpoint: 'datalist' }
   },
   {
-    path : 'blog-management/add',component : AddEditBlogComponent
+    path : 'blog-management/add',component : AddEditBlogComponent,canActivate: [AuthGuard]
   },
   {
-    path : 'blog-management/edit/:_id',component : AddEditBlogComponent,
+    path : 'blog-management/edit/:_id',component : AddEditBlogComponent,canActivate: [AuthGuard],
     resolve: { blogList: ResolveService },
     data: { requestcondition: { source: 'blogs', condition: {} }, endpoint: 'datalist' }
   }
