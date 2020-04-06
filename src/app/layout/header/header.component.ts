@@ -20,11 +20,9 @@ export class HeaderComponent implements OnInit {
 
       /**logout function start here**/
       logout() {
-        this.cookieService.deleteAll();
-        this.cookieService.deleteAll('/');
+
         setTimeout(() => {
-          //this.window.location.href = '/';
-          //this.router.navigateByUrl('/home');
+        this.cookieService.deleteAll();
           this.router.navigate(['/']);
         }, 1000);
       }
