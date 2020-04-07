@@ -104,7 +104,7 @@ export class AccountSettingsComponent implements OnInit {
         newPassword: this.changePasswordFormGroup.value.newPassword
       }
 
-      this.apiService.CustomRequest(data, endpoint).subscribe(res => {
+      this.apiService.addUpdateService(data, endpoint).subscribe(res => {
         let message = "Successfully Changed Password";
         let action  = "Ok"
         this.snackBar.open(message, action, {
