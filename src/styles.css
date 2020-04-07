@@ -63,18 +63,19 @@
   }
   
   :root {
-    --c-t-bg-w: #fff;
+    --c-t-bg-w: #fff;    
+    --c-t-bg-secondary: #F9594D;    
+    --c-t-alt-links: #03AAE0;
+    
+    --c-t-primary-btn_title: #0FA1D2;
     --c-t-bg-black: #0d0d0d;
     --c-t-bg-zblack: var(--c-t-bg-zblack);
     --c-t-bg: #dce5ea;
-    --c-t-bg-secondary: #a5e1cf;
     --c-t-sub-primary: #fff;
-    --c-t-primary: #d0531c;
+    --c-t-primary: #0C4E66;
     --c-t-secondary: #0b5746;
-    --c-t-primary-btn_title: #48281b;
     --c-t-paragraph: #797a7b;
     --c-t-links: #005d40;
-    --c-t-alt-links: #03AAE0;
     --c-t-long-para: #002346;
   
   
