@@ -102,4 +102,4 @@ body { margin: 0; font-family: "NunitoRegular"; }
 .topmenulist .navigation-left .mat-list-item .mat-list-item-content{padding: 0 0!important;}
 .topmenulist .activemenu, .topmenulist .navigation-left a:hover {color: #08b1e7;}
 .activemenu a {color: #08b1e7!important;}
-.mat-card{box-shadow: none !important;border-radius: 0 !important;}
+.mat-card{box-shadow: none !important;border-radius: 0 !important;background:transparent !important;}
