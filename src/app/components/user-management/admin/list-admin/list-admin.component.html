@@ -6,13 +6,13 @@
     <div id="maincontent">
       <div class="main-content-wrap">
         <mat-card class="generalcls" style="padding: 0 !important;">
-            <h2>Admin List</h2>
-
-            <div>
-                <button mat-raised-button color="accent" [routerLink]="['/admin/add']">Add Admin</button>
-            </div>
+          <div class="content_header_wrapper">
+              <h2>Admin List</h2>
+              <div class="buttonsetToolbar">
+                  <button mat-raised-button color="accent" [routerLink]="['/admin/add']">Add Admin</button>
+              </div>
             
-            <br>
+          </div>
             
             <div class="listingnewstyle">
                 <lib-listing *ngIf="adminDataList!=null && adminDataList.length>0" 
