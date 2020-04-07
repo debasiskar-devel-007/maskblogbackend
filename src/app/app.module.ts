@@ -7,8 +7,12 @@ import { AuthGuard } from './services/auth.guard';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DemoMaterialModule } from 'src/material-module';
+
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
+
+import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
+
 import { AddEditAdminComponent } from './components/user-management/admin/add-edit-admin/add-edit-admin.component';
 import { ListAdminComponent } from './components/user-management/admin/list-admin/list-admin.component';
 import { LoginComponent } from './components/login/login.component';
@@ -27,6 +31,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BlogModule } from 'blog-lib-influxiq'
 import { CookieService } from 'ngx-cookie-service';
+import { AccountSettingsComponent } from './components/account-settings/account-settings.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +45,9 @@ import { CookieService } from 'ngx-cookie-service';
     AddEditComponent,
     CategoryListComponent,
     AddEditBlogComponent,
-    ListBlogsComponent
+    ListBlogsComponent,
+    DashboardAdminComponent,
+    AccountSettingsComponent
   ],
   imports: [
     BrowserModule,

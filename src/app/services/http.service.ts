@@ -98,7 +98,6 @@ getDataForDatalist(endpoint: any) {
   return result;
 }
 // getData end
-/*************** Added by himadri using for datalist start here ***************/ 
 
 getDatalist(requestdata: any) {
   const httpOptions = {
@@ -110,6 +109,16 @@ getDatalist(requestdata: any) {
   var result = this._http.post(this.serverUrlDemo + requestdata.endpoint, JSON.stringify(requestdata), httpOptions).pipe(map(res => res));
   return result;
 
+}
+getDatalistforapi1(requestdata: any) {
+  const httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      // 'Authorization': this.cookieService.get('jwtToken')
+    })
+  };
+  var result = this._http.post(this.serverUrlDemo1 + requestdata.endpoint, JSON.stringify(requestdata), httpOptions).pipe(map(res => res));
+  return result;
 
 }
 getDatalistWithToken(requestdata: any, endpoint: any){
@@ -251,6 +260,15 @@ forgetPassword(requestdata: any) {
       })
     };
     var result = this._http.post(this.serverUrlDemo2 + endpoint, JSON.stringify(requestdata), httpOptions).pipe(map(res => res));
+    return result;
+  }
+  addUpdateService(requestdata: any, endpoint:any ) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    var result = this._http.post(this.serverUrlDemo1 + endpoint, JSON.stringify(requestdata), httpOptions).pipe(map(res => res));
     return result;
   }
 

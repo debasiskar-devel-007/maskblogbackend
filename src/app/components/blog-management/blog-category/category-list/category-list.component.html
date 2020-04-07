@@ -1,21 +1,43 @@
-<mat-card>
+<div class="adminwrappercls">
+    <app-header></app-header>
+    <!-- <div id="beadcamb">
+      
+    </div> -->
+    <div id="maincontent">
+      <div class="main-content-wrap">
+        <mat-card class="generalcls" style="padding: 0 !important;">
+            <div class="content_header_wrapper">
+                <h2 class="headerSpan">Blog Categories</h2>
+                               
+                <mat-toolbar class="buttonsetToolbar">
+                     <!-- ---------------------Button for adding new role------------------------------ -->
+                    <button class="singleButton" mat-raised-button color="primary"
+                    [routerLink]="['/blog/category/add']">Add Blog Category </button>
+
+                    <!-- blog management -->
+                    <button class="singleButton" mat-raised-button color="primary"
+                    [routerLink]="['/blog-management/list']">Blog Managment </button>
+                </mat-toolbar>
+            </div>                    
+
+            <!-- to listing library -->
+            <div class="listingnewstyle">
+                <lib-Blog [config]="blogListConfig"></lib-Blog>
+            </div>
+        </mat-card>
+      </div>
+    </div>    
+</div>
+<app-footer></app-footer>
+
+
+
+
+
+<!-- <mat-card>
     <mat-toolbar color="primary" style="justify-content: center; align-items: center;">
-        <h2 class="headerSpan">Blog Categories</h2>
+       
     </mat-toolbar>
 
-    <!-- ---------------------Button for adding new role------------------------------ -->
-    <mat-toolbar class="buttonsetToolbar">
-        <button class="singleButton" mat-raised-button color="primary"
-         [routerLink]="['/blog/category/add']">Add Blog Category </button>
-    </mat-toolbar>
-<!-- blog management -->
-    <mat-toolbar class="buttonsetToolbar">
-        <button class="singleButton" mat-raised-button color="primary"
-         [routerLink]="['/blog-management/list']">Blog Managment </button>
-    </mat-toolbar>
-
-
-    <!-- to listing library -->
-
-    <lib-Blog [config]="blogListConfig"></lib-Blog>
-</mat-card>
+   
+</mat-card> -->

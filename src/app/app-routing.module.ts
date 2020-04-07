@@ -17,19 +17,28 @@ import { AddEditBlogComponent } from './components/blog-management/blog/add-edit
 import { AddEditAdminComponent } from './components/user-management/admin/add-edit-admin/add-edit-admin.component';
 import { AuthGuard } from './services/auth.guard';
 
+//Admin-dashboard
+import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
+//account-settings
+import { AccountSettingsComponent } from './components/account-settings/account-settings.component';
+
 const routes: Routes = [
   {path:'',component:LoginComponent},
-  {path:'dashboard',component:HeaderComponent,canActivate: [AuthGuard]},
+  // {path:'dashboard',component:HeaderComponent},
 
 
   {path:'login',component:LoginComponent},
-
+  {
+    path:'account-settings' , component:AccountSettingsComponent,canActivate: [AuthGuard]
+  },
   {path:'reset-password/:token',component:ResetPasswordComponent},
 
   {path:'forget-password',component:ForgetPasswordComponent},
 
 
   //..............admin section route...................//
+
+  {path:'dashboard',component:DashboardAdminComponent,canActivate: [AuthGuard]},
 
   {path:'admin/add',component:AddEditAdminComponent,canActivate: [AuthGuard]},
 

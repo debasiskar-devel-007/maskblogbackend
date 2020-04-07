@@ -1,9 +1,53 @@
-<button mat-raised-button color="primary" [routerLink]="['/admin/list']" 
-routerLinkActive="router-link-active" >Admin List</button> &nbsp;
-
-<button mat-raised-button color="accent" [routerLink]="['/blog/category/list']">Blog List</button>
-
-&nbsp;&nbsp;
-<button mat-raised-button color="primary" (click)="logout()">Log Out</button>
-
-
+<mat-card class="admcls">
+    <mat-toolbar class="header">
+      <mat-toolbar-row class="toolbar-row">
+        <div class="logo">
+          <!-- <img src="assets/images/logo.png" alt=""> -->
+          <h2><span class="barrier">Mask</span> <span class="medical">Backend</span></h2>
+        </div>      
+        <div class="topmenulist">       
+        
+          <mat-list class="navigation-left">
+            <mat-list-item class="nav-item">
+              <a mat-menu-item routerLinkActive="activemenu">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+              </a>
+            </mat-list-item>
+    
+            <mat-list-item class="nav-item" routerLinkActive="activemenu">
+              <a class="nav-item-hold" mat-menu-item routerLinkActive="activemenu" [routerLink]="['/dashboard']">
+                <span class="nav-text">Dashboard</span>
+              </a>
+            </mat-list-item>          
+    
+            <mat-list-item class="nav-item" routerLinkActive="activemenu">
+              <a class="nav-item-hold" mat-menu-item routerLinkActive="activemenu" [routerLink]="['/admin/list']"><span class="nav-text">Admin Management</span></a>
+            </mat-list-item>
+            <mat-list-item class="nav-item" routerLinkActive="activemenu">
+              <a class="nav-item-hold" mat-menu-item routerLinkActive="activemenu" [routerLink]="['/blog/category/list']"><span class="nav-text">Blog Management</span></a>
+            </mat-list-item>
+            
+            <mat-list-item class="nav-item" routerLinkActive="activemenu">
+              <a class="nav-item-hold" mat-menu-item routerLinkActive="activemenu" [routerLink]="['/account-settings']">
+                <span class="material-icons">account_circle</span> <span class="nav-text">My Account</span></a>
+            </mat-list-item>
+            <mat-list-item class="nav-item" routerLinkActive="activemenu">
+              <a class="nav-item-hold" mat-menu-item routerLinkActive="activemenu" (click)="logout()">
+                <span class="material-icons">exit_to_app</span> <span class="nav-text">Logout</span></a>
+            </mat-list-item>
+          </mat-list>
+        </div>      
+      </mat-toolbar-row>
+    </mat-toolbar>
+    
+  </mat-card>
+  
+<!-- 
+  <button mat-raised-button color="primary"  routerLinkActive="router-link-active">Admin List</button> &nbsp;
+  
+  <button mat-raised-button color="accent" >Blog List</button> -->
+<!--   
+  &nbsp;&nbsp;
+  <button mat-raised-button color="primary" >Log Out</button> -->
+    
+  

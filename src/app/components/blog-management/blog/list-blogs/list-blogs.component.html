@@ -1,15 +1,30 @@
+<div class="adminwrappercls">
+    <app-header></app-header>
+    <!-- <div id="beadcamb">
+      
+    </div> -->
+    <div id="maincontent">
+      <div class="main-content-wrap">
+        <mat-card class="generalcls" style="padding: 0 !important;">
+          <div class="content_header_wrapper">
+                <h2 class="headerSpan">Blogs</h2>
+                <!-- ---------------------Button for adding new role------------------------------ -->
+                <mat-toolbar class="buttonsetToolbar">
+                    <button style="margin-left: auto;" class="singleButton" mat-raised-button color="primary" [routerLink]="['/blog-management/add']">Add New Blog</button>
+                </mat-toolbar>                
+              </div>
 
-<mat-card>
-    <mat-toolbar color="primary" style="justify-content: center; align-items: center;">
-        <h2 class="headerSpan">Blogs</h2>
-    </mat-toolbar>
+                <!-- to listing library -->
+              <div class="listingnewstyle">
+                <lib-listing-blogmanagementlib [config]="blogListConfig"></lib-listing-blogmanagementlib>
+              </div>               
+            
+        </mat-card>
+      </div>
+    </div>    
+</div>
+<app-footer></app-footer>
 
-    <!-- ---------------------Button for adding new role------------------------------ -->
-    <mat-toolbar class="buttonsetToolbar">
-        <button style="margin-left: auto;" class="singleButton" mat-raised-button color="primary" [routerLink]="['/blog-management/add']">Add New Blog</button>
-    </mat-toolbar>
-    
 
-    <!-- to listing library -->
-    <lib-listing-blogmanagementlib [config]="blogListConfig"></lib-listing-blogmanagementlib>
-</mat-card>
+
+
