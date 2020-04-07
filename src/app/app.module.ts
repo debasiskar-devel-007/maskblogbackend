@@ -31,6 +31,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BlogModule } from 'blog-lib-influxiq'
 import { CookieService } from 'ngx-cookie-service';
+import { AccountSettingsComponent } from './components/account-settings/account-settings.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,8 @@ import { CookieService } from 'ngx-cookie-service';
     CategoryListComponent,
     AddEditBlogComponent,
     ListBlogsComponent,
-    DashboardAdminComponent
+    DashboardAdminComponent,
+    AccountSettingsComponent
   ],
   imports: [
     BrowserModule,

@@ -19,6 +19,8 @@ import { AuthGuard } from './services/auth.guard';
 
 //Admin-dashboard
 import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
+//account-settings
+import { AccountSettingsComponent } from './components/account-settings/account-settings.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -26,7 +28,9 @@ const routes: Routes = [
 
 
   {path:'login',component:LoginComponent},
-
+  {
+    path:'account-settings' , component:AccountSettingsComponent,canActivate: [AuthGuard]
+  },
   {path:'reset-password/:token',component:ResetPasswordComponent},
 
   {path:'forget-password',component:ForgetPasswordComponent},
@@ -34,7 +38,7 @@ const routes: Routes = [
 
   //..............admin section route...................//
 
-  {path:'dashboard',component:DashboardAdminComponent},
+  {path:'dashboard',component:DashboardAdminComponent,canActivate: [AuthGuard]},
 
   {path:'admin/add',component:AddEditAdminComponent,canActivate: [AuthGuard]},
 
