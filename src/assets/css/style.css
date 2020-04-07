@@ -104,6 +104,7 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 
 
 .generalcls .content_header_wrapper{display: flex;justify-content: space-between;align-items: center;}
+.generalcls .content_header_wrapper .headerSpan{font-family:'NunitoLight';font-size:24px!important;text-transform:capitalize;color:#535353}
 .generalcls .content_header_wrapper .buttonsetToolbar {width: auto;}
 .generalcls .content_header_wrapper .buttonsetToolbar .mat-raised-button.mat-primary {margin: 0 2px!important;border-radius: 0;background-color: var(--c-t-primary-btn_title);text-transform: uppercase;font-family: 'NunitoRegular'!important;}
 .generalcls .content_header_wrapper .buttonsetToolbar .mat-raised-button.mat-primary:first-child{margin-left: 0;}
