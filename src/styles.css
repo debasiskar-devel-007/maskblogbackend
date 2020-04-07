@@ -104,3 +104,4 @@ body { margin: 0; font-family: "NunitoRegular"; }
 .activemenu a {color: #08b1e7!important;}
 .mat-card{box-shadow: none !important;border-radius: 0 !important;}
 .listingnewstyle .tablewrapper tr th span{display: flex;align-items: center;}
+.generalcls.mat-card{background-color: transparent;}
