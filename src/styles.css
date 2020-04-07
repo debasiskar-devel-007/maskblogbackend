@@ -103,5 +103,4 @@ body { margin: 0; font-family: "NunitoRegular"; }
 .topmenulist .activemenu, .topmenulist .navigation-left a:hover {color: #08b1e7;}
 .activemenu a {color: #08b1e7!important;}
 .mat-card{box-shadow: none !important;border-radius: 0 !important;background:transparent !important;}
-.listingnewstyle .th.mat-header-cell span{display: flex;align-items: center;}
 .listingnewstyle .tablewrapper tr th span{display: flex;align-items: center;}
