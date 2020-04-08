@@ -33,7 +33,7 @@ tr.mat-header-row{background:var(--c-t-alt-links)}
 .mat-sort-header-button{text-transform:uppercase}
 th.mat-header-cell{color:var(--c-t-sub-primary);text-transform:uppercase;font-family:"NunitoRegular";font-size:14px}
 tr td br{display:none}
-td.mat-cell{color:#465157;font-family:"NunitoLight";line-height: 2;}
+td.mat-cell{color:#465157;font-family:"NunitoLight"; line-height: 2;}
 tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 
 .mat-paginator{background:#105d9f!important;color:var(--c-t-bg-w)!important}
@@ -144,12 +144,12 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .listingnewstyle .mat-form-field-prefix,.mat-form-field-suffix{position:absolute!important;right:0;top:4px}
 .listingnewstyle .aslist_view .mat-form-field-flex .mat-datepicker-toggle{position:inherit;right:inherit;top:inherit}
 
-/* .listingnewstyle .mat-table .mat-cell span, .mat-table .mat-footer-cell span{overflow: hidden;
+.listingnewstyle .mat-table .mat-cell span, .mat-table .mat-footer-cell span{overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  height: 32px;} */
+ line-height: 2;}
   
 .listingnewstyle tr.mat-row:nth-child(even){background:var(--c-t-bg-w)}
 .listingnewstyle .mat-paginator .mat-select-value-text{color:var(--c-t-bg-w)}
