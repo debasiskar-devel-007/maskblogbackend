@@ -373,8 +373,7 @@ postdata(requestdata: any) {
     return result;
   }
 
-
-  getDataforBlogList(endpoint:any,requestdata: any) {
+  getDataforBlogListApi1(endpoint:any,requestdata: any) {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -384,8 +383,6 @@ postdata(requestdata: any) {
     var result = this._http.post(this.serverUrlDemo1 + endpoint, JSON.stringify(requestdata), httpOptions).pipe(map(res => res));
     return result;
   }
-
-
   
 
 
