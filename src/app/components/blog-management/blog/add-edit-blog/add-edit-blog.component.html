@@ -9,17 +9,20 @@
       <div class="main-content-wrap">
         <mat-card class="generalcls" style="padding: 0 !important;">
             <!-- <h2>addedit</h2> -->
-            <lib-addedit-blogmanagement 
-            [serverUrl]="server"
-            [addEndpoint]="addUrl" 
-            [getDataEndpoint]="getDataUrl"
-            [listRoute]="listURL"
-            [singleData]="editdata" 
-            [imageUpload]="configData"
-            [fileUpload]="configFileData"
-            [action]="action"
+            <div class="AddEditBlog">
+              <lib-addedit-blogmanagement 
+              [serverUrl]="server"
+              [addEndpoint]="addUrl" 
+              [getDataEndpoint]="getDataUrl"
+              [listRoute]="listURL"
+              [singleData]="editdata" 
+              [imageUpload]="configData"
+              [fileUpload]="configFileData"
+              [action]="action"
+              
+              ></lib-addedit-blogmanagement>
+            </div>
             
-            ></lib-addedit-blogmanagement>
         </mat-card>
       </div>
     </div>    
