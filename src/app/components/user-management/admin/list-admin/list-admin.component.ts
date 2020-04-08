@@ -98,7 +98,7 @@ sortdata:any={
 
   search_settings:any={
 
-      datesearch:[{startdatelabel:"Start Date",enddatelabel:"End Date",submit:"Search",  field:"created_at"}],   // this is use for  date search
+   // this is use for  date search
 
       selectsearch:[{ label: 'Search By Status', field: 'status', values: this.status }], // this is use for  select search
 
