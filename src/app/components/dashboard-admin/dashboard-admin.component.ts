@@ -11,7 +11,7 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./dashboard-admin.component.css']
 })
 export class DashboardAdminComponent implements OnInit {
-   
+   public value:any=[];
   public status: any = [{val: 1, name: 'Active'}, {val: 0, name: 'Inactive'}];
 
    // use for status search
@@ -36,7 +36,7 @@ export class DashboardAdminComponent implements OnInit {
   };
 
 //   api url from environment
-  apiurl:any=environment.API_URL2
+  apiurl:any=environment.API_URL1
 
 
 
@@ -58,7 +58,7 @@ export class DashboardAdminComponent implements OnInit {
   deleteendpoint = 'deletesingledata';
 
   // this is a database collection name
-  tablename = 'data_user';
+  tablename = 'blogs';
 
   // searchendpoint is use for data search endpoint
   searchendpoint = 'datalist';
@@ -78,29 +78,33 @@ export class DashboardAdminComponent implements OnInit {
 };
 // send basic sort data
 sortdata:any={
-    "type":'desc',
-    "field":'firstname',
-    "options":['firstname','email','lastname','email','state','city']
+  "type":'desc',
+  "field":'priority',
+  "options":['author','blogcategory','blogtitle','priority']
 };
 
   // this is a database collection or view name
-  date_search_source: any='admin_blog_list';
+  date_search_source: any='blogs_desc_priority';
   // datacollection
-  datacollection: any='getadminlistdata';
+  datacollection: any='getblogmanagementlistdata';
   //source count
   date_search_source_count: any=0;
 
 
   search_settings:any={
+    textsearch: [{ label: "Search By Blog Title", field: 'blogtitle_search' },{ label: "Search By Author", field: 'author_search' },{ label: "Search By Tags", field: 'tagsearch' }],
 
-   // this is use for  date search
+    selectsearch: [
+      { label: 'Status', field: 'status', values: [{ val: 1, name: "Active" }, { val: 0, name: 'Inactive' }]},{label:"Search By Blog Category",field:'blogcategory',values:this.value},
+      {
+        label: 'Search By Blog Featured', field: 'featured', values: [{ val: 1, name: "Yes" }, { val: 0, name: 'No' }]
+      },
+      {
+        label: 'Search By Blog Website', field: 'website', values: [{ val: 1, name: "Mask Blog 1" }, { val: 2, name: 'Mask Blog 2' },{val:3,name:"Mask Blog 3"}]
+      }
+    ]
 
-      selectsearch:[{ label: 'Search By Status', field: 'status', values: this.status }], // this is use for  select search
-
-       textsearch:[{label:"Search By name",field:'firstname'},{label:"Search By Email",field:'email'}],  // this is use for  text search
-
-       // this is use for  Autocomplete search
-    //    search:[{label:"Search By status",field:this.status}]     
+     
 
   };
 
@@ -116,10 +120,7 @@ sortdata:any={
   editroute1:any='modeledit';
     jwttoken:any;
   
-//   status_gretterthan_zero_skip: any= ['_id','username','phone','city','state','ethnicity','height','haircolor','eyecolor','weight','bust','waist','hips','slim','toned','tattoos','athletic','piercings','retail','voluptuous','promotions','sales','descriptionbox','facebooklink','twitterlink','instagramlink','modelmayhemlink','type','images'];
-//   status_gretterthan_zero_modify_header: any = { 'dateformat': 'Date','status':'Status','email':'Email', 'name':'Full Name', 'bodytype' : 'Bodytype', 'shatterblok agreement date': 'Shatterblok Agreement Date', 'audiodeadline agreement date': 'Audiodeadline Agreement Date' };
-//   status_gretterthan_zero_detail_skip:any=['_id','email','name','type','status'];
-  // status_gretterthan_zero_detail_datatype:any=[{key:"images",value:'image',fileurl:this.httpService }];
+
 
 
   constructor(public activatedRoute:ActivatedRoute,public httpService:HttpService,private cookieService: CookieService) {
@@ -168,7 +169,13 @@ sortdata:any={
 
         this.activatedRoute.data.forEach(res=>{
             let result:any=res;
-            this.adminDataList=result.adminlist.res; 
+            this.adminDataList=result.adminlist.res;
+            for (let i in this.adminDataList) {
+              this.value.push(
+                { 'name': this.adminDataList[i].blogcategory, val: this.adminDataList[i].blogcategory }
+                );
+            
+            }
             // console.log(this.adminDataList)    
         
         })

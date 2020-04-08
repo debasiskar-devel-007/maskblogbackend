@@ -5,9 +5,10 @@
     </div> -->
     <div id="maincontent">
       <div class="main-content-wrap">
+        
         <mat-card class="generalcls" style="padding: 0 !important;">
 
-
+          <div class="listingnewstyle ">
           <lib-listing *ngIf="adminDataList!=null && adminDataList.length>0" 
             [datasource]="adminDataList"
             [skip]="adminDataList_skip"
@@ -30,8 +31,7 @@
             [datacollection]="datacollection"
             [date_search_source_count]="date_search_source_count"
             [limitcond]="limitcond"></lib-listing>
-
-
+          </div>
 
 
 
