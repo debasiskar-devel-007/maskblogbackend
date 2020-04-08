@@ -35,7 +35,7 @@
               </span>
       
               <mat-tab-group class="mattabgroup">
-                <mat-card-title>Account Settings</mat-card-title>
+                <!-- <mat-card-title>Account Settings</mat-card-title> -->
                 <!--<mat-tab>               
                         <ng-template mat-tab-label>Profile Overview</ng-template>
                         Profile Overview content                        
@@ -112,6 +112,7 @@
                 <mat-tab>
                   <ng-template mat-tab-label>Change Password</ng-template>
                   <form [formGroup]="changePasswordFormGroup" (ngSubmit)="changePasswordFormSubmit()">
+                    <mat-card-title>Account Settings</mat-card-title>
                     <mat-form-field>
                       <input matInput type="password" placeholder="Current Password" formControlName="oldPassword" disabled
                         (blur)="inputUntouched(changePasswordFormGroup,'oldPassword')">

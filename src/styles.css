@@ -77,6 +77,7 @@
     --c-t-paragraph: #797a7b;
     --c-t-links: #005d40;
     --c-t-long-para: #002346;
+    --c-t-deepgray-bg: #222f3d;
   
   
   }
@@ -106,12 +107,3 @@ body { margin: 0; font-family: "NunitoRegular"; }
 .listingnewstyle .tablewrapper tr th span{display: flex;align-items: center;}
 .generalcls.mat-card{background-color: transparent;}
 
-.myaccount .myaccountwrapper{width: 550px; margin: 50px auto; display: block;box-shadow: 0 0 10px rgba(0,0,0,0.6);
-  -moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);-o-box-shadow: 0 0 10px rgba(0,0,0,0.6);}
-.myaccount .mat-tab-labels {display: flex;flex-wrap: wrap;flex-direction: column;}
-.myaccount .mat-tab-group {display: flex;flex-direction: row;margin-top: -16px;}
-.myaccount .mat-tab-body-wrapper {margin-top: -25%;}
-.myaccount .mat-form-field {width: 100%;}
-.profile-area-wrapper{background-color: var(--c-t-bg-w);}
-.profile-area {background-color: var(--c-t-bg-black);width: 180px;height: auto;display: block;}
-.myaccount .mattabgroup .mat-tab-header {background-color: var(--c-t-alt-links);}
