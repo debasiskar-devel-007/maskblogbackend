@@ -227,16 +227,33 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
   -moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);-o-box-shadow: 0 0 10px rgba(0,0,0,0.6);}
 .myaccount .mat-tab-labels {display: flex;flex-wrap: wrap;flex-direction: column;}
 .myaccount .mat-tab-group {display: flex;flex-direction: row;}
-.myaccount .mat-tab-body-wrapper {margin-top: -21%;padding: 0 30px 30px;}
+.myaccount .mat-tab-body-wrapper {margin-top: -29%;padding: 0 30px 30px;}
 .myaccount .mat-form-field {width: 100%;}
-.myaccount .mattabgroup .mat-tab-header {background-color: var(--c-t-alt-links);}
+.myaccount .mattabgroup .mat-tab-header {background-color: var(--c-t-alt-links);width: 180px;flex-wrap: wrap;}
 .profile-area-wrapper{background-color: var(--c-t-bg-w);margin-top: 30px;display: block;}
-.profile-area {background-color: var(--c-t-deepgray-bg);width: 180px;height: auto;display: block;}
+.profile-area {background-color: var(--c-t-deepgray-bg);width: 170px;height: auto;display: block;padding: 20px 5px 20px;}
 .profile-area .profileimg{width: 80px; height: 80px;display: block;margin: 0 auto; overflow: hidden; position: relative;background: #fff;border-radius: 50px;}
 .profile-area .profileimg img{width: 100%; display: block;}
 .profile-area .profileinfo{text-align: center;margin-top: 10px;display: block;}
-.profile-area .profileinfo h2{margin: 0; padding: 0;text-transform: capitalize;color: var(--c-t-bg-w);font-size: var(--base-font-size); font-family: var(--main-font);}
+.profile-area .profileinfo h2{margin: 0; padding: 0;text-transform: capitalize;color: var(--c-t-bg-w);font-size: var(--base-font-size); font-family: var(--main-font);margin-bottom: 8px;}
 .profile-area .profileinfo p{margin: 0; padding: 0;text-transform: capitalize;color: var(--c-t-bg-w); font-size: 12px; font-family: var(--main-light-font);}
+.myaccount .mat-tab-list {margin-top: 15px;}
+.myaccount .mat-tab-label {
+  height: auto !important;
+  padding: 12px 10px !important;
+  min-width: 160px !important;
+  text-align: left !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  position: relative !important;
+  max-width: 180px !important;
+  flex-wrap: wrap !important;
+  color: var(--c-t-bg-w);
+  opacity: 1!important;
+}
+.myaccount .mat-tab-label .mat-tab-label-content {white-space: initial;}
 
 @media screen and (max-width: 1620px) {
 .listingnewstyle mat-toolbar-row.searchbar{justify-content:center!important;flex-wrap:wrap;height:auto}
