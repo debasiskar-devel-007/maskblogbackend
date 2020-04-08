@@ -108,6 +108,9 @@ body { margin: 0; font-family: "NunitoRegular"; }
 
 .myaccount .myaccountwrapper{width: 550px; margin: 50px auto; display: block;}
 .myaccount .mat-tab-labels {display: flex;flex-wrap: wrap;flex-direction: column;}
-.myaccount .mat-tab-group {display: flex;flex-direction: row;}
+.myaccount .mat-tab-group {display: flex;flex-direction: row;margin-top: -16px;}
 .myaccount .mat-tab-body-wrapper {margin-top: -25%;}
 .myaccount .mat-form-field {width: 100%;}
+.profile-area-wrapper{background-color: var(--c-t-bg-w);}
+.profile-area {background-color: var(--c-t-bg-black);width: 180px;height: auto;display: block;}
+.myaccount .mattabgroup .mat-tab-header {background-color: var(--c-t-alt-links);}
