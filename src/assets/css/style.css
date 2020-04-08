@@ -366,6 +366,79 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .cdk-overlay-pane bottom-sheet .mat-nav-list a.mat-list-item .mat-line{font-size:14px}
 .mat-raised-button:not([class*=mat-elevation-z]){box-shadow: none !important;}
 
+.formspan {
+  background-color: #e7e9ea;
+  border: 6px solid #fff;
+  border-bottom: 10px solid #fff;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+}
+.formspan .form-field-span, .formspan .mat-form-field {
+  display: block;
+  position: relative;
+  text-align: left;
+  width: 98% !important;
+  background: #fff;
+  padding: 1px 14px;
+  margin: 9px auto 18px;
+}
+
+.formspan .bottompart .mat-raised-button.mat-primary{
+  position: relative!important;
+    font-size: 14px!important;
+    text-transform: uppercase!important;
+    border: none!important;
+    padding: 5px 10px 10px!important;
+    line-height: 18px!important;
+    color: white!important;
+    border-radius: 0!important;
+    margin: 0 2px!important;
+    font-family: 'NunitoRegular', sans-serif;
+    background-color: var(--c-t-primary-btn_title)!important;
+    margin-bottom: 1% !important;
+    margin-left: 1% !important;
+}
+
+.formspan .example-container,.formspan,.formspan .mat-form-field{box-sizing:border-box}
+
+.AddEditBlog h1 {
+  font-family: 'NunitoRegular';
+  font-size: 24px!important;
+  margin-bottom: 40px!important;
+  background: linear-gradient(45deg,#363636,#08b1e7);
+  text-align: center;
+  padding: 14px 18px 18px;
+  color: var(--c-t-bg);
+  text-transform: uppercase;
+}
+
+.AddEditBlog form h1{
+  background:none;
+  color: var(--c-t-bg-zblack);
+}
+  
+
+.AddEditBlog .mat-card{padding:0!important;background: transparent;}
+.AddEditBlog .mat-toolbar.mat-primary{font-family: 'NunitoRegular';
+  font-size: 24px!important;
+  width: 100%;
+  margin-bottom: 40px!important;
+  background: linear-gradient(45deg,#363636,#08b1e7);
+  padding: 14px 18px;
+  color: #ffffff;
+  text-transform: uppercase;}
+
+.AddEditBlog .submitbtn{border-radius:0;background:var(--c-t-primary-btn_title);min-width:165px;margin:0 auto!important;display:block;font-family:'NunitoRegular';font-size:20px}
+.AddEditBlog .uploadfilecontainer{width:100%!important;margin:0 auto}
+.AddEditBlog .files-view{width:100%!important;margin:16px}
+.AddEditBlog .files-view .mat-card img{max-width:100%}
+.AddEditBlog .files-view .mat-card .mat-card-title{font-size:16px;font-family:'NunitoRegular';width:100%;padding:0 10px;box-sizing:border-box;color:var(--c-t-primary);text-transform:capitalize}
+.AddEditBlog .button-group{width:100%!important}
+
+
+
 @media screen and (max-width: 1620px) {
 .listingnewstyle mat-toolbar-row.searchbar{justify-content:center!important;flex-wrap:wrap;height:auto}
 .listingnewstyle mat-toolbar-row.searchbar mat-form-field{margin:0 5px 5px 0}
@@ -479,24 +552,6 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .changepassword .mat-dialog-container .mat-dialog-actions button:last-child{background:var(--c-t-primary-btn_title)} */
 
 
-.AddEditBlog .mat-card{padding:0!important;background: transparent;}
-.AddEditBlog .mat-toolbar.mat-primary{font-family: 'NunitoRegular';
-  font-size: 24px!important;
-  width: 100%;
-  margin-bottom: 40px!important;
-  background: linear-gradient(45deg,#363636,#08b1e7);
-  padding: 14px 18px;
-  color: #ffffff;
-  text-transform: uppercase;}
-.AddEditBlog  h1{color:var(--c-t-primary);font-family:'NunitoRegular';font-size:24px}
-.AddEditBlog .submitbtn{border-radius:0;background:var(--c-t-primary-btn_title);min-width:165px;margin:0 auto!important;display:block;font-family:'NunitoRegular';font-size:20px}
-.AddEditBlog .uploadfilecontainer{width:100%!important;margin:0 auto}
-.AddEditBlog .files-view{width:100%!important;margin:16px}
-.AddEditBlog .files-view .mat-card img{max-width:100%}
-.AddEditBlog .files-view .mat-card .mat-card-title{font-size:16px;font-family:'NunitoRegular';width:100%;padding:0 10px;box-sizing:border-box;color:var(--c-t-primary);text-transform:capitalize}
-.AddEditBlog .button-group{width:100%!important}
-
-.formspan .example-container,.formspan,.formspan .mat-form-field{width:100%!important;box-sizing:border-box}
 
 .login_wrapper{overflow: hidden;}
 .login_wrapper .mat-form-field-flex {background: var(--c-t-bg-w);}
