@@ -143,6 +143,7 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .listingnewstyle .aslist_view .mat-form-field-flex .mat-datepicker-toggle{position:inherit;right:inherit;top:inherit}
 .listingnewstyle .mat-table .mat-cell span, .mat-table .mat-footer-cell span{overflow: hidden;text-overflow: ellipsis;
   display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+  
 .listingnewstyle tr.mat-row:nth-child(even){background:var(--c-t-bg-w)}
 .listingnewstyle .mat-paginator .mat-select-value-text{color:var(--c-t-bg-w)}
 .listingnewstyle .mat-paginator .mat-select-arrow{color:var(--c-t-bg-w)}
@@ -154,6 +155,7 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .listingnewstyle .mat-sort-header-button,.listingnewstyle th.mat-header-cell:last-of-type{font-family:'AvenirRoman';font-size:14px}
 .listingnewstyle .mat-table{font-family:'NunitoLight';font-size:14px;color:#465157}
 .listingnewstyle td.mat-cell:last-of-type{padding-right:0;text-align:right}
+.listingnewstyle td.mat-cell:last-of-type > span{display: flex;}
 
 .listingnewstyle .mat-form-field-appearance-legacy .mat-form-field-underline{height:0}
 .listingnewstyle .mat-form-field-appearance-legacy .mat-form-field-ripple{height:0; display: none;}
@@ -219,6 +221,8 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .email_wrapper .mat-form-field .mat-form-field-flex{border:1px solid var(--c-t-bg-w);padding:6px 10px}
 .email_wrapper .mat-form-field-appearance-legacy .mat-form-field-underline{height:0}
 .email_wrapper form{padding:16px}
+
+
 
 @media screen and (max-width: 1620px) {
 .listingnewstyle mat-toolbar-row.searchbar{justify-content:center!important;flex-wrap:wrap;height:auto}

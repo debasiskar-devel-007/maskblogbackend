@@ -105,3 +105,9 @@ body { margin: 0; font-family: "NunitoRegular"; }
 .mat-card{box-shadow: none !important;border-radius: 0 !important;}
 .listingnewstyle .tablewrapper tr th span{display: flex;align-items: center;}
 .generalcls.mat-card{background-color: transparent;}
+
+.myaccount .myaccountwrapper{width: 550px; margin: 50px auto; display: block;}
+.myaccount .mat-tab-labels {display: flex;flex-wrap: wrap;flex-direction: column;}
+.myaccount .mat-tab-group {display: flex;flex-direction: row;}
+.myaccount .mat-tab-body-wrapper {margin-top: -25%;}
+.myaccount .mat-form-field {width: 100%;}
