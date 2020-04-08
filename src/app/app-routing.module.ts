@@ -38,7 +38,16 @@ const routes: Routes = [
 
   //..............admin section route...................//
 
-  {path:'dashboard',component:DashboardAdminComponent,canActivate: [AuthGuard]},
+  {path:'dashboard',component:DashboardAdminComponent,canActivate: [AuthGuard],
+  resolve: { bloglist: ResolveService },
+  data: {
+    requestcondition: {
+      source: 'blogs_desc_priority',
+      condition: {}
+    },
+    endpoint: 'datalist'
+  },
+},
 
   {path:'admin/add',component:AddEditAdminComponent,canActivate: [AuthGuard]},
 
