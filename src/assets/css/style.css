@@ -33,7 +33,7 @@ tr.mat-header-row{background:var(--c-t-alt-links)}
 .mat-sort-header-button{text-transform:uppercase}
 th.mat-header-cell{color:var(--c-t-sub-primary);text-transform:uppercase;font-family:"NunitoRegular";font-size:14px}
 tr td br{display:none}
-td.mat-cell{color:#465157;font-family:"NunitoLight"}
+td.mat-cell{color:#465157;font-family:"NunitoLight"; line-height: 2;}
 tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 
 .mat-paginator{background:#105d9f!important;color:var(--c-t-bg-w)!important}
@@ -105,7 +105,7 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .generalcls .btnred{background-color: var(--c-t-bg-secondary)!important;}
 
 .generalcls .singleButton {position: relative!important;font-size: 14px!important;text-transform: uppercase!important;
-  border: none!important;padding: 5px 10px 10px!important;line-height: 20px!important;color: white!important;
+  border: none!important;padding: 5px 10px 10px!important;line-height: 18px!important;color: white!important;
   border-radius: 0!important;margin: 0 2px!important;font-family: 'NunitoRegular', sans-serif;}
 
 
@@ -143,8 +143,13 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .listingnewstyle .content_header_wrapper .singleButton{min-width:102px;color:var(--c-t-bg-w);text-transform:uppercase;font-size:18px;font-family:'NunitoRegular'!important;text-align:center;text-shadow:0 2px 0 rgba(0,0,0,.30);background:var(--c-t-primary-btn_title)}
 .listingnewstyle .mat-form-field-prefix,.mat-form-field-suffix{position:absolute!important;right:0;top:4px}
 .listingnewstyle .aslist_view .mat-form-field-flex .mat-datepicker-toggle{position:inherit;right:inherit;top:inherit}
-/* .listingnewstyle .mat-table .mat-cell span, .mat-table .mat-footer-cell span{overflow: hidden;text-overflow: ellipsis;
-  display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;} */
+
+.listingnewstyle .mat-table .mat-cell span, .mat-table .mat-footer-cell span{overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+ line-height: 2;}
   
 .listingnewstyle tr.mat-row:nth-child(even){background:var(--c-t-bg-w)}
 .listingnewstyle .mat-paginator .mat-select-value-text{color:var(--c-t-bg-w)}
@@ -289,7 +294,7 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .generalmodalcls .mat-form-field-flex{display:block!important;border:none!important;padding:0!important}
 .generalmodalcls h4{display:block;text-align:center;margin:0;padding:10px 0 0;font-size:22px;color:#111;font-family:'Helvetica-Normal';font-weight:400}
 
-/* .newsletter_modalsuccess{padding-top:25px!important;padding-bottom:25px!important}
+.newsletter_modalsuccess{padding-top:25px!important;padding-bottom:25px!important}
 .success-modal .mat-dialog-container{padding:10px!important;border-radius:0!important;overflow:hidden!important;position:relative;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-flex-direction: column;-moz-flex-direction: column;-ms-flex-direction: column;flex-direction: column;width:100%;pointer-events:auto;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:.3rem;outline:0}
 .generalmodalcls .actions{margin:0 auto;display:block;text-align:center}
 .generalmodalcls .actions .btnblue{color:#fff;font-size:30px;text-transform:uppercase;font-family:'HelveticaBold';text-decoration:none;display:inline-block;padding:10px 15px 5px;border-radius:0!important;background-color:#12c3e4;margin:10px auto;display:block}
@@ -314,7 +319,7 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .cdk-overlay-pane bottom-sheet .mat-nav-list a.mat-list-item:first-child{color:#fff;font-size:30px;text-transform:uppercase;font-family:'HelveticaBold';text-decoration:none;display:inline-block;padding:10px 15px 5px;border-radius:0!important;background-color:#12c3e4!important}
 .cdk-overlay-pane bottom-sheet .mat-nav-list a.mat-list-item:last-child{color:#fff;font-size:30px;text-transform:uppercase;font-family:'HelveticaBold';text-decoration:none;display:inline-block;padding:10px 15px 5px;border-radius:0;background-color:#fb4a32}
 .cdk-overlay-pane bottom-sheet .mat-nav-list a.mat-list-item:not(:first-child):not(:last-child){color:#fff;font-size:30px;text-transform:uppercase;font-family:'HelveticaBold';text-decoration:none;display:inline-block;padding:10px 15px 5px;border-radius:0;background-color:#fba732}
-.cdk-overlay-pane bottom-sheet .mat-nav-list a.mat-list-item .mat-line{font-size:30px} */
+.cdk-overlay-pane bottom-sheet .mat-nav-list a.mat-list-item .mat-line{font-size:30px}
 
 
 @media screen and (max-width: 1620px) {
