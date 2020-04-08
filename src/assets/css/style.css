@@ -238,22 +238,9 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .profile-area .profileinfo h2{margin: 0; padding: 0;text-transform: capitalize;color: var(--c-t-bg-w);font-size: var(--base-font-size); font-family: var(--main-font);margin-bottom: 8px;}
 .profile-area .profileinfo p{margin: 0; padding: 0;text-transform: capitalize;color: var(--c-t-bg-w); font-size: 12px; font-family: var(--main-light-font);}
 .myaccount .mat-tab-list {margin-top: 15px;}
-.myaccount .mat-tab-label {
-  height: auto !important;
-  padding: 12px 10px !important;
-  min-width: 160px !important;
-  text-align: left !important;
-  display: flex !important;
-  justify-content: flex-start !important;
-  align-items: center !important;
-  white-space: nowrap !important;
-  position: relative !important;
-  max-width: 180px !important;
-  flex-wrap: wrap !important;
-  color: var(--c-t-bg-w);
-  opacity: 1!important;
-}
+.myaccount .mat-tab-label {height: auto !important;padding: 12px 10px !important;min-width: 160px !important;text-align: left !important;display: flex !important;justify-content: flex-start !important;align-items: center !important;white-space: nowrap !important;position: relative !important;max-width: 180px !important;flex-wrap: wrap !important;color: var(--c-t-bg-w);opacity: 1!important;}
 .myaccount .mat-tab-label .mat-tab-label-content {white-space: initial;}
+.myaccount .mat-card-title {display: block;margin-bottom: 20px;}
 
 @media screen and (max-width: 1620px) {
 .listingnewstyle mat-toolbar-row.searchbar{justify-content:center!important;flex-wrap:wrap;height:auto}
