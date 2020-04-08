@@ -103,9 +103,12 @@
                           <mat-option *ngFor="let city of allCities;" value="{{ city }}">{{ city }}</mat-option>
                         </mat-select>
                     </mat-form-field>
-      
-                    <button mat-raised-button class="btnblue">Update</button>
-                    <button mat-raised-button class="btnredclsnew">Cancel</button>
+                    <span class="content_header_wrapper">
+                      <span class="buttonsetToolbar">
+                        <button class="singleButton btnblue" mat-raised-button>Update</button>
+                        <button class="singleButton btnred" mat-raised-button>Cancel</button>
+                      </span>
+                    </span>                    
                   </form>
                 </mat-tab>
                 <!-- change password form start here -->
@@ -147,8 +150,12 @@
                           *ngIf="!changePasswordFormGroup.controls['confirmPassword'].valid && changePasswordFormGroup.controls['confirmPassword'].touched">
                           Password does not match </mat-error>
                     </mat-form-field>
-                    <button mat-raised-button class="btnblue">Update</button>
-                    <button mat-raised-button class="btnredclsnew">Cancel</button>
+                    <span class="content_header_wrapper">
+                      <span class="buttonsetToolbar">
+                        <button class="singleButton btnblue" mat-raised-button>Update</button>
+                        <button class="singleButton btnred" mat-raised-button>Cancel</button>
+                      </span>
+                    </span>                    
                   </form>
                 </mat-tab>
               </mat-tab-group>
