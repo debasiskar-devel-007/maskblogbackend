@@ -33,7 +33,7 @@ tr.mat-header-row{background:var(--c-t-alt-links)}
 .mat-sort-header-button{text-transform:uppercase}
 th.mat-header-cell{color:var(--c-t-sub-primary);text-transform:uppercase;font-family:"NunitoRegular";font-size:14px}
 tr td br{display:none}
-td.mat-cell{color:#465157;font-family:"NunitoLight"}
+td.mat-cell{color:#465157;font-family:"NunitoLight";line-height: 2;}
 tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 
 .mat-paginator{background:#105d9f!important;color:var(--c-t-bg-w)!important}
