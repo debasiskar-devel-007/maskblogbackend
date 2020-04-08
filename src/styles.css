@@ -107,3 +107,6 @@ body { margin: 0; font-family: "NunitoRegular"; }
 .listingnewstyle .tablewrapper tr th span{display: flex;align-items: center;}
 .generalcls.mat-card{background-color: transparent;}
 
+.mat-select{font-family: var(--main-font);}
+.mat-card {font-family: var(--main-font),sans-serif;}
+
