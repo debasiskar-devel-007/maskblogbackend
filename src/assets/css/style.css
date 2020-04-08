@@ -109,7 +109,8 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
   border-radius: 0!important;margin: 0 2px!important;font-family: 'NunitoRegular', sans-serif;}
 
 
-.generalcls .content_header_wrapper{display: flex;justify-content: flex-end;align-items: center;}
+.generalcls .content_header_wrapper{display: flex;justify-content: space-between;align-items: center;}
+.generalcls .myaccountwrapper .content_header_wrapper{display: flex;justify-content: flex-end;align-items: center;}
 .generalcls .content_header_wrapper .headerSpan{font-family:'NunitoLight';font-size:24px!important;text-transform:capitalize;color:#535353}
 .generalcls .content_header_wrapper .buttonsetToolbar {width: auto;padding: 0;}
 .generalcls .content_header_wrapper .buttonsetToolbar .mat-raised-button.mat-primary:first-child{margin-left: 0;}
@@ -223,7 +224,7 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .email_wrapper .mat-form-field-appearance-legacy .mat-form-field-underline{height:0}
 .email_wrapper form{padding:16px}
 
-
+.mat-form-field{font-family: var(--main-font) !important;}
 .myaccount .myaccountwrapper{width: 550px; margin: 50px auto; display: block;box-shadow: 0 0 10px rgba(0,0,0,0.6);
   -moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);-o-box-shadow: 0 0 10px rgba(0,0,0,0.6);}
 .myaccount .mat-tab-labels {display: flex;flex-wrap: wrap;flex-direction: column;}
@@ -233,14 +234,20 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .myaccount .mattabgroup .mat-tab-header {background-color: var(--c-t-alt-links);width: 180px;flex-wrap: wrap;}
 .profile-area-wrapper{background-color: var(--c-t-bg-w);display: block;}
 .profile-area {background-color: var(--c-t-deepgray-bg);width: 170px;height: auto;display: block;padding: 20px 5px 20px;}
-.profile-area .profileimg{width: 80px; height: 80px;display: block;margin: 0 auto; overflow: hidden; position: relative;background: #fff;border-radius: 50px;}
-.profile-area .profileimg img{width: 100%; display: block;}
+.profile-area .profileimg{width: 80px; height: 80px;display: block;margin: 0 auto; overflow: hidden; position: relative;background: #fff;border-radius: 50px;border: 2px solid #fff;    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  -moz-box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);-webkit-box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);-o-box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);}
+  .profile-area .profileimg img{width: 100%; display: block;}
 .profile-area .profileinfo{text-align: center;margin-top: 10px;display: block;}
-.profile-area .profileinfo h2{margin: 0; padding: 0;text-transform: capitalize;color: var(--c-t-bg-w);font-size: var(--base-font-size); font-family: var(--main-font);margin-bottom: 8px;}
+.profile-area .profileinfo h2{margin: 0; padding: 0;text-transform: capitalize;color: var(--c-t-bg-w);font-size: var(--base-font-size); font-family: var(--main-font);margin-bottom: 10px;}
 .profile-area .profileinfo p{margin: 0; padding: 0;text-transform: capitalize;color: var(--c-t-bg-w); font-size: 12px; font-family: var(--main-light-font);margin-top: 5px;}
 .myaccount .mat-tab-list {margin-top: 15px;}
-.myaccount .mat-tab-label {height: auto !important;padding: 12px 10px !important;min-width: 160px !important;text-align: left !important;display: flex !important;justify-content: flex-start !important;align-items: center !important;white-space: nowrap !important;position: relative !important;max-width: 180px !important;flex-wrap: wrap !important;color: var(--c-t-bg-w);opacity: 1!important;}
+.myaccount .mat-tab-label {height: auto !important;padding: 12px 5px !important;min-width: 160px !important;text-align: left !important;display: flex !important;justify-content: flex-start !important;align-items: center !important;white-space: nowrap !important;position: relative !important;max-width: 180px !important;flex-wrap: wrap !important;color: var(--c-t-bg-w);opacity: 1!important;}
 .myaccount .mat-tab-label .mat-tab-label-content {white-space: initial;font-family: var(--main-font);}
+.myaccount .mat-tab-label .mat-tab-label-content svg{margin-right: 5px;color: white;fill: currentColor;
+  vertical-align: middle;    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  -moz-box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  -o-box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);}
 .myaccount .mat-card-title {display: block;margin-bottom: 20px;}
 
 @media screen and (max-width: 1620px) {
