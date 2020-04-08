@@ -46,7 +46,7 @@ export class ListAdminComponent implements OnInit {
 
 
     // use for Table Detail Field Skip 
-  adminDataList_skip: any = ['_id', 'name','type', 'password','created_at','updated_at','id'];
+  adminDataList_skip: any = ['_id', 'name','type', 'password','created_at','updated_at','id','created_at'];
 
 
    // use for Table Detail inside the modal image path 

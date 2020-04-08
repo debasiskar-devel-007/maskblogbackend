@@ -41,6 +41,8 @@ export class DashboardAdminComponent implements OnInit {
     // use for Table Detail Field Skip 
   adminDataList_skip: any = ["_id", "userId", "created_at", "updated_at", "image", "metatitle", "metadesc", "description", "credentials", "blogs_file", "blogs_image","blogtitle_search","author_search","video","blogcat","profile_picture","tagsearch","featured","description_html","blogcat","created_at","profile_picture","tagsearch"];
 
+  adminDataList_detail_skip:any=['_id','password','updated_at','id',"description_html","blogcat","created_at","profile_picture","tagsearch"]
+
 
    // use for Table Detail inside the modal image path 
 //    adminDataList_skip_detail_datatype: any = [{
@@ -110,7 +112,6 @@ sortdata:any={
   adminDataList_detail_datatype:any;
 
   custom_link:any;
-  adminDataList_detail_skip:any=['_id','password','updated_at','id']
   brandarray: any = [];
   notpendingapplication_view: any = [];
   adminlist: any = [];
