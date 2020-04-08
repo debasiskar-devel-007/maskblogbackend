@@ -34,11 +34,20 @@ const routes: Routes = [
   {path:'reset-password/:token',component:ResetPasswordComponent},
 
   {path:'forget-password',component:ForgetPasswordComponent},
+  
 
 
   //..............admin section route...................//
 
-  {path:'dashboard',component:DashboardAdminComponent,canActivate: [AuthGuard]},
+  {path:'dashboard',component:DashboardAdminComponent,canActivate: [AuthGuard],
+  resolve: { adminlist: ResolveService },
+  data: {
+    requestcondition: {
+      source: 'blogs_desc_priority',
+      condition: {}
+    },
+    endpoint: 'datalist'
+  },},
 
   {path:'admin/add',component:AddEditAdminComponent,canActivate: [AuthGuard]},
 
