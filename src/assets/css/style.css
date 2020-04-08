@@ -209,7 +209,7 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .cdk-overlay-pane .mat-dialog-container lib-dialog-box{display:block;background:#f9f9f9;position:relative;z-index:20;border-radius:0;color:#000;box-shadow:none;position:relative;padding:15px;-moz-box-shadow:inset 0 0 10px #000;-webkit-box-shadow:inset 0 0 10px #000}
 .cdk-overlay-pane .mat-dialog-container lib-dialog-box .mat-dialog-title{background-color:#151519;padding:15px;margin-bottom:15px;text-align:center;color:#fff;font-size:24px}
 .cdk-overlay-pane .mat-dialog-container lib-dialog-box p{display:block;text-align:center;margin:0;padding:0;font-size:16px;color:#333;font-family:'Helvetica-Normal';white-space:normal;word-break:break-word}
-.cdk-overlay-pane .mat-dialog-container lib-dialog-box .mat-button{color:#fff;font-size:30px;text-transform:uppercase;font-family:'NunitoRegular';text-decoration:none;display:inline-block;padding:10px 15px 5px;border-radius:0;background-color:#fb4a32}
+.cdk-overlay-pane .mat-dialog-container lib-dialog-box .mat-button{color:#fff;font-size:30px;text-transform:uppercase;font-family:'NunitoRegular';text-decoration:none;display:inline-block;padding:10px 15px 5px;border-radius:0;background-color:var(--c-t-bg-secondary)}
 .cdk-overlay-pane .mat-dialog-container lib-dialog-box .mat-button+.mat-button{color:#fff;font-size:30px;text-transform:uppercase;font-family:'NunitoRegular';text-decoration:none;display:inline-block;padding:10px 15px 5px;border-radius:0!important;background-color:#12c3e4}
 .cdk-overlay-pane .mat-dialog-container lib-dialog-box .mat-dialog-actions{-webkit-flex-wrap: wrap;-webkit-box-align: center;align-items: center;margin: 0 auto;display: block;text-align: center;}
 .cdk-global-scrollblock{top:0!important}
@@ -229,12 +229,12 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
   -webkit-align-items: center;align-items: center;-ms-flex-pack:end;justify-content:flex-end;padding:0}
 .generalmodalcls .mat-dialog-actions{padding:8px 0;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;flex-wrap: wrap;  -webkit-flex-wrap: wrap;min-height:52px;-webkit-box-align: center;-moz-box-align: center;-ms-flex-align: center;-webkit-box-align: center;-moz-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;margin-bottom:0;justify-content:center}
 .generalmodalcls .mat-dialog-actions button{margin:2px}
-.generalmodalcls .btnredcls{color:#fff;font-size:20px;text-transform:uppercase;font-family:'NunitoRegular';text-decoration:none;display:inline-block;padding:10px 15px 5px;border-radius:0;background-color:#fb4a32}
+.generalmodalcls .btnredcls{color:#fff;font-size:20px;text-transform:uppercase;font-family:'NunitoRegular';text-decoration:none;display:inline-block;padding:10px 15px 5px;border-radius:0;background-color:var(--c-t-bg-secondary)}
 .generalmodalcls .btnbluecls{color:#fff;font-size:20px;text-transform:uppercase;font-family:'NunitoRegular';text-decoration:none;display:inline-block;padding:10px 15px 5px;border-radius:0!important;background-color:#12c3e4}
 .generalmodalcls .logowrapperouter{background-color:#151519;padding:15px;margin-bottom:15px}
 .generalmodalcls .logowrapper{text-align:center;width:350px;margin:0 auto!important}
 .generalmodalcls .infomodal{max-width:96vw}
-.generalmodalcls h2{display:block;text-align:center;margin:0;padding:0;font-size:30px;color:#fb4a32;font-family:NunitoRegular}
+.generalmodalcls h2{display:block;text-align:center;margin:0;padding:0;font-size:30px;color:var(--c-t-bg-secondary);font-family:NunitoRegular}
 .generalmodalcls p{display:block;text-align:center;margin:0;padding:0;font-size:16px;color:#333;font-family:'Helvetica-Normal'}
 .generalmodalcls h3{display:block;text-align:center;margin:0;padding:10px 0 15px;font-size:18px;color:#111;font-family:Helvetica-Normal;font-weight:400}
 .generalmodalcls .mat-form-field-appearance-legacy .mat-form-field-infix{width:auto;padding:0 15px!important;height:36px!important;background:#e1e0e6!important;margin:5px 0;height:50px!important}
@@ -266,7 +266,7 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
     border-radius: 0!important;
     margin: 0 2px!important;
     font-family: 'NunitoRegular', sans-serif;
-    background-color: #fb4a32;
+    background-color: var(--c-t-bg-secondary);
    
 }
 
@@ -360,7 +360,7 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
     border-radius: 0!important;
     margin: 0 2px!important;
     font-family: 'NunitoRegular', sans-serif;
-    background-color: #fb4a32;
+    background-color: var(--c-t-bg-secondary);
 }
 .cdk-overlay-pane bottom-sheet .mat-nav-list a.mat-list-item:not(:first-child):not(:last-child){color:#fff;font-size:30px;text-transform:uppercase;font-family:'NunitoRegular';text-decoration:none;display:inline-block;padding:10px 15px 5px;border-radius:0;background-color:#fba732}
 .cdk-overlay-pane bottom-sheet .mat-nav-list a.mat-list-item .mat-line{font-size:14px}
