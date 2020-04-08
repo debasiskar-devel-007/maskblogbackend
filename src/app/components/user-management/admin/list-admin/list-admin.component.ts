@@ -113,7 +113,7 @@ sortdata:any={
   adminDataList_detail_datatype:any;
 
   custom_link:any;
-  adminDataList_detail_skip:any=['_id','password']
+  adminDataList_detail_skip:any=['_id','password','updated_at','id']
   brandarray: any = [];
   notpendingapplication_view: any = [];
   adminlist: any = [];
