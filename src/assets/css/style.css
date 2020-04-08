@@ -227,7 +227,7 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
   -moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);-o-box-shadow: 0 0 10px rgba(0,0,0,0.6);}
 .myaccount .mat-tab-labels {display: flex;flex-wrap: wrap;flex-direction: column;}
 .myaccount .mat-tab-group {display: flex;flex-direction: row;margin-top: -16px;}
-.myaccount .mat-tab-body-wrapper {margin-top: -33%;padding: 0 30px;}
+.myaccount .mat-tab-body-wrapper {margin-top: -33%;padding: 0 30px 30px;}
 .myaccount .mat-form-field {width: 100%;}
 .myaccount .mattabgroup .mat-tab-header {background-color: var(--c-t-alt-links);}
 .profile-area-wrapper{background-color: var(--c-t-bg-w);}
