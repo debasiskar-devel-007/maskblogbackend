@@ -28,7 +28,7 @@ public configData: any = {
       prefix: "blogs-image_",
       formSubmit: false,
       conversionNeeded: 0,
-      bucketName: "crmfiles.influxhostserver"
+      bucketName:"crmfiles.influxhostserver"
     }
 
 // public mask:any=Object.assign(this.configData,{bucketname:"crmfiles.influxhostserver"});
@@ -45,7 +45,7 @@ public configData: any = {
       bucketName: "crmfiles.influxhostserver"
     }
   constructor(public router:Router,public activatedRoute:ActivatedRoute) {
-
+     console.log("ggggg",this.configData);
     
    }
 
