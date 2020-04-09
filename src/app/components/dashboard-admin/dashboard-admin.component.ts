@@ -9,6 +9,7 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./dashboard-admin.component.css']
 })
 export class DashboardAdminComponent implements OnInit {
+  public allData:any=[];
    public value:any=[];
   public status: any = [{val: 1, name: 'Active'}, {val: 0, name: 'Inactive'}];
 
@@ -125,61 +126,64 @@ sortdata:any={
   constructor(public activatedRoute:ActivatedRoute,public httpService:HttpService,private cookieService: CookieService) {
     //   this.cookieService.set('jwttoken','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJleHAiOjE1ODU2NTM1MzksImlhdCI6MTU4NTU2NzEzOX0.ErmNEt1IOnbKQMfTveF2Tt0PY0TprflzQ1DngaGGUhA');
       this.jwttoken=this.cookieService.get('jwtToken');
+      this.datasource = '';
+      let endpoint='getblogmanagementlistdata';
+      let endpointc='getblogmanagementlistdata-count';
+      let data:any={
+          "condition":{
+              "limit":10,
+              "skip":0
+          },
+      sort:{
+          "type":'desc',
+          "field":'priority'
+      }
+  
+      }
+          this.httpService.getDataforBlogListApi1(endpointc, data).subscribe((res:any) => {
+              // console.log('in constructor');
+              // console.log(result);
+              this.date_search_source_count =res.count;
+              //console.warn('blogData c',res);
+  
+          }, error => {
+              console.log('Oooops!');
+          });
+  
+          this.httpService.getDataforBlogListApi1(endpoint,data).subscribe((res:any) => {
+             
+              this.adminDataList =res.results.res;
+  
+          }, error => {
+              console.log('Oooops!');
+          });
+  
+  
+  
+  
+          this.activatedRoute.data.forEach(res=>{
+              let result:any=res;
+              // this.adminDataList=result.adminlist.res;
+              this.allData = result.adminlist.res;
+              for (let i in this.allData) {
+                this.value.push(
+                  { 'name': this.allData[i].blogcategory, val: this.allData[i].blogcategory }
+                  );
+              
+              }
+              // console.log(this.adminDataList)    
+          
+          })
+  
+  
+    }
 
 
-  }
+  
 
   ngOnInit() {
-
-    this.datasource = '';
-    let endpoint='getblogmanagementlistdata';
-    let endpointc='getblogmanagementlistdata-count';
-    let data:any={
-        "condition":{
-            "limit":10,
-            "skip":0
-        },
-    sort:{
-        "type":'desc',
-        "field":'priority'
-    }
-
-    }
-        this.httpService.getDataforBlogListApi1(endpointc, data).subscribe((res:any) => {
-            // console.log('in constructor');
-            // console.log(result);
-            this.date_search_source_count =res.count;
-            //console.warn('blogData c',res);
-
-        }, error => {
-            console.log('Oooops!');
-        });
-
-        this.httpService.getDataforBlogListApi1(endpoint,data).subscribe((res:any) => {
-           
-            this.adminDataList =res.results.res;
-
-        }, error => {
-            console.log('Oooops!');
-        });
-
-
-
-
-        this.activatedRoute.data.forEach(res=>{
-            let result:any=res;
-            this.adminDataList=result.adminlist.res;
-            for (let i in this.adminDataList) {
-              this.value.push(
-                { 'name': this.adminDataList[i].blogcategory, val: this.adminDataList[i].blogcategory }
-                );
-            
-            }
-            // console.log(this.adminDataList)    
-        
-        })
-
-
   }
+
+   
 
 }
