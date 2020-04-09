@@ -302,7 +302,7 @@ height: auto;display: flex;align-items: center;flex-wrap: wrap;}
 .AddEditBlog h1{font-family:'NunitoRegular';font-size:24px!important;margin-bottom:20px!important;background:linear-gradient(45deg,#363636,#08b1e7);text-align:center;padding:14px 18px 18px;color:var(--c-t-bg);text-transform:uppercase}
 .AddEditBlog form h1{background:none;color:var(--c-t-bg-zblack);padding: 0 !important;margin: 0;}
 .AddEditBlog .mat-card{padding:0!important;background:transparent}
-.AddEditBlog .mat-toolbar.mat-primary{font-family:'NunitoRegular';font-size:24px!important;width:100%;margin-bottom:40px!important;background:linear-gradient(45deg,#363636,#08b1e7);padding:14px 18px;color:#fff;text-transform:uppercase}
+.AddEditBlog .mat-toolbar.mat-primary{font-family:'NunitoRegular';font-size:24px!important;width:100%;margin-bottom:20px!important;background:linear-gradient(45deg,#363636,#08b1e7);padding:14px 18px;color:#fff;text-transform:uppercase}
 .AddEditBlog .submitbtn{border-radius:0;background:var(--c-t-primary-btn_title);min-width:64px;margin:0 auto!important;display:block;font-family:'NunitoRegular';font-size:20px}
 .AddEditBlog .uploadfilecontainer{width:100%!important;margin:0 auto}
 .AddEditBlog .files-view{width:100%!important;margin:16px}
@@ -320,7 +320,7 @@ height: auto;display: flex;align-items: center;flex-wrap: wrap;}
 .AddEditBlog .files-view .mat-card img{max-width:inherit;margin:0;width:100%;object-fit:scale-down;height:100%}
 .AddEditBlog .files-view .mat-card .viewUrlcontent{background-color:#dbdbdb;margin-top:16px;padding-top:10px;border-top:2px solid #1297c1}
 .AddEditBlog .files-view .mat-card .viewUrlcontent .mat-card-header{justify-content:center}
-.AddEditBlog lib-addedit-blogmanagement mat-label{line-height: 18px; font-size: 14px;margin-bottom: 10px;display: block;}
+.AddEditBlog .formspan mat-label{line-height: 18px; font-size: 14px;margin-bottom: 10px;display: block;}
 
 
 /* lib-preview-files */
