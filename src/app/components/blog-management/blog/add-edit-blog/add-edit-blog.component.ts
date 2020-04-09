@@ -29,7 +29,6 @@ public configData: any = {
       formSubmit: false,
       conversionNeeded: 0,
       bucketName: "crmfiles.influxhostserver"
-  
     }
 
 // public mask:any=Object.assign(this.configData,{bucketname:"crmfiles.influxhostserver"});
@@ -51,7 +50,7 @@ public configData: any = {
    }
 
   ngOnInit() {
-    console.log("gggggg",this.configData)
+    // console.log("gggggg",this.configData)
     
     this.activatedRoute.params.subscribe(params => {
       if (params._id) {
