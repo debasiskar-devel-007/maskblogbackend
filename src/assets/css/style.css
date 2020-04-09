@@ -412,7 +412,7 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .signupfooter a{font-family: var(--main-font); font-size: var(--base-font-size);color:var(--c-t-bg-w);}
 .signupfooter a:last-child{padding-right: 0px !important;}
 .login_wrapper .mat-form-field-appearance-legacy .mat-form-field-label span{color:var(--c-t-bg-zblack); font-family: var(--main-font); font-size: var(--base-font-size);padding-left: 10px;}
-.login_wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {height: 36px;}
+/* .login_wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {height: 36px;} */
 .login_wrapper .from {padding: 16px 42px;}
 .login_wrapper input.mat-input-element {width: 96%;line-height: 26px;margin: 0 auto;
   display: block;}
