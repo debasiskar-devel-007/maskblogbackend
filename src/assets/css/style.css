@@ -294,6 +294,10 @@ height: auto;display: flex;align-items: center;flex-wrap: wrap;}
 .mat-form-field-appearance-legacy .mat-form-field-underline {bottom: 0 !important;}
 .mat-form-field-appearance-legacy .mat-form-field-subscript-wrapper {margin-top: 15px !important;}
 
+.cdk-overlay-pane.custom-modalbox confirmdialog .mat-dialog-content .mat-card #dialogdata_id{display:none;}
+.cdk-overlay-pane.custom-modalbox confirmdialog .mat-dialog-content .mat-card #dialogdatadescription_html{display:none;}
+
+
 /* AddEditBlog */
 
 .AddEditBlog .mat_chip {display: block;}
@@ -329,13 +333,16 @@ height: auto;display: flex;align-items: center;flex-wrap: wrap;}
 .cdk-overlay-pane lib-preview-files .mat-dialog-content img{max-width:100%;max-height:inherit;overflow:auto;height:auto;width:inherit;margin-top:0!important}
 .cdk-overlay-pane lib-preview-files .mat-dialog-actions button{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-bg-secondary)}
 
+.multipledeleteandupdatebuttan .mat-raised-button:first-child{margin-left:0px !important}
+.multipledeleteandupdatebuttan .mat-raised-button:last-child{margin-right:0px !important}
 
-
-
-
-
-
-
+.multipledeleteandupdatebuttan .mat-raised-button:first-child{
+position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:2px;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-bg-secondary)
+}
+.multipledeleteandupdatebuttan .mat-raised-button:last-child{
+  position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:2px;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-primary-btn_title);
+}
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {background-color: #f9594d !important;}
 
 @media screen and (max-width: 1620px) {
 .listingnewstyle mat-toolbar-row.searchbar{justify-content:center!important;flex-wrap:wrap;height:auto}
