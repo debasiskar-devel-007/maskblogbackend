@@ -39,7 +39,7 @@ export class DashboardAdminComponent implements OnInit {
 
 
     // use for Table Detail Field Skip 
-  adminDataList_skip: any = ["_id", "userId", "created_at", "updated_at", "image", "metatitle", "metadesc", "description", "credentials", "blogs_file", "blogs_image","blogtitle_search","author_search","video","blogcat","profile_picture","tagsearch","featured","description_html","blogcat","created_at","profile_picture","tagsearch"];
+  adminDataList_skip: any = ["_id", "userId", "created_at", "updated_at", "image", "metatitle", "metadesc", "description", "credentials", "blogs_file", "blogs_image","blogtitle_search","author_search","video","blogcat","profile_picture","tagsearch","featured","description_html","blogcat","created_at","profile_picture","tagsearch","author"];
 
   adminDataList_detail_skip:any=['_id','password','updated_at','id',"description_html","blogcat","created_at","profile_picture","tagsearch"]
 
@@ -92,7 +92,7 @@ sortdata:any={
 
 
   search_settings:any={
-    textsearch: [{ label: "Search By Blog Title", field: 'blogtitle_search' },{ label: "Search By Author", field: 'author_search' },{ label: "Search By Tags", field: 'tagsearch' }],
+    textsearch: [{ label: "Search By Blog Title", field: 'blogtitle_search' },{ label: "Search By Tags", field: 'tagsearch' }],
 
     selectsearch: [
       { label: 'Status', field: 'status', values: [{ val: 1, name: "Active" }, { val: 0, name: 'Inactive' }]},{label:"Search By Blog Category",field:'blogcategory',values:this.value},
@@ -100,7 +100,7 @@ sortdata:any={
         label: 'Search By Blog Featured', field: 'featured', values: [{ val: 1, name: "Yes" }, { val: 0, name: 'No' }]
       },
       {
-        label: 'Search By Blog Website', field: 'website', values: [{ val: 1, name: "Mask Blog 1" }, { val: 2, name: 'Mask Blog 2' },{val:3,name:"Mask Blog 3"}]
+        label: 'Search By Blog Website', field: 'website', values: [{ val: "Mask Blog 1", name: "Mask Blog 1" }, { val: "Mask Blog 2", name: 'Mask Blog 2' },{val:"Mask Blog 3",name:"Mask Blog 3"}]
       }
     ]
 
