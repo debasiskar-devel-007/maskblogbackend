@@ -377,6 +377,8 @@ position:relative!important;font-size:14px!important;text-transform:uppercase!im
   position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:2px;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-primary-btn_title);
 }
 .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {background-color: #f9594d !important;}
+.myaccount .mat-tab-group .mat-form-field-appearance-legacy .mat-form-field-infix {line-height: 23px;}
+
 
 @media screen and (max-width: 1620px) {
 .listingnewstyle mat-toolbar-row.searchbar{justify-content:center!important;flex-wrap:wrap;height:auto}
