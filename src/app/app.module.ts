@@ -29,7 +29,7 @@ import { LoginModule } from 'login-lib-influxiq';
 import { CKEditorModule } from 'ngx-ckeditor';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { BlogModule } from 'blog-lib-influxiq'
+import { BlogModule } from 'blog-lib-influxiq';
 import { CookieService } from 'ngx-cookie-service';
 import { AccountSettingsComponent } from './components/account-settings/account-settings.component';
 // http-loader section
