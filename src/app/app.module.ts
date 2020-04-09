@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGuard } from './services/auth.guard';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +32,12 @@ import { CommonModule } from '@angular/common';
 import { BlogModule } from 'blog-lib-influxiq'
 import { CookieService } from 'ngx-cookie-service';
 import { AccountSettingsComponent } from './components/account-settings/account-settings.component';
+// http-loader section
+import { HttpLoaderComponent } from './common/http-loader/http-loader.component';
+import { LoaderService } from './services/loader.service';
+import { LoaderInterceptor } from './common/loader.interceptor';
+// End http-loader section
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +53,9 @@ import { AccountSettingsComponent } from './components/account-settings/account-
     AddEditBlogComponent,
     ListBlogsComponent,
     DashboardAdminComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+
+    HttpLoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +71,8 @@ import { AccountSettingsComponent } from './components/account-settings/account-
     CKEditorModule
   ],
   
-  providers: [CookieService,AuthGuard],
+  providers: [CookieService,AuthGuard,LoaderService,
+    { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   entryComponents:[]

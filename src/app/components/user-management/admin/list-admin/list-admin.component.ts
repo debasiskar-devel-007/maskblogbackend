@@ -11,8 +11,9 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./list-admin.component.css']
 })
 export class ListAdminComponent implements OnInit {
+ 
 
-   
+
   public status: any = [{val: 1, name: 'Active'}, {val: 0, name: 'Inactive'}];
 
    // use for status search

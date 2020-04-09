@@ -109,4 +109,5 @@ body { margin: 0; font-family: "NunitoRegular"; }
 
 .mat-select{font-family: var(--main-font);}
 .mat-card {font-family: var(--main-font),sans-serif;}
-.mat-form-field {line-height: 2 !important;}
+.mat-form-field {line-height: 18px !important;}
+.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label, .mat-form-field-empty.mat-form-field-label {padding-left: 14px;}
