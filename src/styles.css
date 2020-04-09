@@ -111,3 +111,29 @@ body { margin: 0; font-family: "NunitoRegular"; }
 .mat-card {font-family: var(--main-font),sans-serif;}
 .mat-form-field {line-height: 20px !important;}
 .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label, .mat-form-field-empty.mat-form-field-label {padding-left: 14px;}
+
+.mat-column-date_added{min-width: 80px !important;}
+.mat-column-website{min-width: 130px !important;}
+.mat-column-author{min-width: 150px !important;}
+.mat-column-blogtitle{min-width: 200px !important;}
+.mat-column-blogtitle span{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:20px}
+.mat-column-description_html span{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:20px}
+.mat-column-tags span{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:20px}
+  
+
+/* 
+.mat-column-date_added {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 10% !important;
+  width: 10% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  word-break: break-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+} */
