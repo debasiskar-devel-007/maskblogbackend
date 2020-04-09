@@ -112,11 +112,15 @@ body { margin: 0; font-family: "NunitoRegular"; }
 .mat-form-field {line-height: 20px !important;}
 .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label, .mat-form-field-empty.mat-form-field-label {padding-left: 14px;}
 
-.mat-column-date_added{min-width: 80px !important;}
-.mat-column-website{min-width: 130px !important;}
-.mat-column-author{min-width: 150px !important;}
+
+/* mat-table-column-width */
+
 .mat-column-blogtitle{min-width: 200px !important;}
 .mat-column-blogtitle span{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:20px}
+.mat-column-blogcategory{min-width: 140px;}
+.mat-column-website{min-width: 130px !important;}
+.mat-column-date_added{min-width: 80px !important;}
+.mat-column-author{min-width: 150px !important;}
 .mat-column-description_html span{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:20px}
 .mat-column-tags span{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:20px}
   
