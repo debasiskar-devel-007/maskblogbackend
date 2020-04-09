@@ -331,10 +331,12 @@ height: auto;display: flex;align-items: center;flex-wrap: wrap;}
 
 
 
-
-
-
-
+.multipledeleteandupdatebuttan button .mat-raised-button:first-child{
+position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-bg-secondary)
+}
+.multipledeleteandupdatebuttan button .mat-raised-button:last-child{
+  position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-primary-btn_title);
+}
 
 
 @media screen and (max-width: 1620px) {
