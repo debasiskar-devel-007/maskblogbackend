@@ -296,8 +296,10 @@ height: auto;display: flex;align-items: center;flex-wrap: wrap;}
 
 /* AddEditBlog */
 
+.AddEditBlog .mat_chip {display: block;}
+.AddEditBlog .uploadfilecontainer {margin: 10px auto;}
 .AddEditBlog h1{font-family:'NunitoRegular';font-size:24px!important;margin-bottom:40px!important;background:linear-gradient(45deg,#363636,#08b1e7);text-align:center;padding:14px 18px 18px;color:var(--c-t-bg);text-transform:uppercase}
-.AddEditBlog form h1{background:none;color:var(--c-t-bg-zblack)}
+.AddEditBlog form h1{background:none;color:var(--c-t-bg-zblack);padding: 0 !important;margin: 0;}
 .AddEditBlog .mat-card{padding:0!important;background:transparent}
 .AddEditBlog .mat-toolbar.mat-primary{font-family:'NunitoRegular';font-size:24px!important;width:100%;margin-bottom:40px!important;background:linear-gradient(45deg,#363636,#08b1e7);padding:14px 18px;color:#fff;text-transform:uppercase}
 .AddEditBlog .submitbtn{border-radius:0;background:var(--c-t-primary-btn_title);min-width:64px;margin:0 auto!important;display:block;font-family:'NunitoRegular';font-size:20px}
