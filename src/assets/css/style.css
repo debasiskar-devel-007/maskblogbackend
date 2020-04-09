@@ -304,6 +304,52 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .AddEditBlog .files-view .mat-card .mat-card-title{font-size:16px;font-family:'NunitoRegular';width:100%;padding:0 10px;box-sizing:border-box;color:var(--c-t-primary);text-transform:capitalize}
 .AddEditBlog .button-group{width:100%!important}
 
+.AddEditBlog .files-view { height: auto !important;display: flex;align-items: stretch;flex-wrap: wrap;justify-content: center;}
+.AddEditBlog .files-view .mat-card{
+  flex: 1 1 18%;
+    display: flex;
+    flex-direction: column;
+    margin: 1% !important;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #c9c9c9;
+    padding: 10px !important;
+}
+.AddEditBlog .files-view .mat-card .viewUrlwrapper{
+  width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+    background: #fff;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    border-top: 1px solid #d3d4d4;
+    border-left: 1px solid #d3d4d4;
+    border-right: 5px solid #0eb8ef;
+    border-bottom: 7px solid #0eb8ef;
+}
+
+.AddEditBlog .files-view .mat-card .viewUrlcontent .mat-card-content{margin-bottom:5px;}
+
+    .AddEditBlog .files-view .mat-card img{max-width: inherit;
+    margin: 0;
+    width: 100%;
+    object-fit: scale-down;
+    height: 100%;}
+    .AddEditBlog .files-view .mat-card .viewUrlcontent{    background-color: #dbdbdb;
+    margin-top: 16px;
+    padding-top: 10px;
+    border-top: 2px solid #1297c1;}
+    .AddEditBlog .files-view .mat-card .viewUrlcontent .mat-card-header{justify-content: center;}
+
+
+.mat-table thead .mat-column-Actions, .mat-table tbody .mat-column-Actions{    position: sticky;}
+
+
+
+
+
 
 
 @media screen and (max-width: 1620px) {
