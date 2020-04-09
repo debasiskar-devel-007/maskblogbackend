@@ -174,6 +174,8 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .listingnewstyle .mat-form-field-appearance-legacy .mat-form-field-underline{height:0}
 .listingnewstyle .mat-form-field-appearance-legacy .mat-form-field-ripple{height:0; display: none;}
 
+/* .mat-table thead .mat-column-Actions, .mat-table tbody .mat-column-Actions{    position: sticky;} */
+
 
 
 .logo_wrapper{cursor:pointer;width:auto;display:block}
@@ -304,96 +306,23 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .AddEditBlog .files-view .mat-card .mat-card-title{font-size:16px;font-family:'NunitoRegular';width:100%;padding:0 10px;box-sizing:border-box;color:var(--c-t-primary);text-transform:capitalize}
 .AddEditBlog .button-group{width:100%!important}
 
-.AddEditBlog .mat-card-actions .mat-raised-button:first-child{
-  position: relative!important;
-    font-size: 14px!important;
-    text-transform: uppercase!important;
-    border: none!important;
-    padding: 5px 10px 10px!important;
-    line-height: 18px!important;
-    color: #fff!important;
-    border-radius: 0!important;
-    margin: 0 2px!important;
-    font-family: 'NunitoRegular',sans-serif;
-    background-color: var(--c-t-bg-w)!important;
-}
-
-.AddEditBlog .button-group .mat-raised-button.mat-primary, .AddEditBlog .mat-card-actions .mat-raised-button.mat-primary{
-  position: relative!important;
-    font-size: 14px!important;
-    text-transform: uppercase!important;
-    border: none!important;
-    padding: 5px 10px 10px!important;
-    line-height: 18px!important;
-    color: #fff!important;
-    border-radius: 0!important;
-    margin: 0 2px!important;
-    font-family: 'NunitoRegular',sans-serif;
-    background-color: var(--c-t-primary-btn_title)!important;
-}
-
-
-
-.AddEditBlog .button-group .mat-raised-button.mat-warn, .AddEditBlog .mat-card-actions .mat-raised-button.mat-warn{
-      position: relative!important;
-    font-size: 14px!important;
-    text-transform: uppercase!important;
-    border: none!important;
-    padding: 5px 10px 10px!important;
-    line-height: 18px!important;
-    color: #fff!important;
-    border-radius: 0!important;
-    margin: 0 2px!important;
-    font-family: 'NunitoRegular',sans-serif;
-    background-color: var(--c-t-bg-secondary);
-}
-
-
-.AddEditBlog .files-view { height: auto !important;display: flex;align-items: stretch;flex-wrap: wrap;justify-content: center;}
-.AddEditBlog .files-view .mat-card{
-  flex: 1 1 18%;
-    display: flex;
-    flex-direction: column;
-    margin: 1% !important;
-    justify-content: center;
-    text-align: center;
-    border: 1px solid #c9c9c9;
-    padding: 10px !important;
-}
-.AddEditBlog .files-view .mat-card .viewUrlwrapper{
-  width: 200px;
-    height: 200px;
-    display: block;
-    margin: 0 auto;
-    background: #fff;
-    position: relative;
-    border-radius: 50%;
-    overflow: hidden;
-    border-top: 1px solid #d3d4d4;
-    border-left: 1px solid #d3d4d4;
-    border-right: 5px solid #0eb8ef;
-    border-bottom: 7px solid #0eb8ef;
-}
-
-.AddEditBlog .files-view .mat-card .viewUrlcontent .mat-card-content{margin-bottom:5px;}
-
-    .AddEditBlog .files-view .mat-card img{max-width: inherit;
-    margin: 0;
-    width: 100%;
-    object-fit: scale-down;
-    height: 100%;}
-    .AddEditBlog .files-view .mat-card .viewUrlcontent{    background-color: #dbdbdb;
-    margin-top: 16px;
-    padding-top: 10px;
-    border-top: 2px solid #1297c1;}
-    .AddEditBlog .files-view .mat-card .viewUrlcontent .mat-card-header{justify-content: center;}
-
-
-.mat-table thead .mat-column-Actions, .mat-table tbody .mat-column-Actions{    position: sticky;}
+.AddEditBlog .mat-card-actions .mat-raised-button:first-child{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:var(--c-t-bg-black)!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-bg-w)!important}
+.AddEditBlog .button-group .mat-raised-button.mat-primary,.AddEditBlog .mat-card-actions .mat-raised-button.mat-primary{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-primary-btn_title)!important}
+.AddEditBlog .button-group .mat-raised-button.mat-warn,.AddEditBlog .mat-card-actions .mat-raised-button.mat-warn{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-bg-secondary)}
+.AddEditBlog .files-view{height:auto!important;display:flex;align-items:stretch;flex-wrap:wrap;justify-content:center}
+.AddEditBlog .files-view .mat-card{flex:1 1 18%;display:flex;flex-direction:column;margin:1%!important;justify-content:center;text-align:center;border:1px solid #c9c9c9;padding:10px!important}
+.AddEditBlog .files-view .mat-card .viewUrlwrapper{width:200px;height:200px;display:block;margin:0 auto;background:#fff;position:relative;border-radius:50%;overflow:hidden;border-top:1px solid #d3d4d4;border-left:1px solid #d3d4d4;border-right:5px solid #0eb8ef;border-bottom:7px solid #0eb8ef}
+.AddEditBlog .files-view .mat-card .viewUrlcontent .mat-card-content{margin-bottom:5px}
+.AddEditBlog .files-view .mat-card img{max-width:inherit;margin:0;width:100%;object-fit:scale-down;height:100%}
+.AddEditBlog .files-view .mat-card .viewUrlcontent{background-color:#dbdbdb;margin-top:16px;padding-top:10px;border-top:2px solid #1297c1}
+.AddEditBlog .files-view .mat-card .viewUrlcontent .mat-card-header{justify-content:center}
 
 
 
 
+
+
+lib-preview-files{}
 
 
 
