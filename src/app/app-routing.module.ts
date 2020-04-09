@@ -47,7 +47,8 @@ const routes: Routes = [
       condition: {}
     },
     endpoint: 'datalist'
-  },},
+  },
+},
 
   {path:'admin/add',component:AddEditAdminComponent,canActivate: [AuthGuard]},
 

@@ -15,6 +15,7 @@ export class AccountSettingsComponent implements OnInit {
 
   isPasswordVisible: Boolean = true;
 
+
   public index: number;
   public user_cookies: any;
   public UpdateForm: FormGroup;

@@ -373,7 +373,7 @@ postdata(requestdata: any) {
     return result;
   }
 
-  getDataforAdminListApi1(endpoint:any,requestdata: any) {
+  getDataforBlogListApi1(endpoint:any,requestdata: any) {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',

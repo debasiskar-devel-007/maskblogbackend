@@ -3,8 +3,6 @@ import { Router,ActivatedRoute } from '@angular/router';
 import { HttpService } from '../../services/http.service';
 import {environment} from '../../../environments/environment';
 import { CookieService } from 'ngx-cookie-service';
-
-
 @Component({
   selector: 'app-dashboard-admin',
   templateUrl: './dashboard-admin.component.html',
@@ -41,7 +39,9 @@ export class DashboardAdminComponent implements OnInit {
 
 
     // use for Table Detail Field Skip 
-  adminDataList_skip: any = ["_id", "userId", "created_at", "updated_at", "image", "metatitle", "metadesc", "description", "credentials", "blogs_file", "blogs_image","blogtitle_search","author_search","video","blogcat","profile_picture","tagsearch","featured"];
+  adminDataList_skip: any = ["_id", "userId", "created_at", "updated_at", "image", "metatitle", "metadesc", "description", "credentials", "blogs_file", "blogs_image","blogtitle_search","author_search","video","blogcat","profile_picture","tagsearch","featured","description_html","blogcat","created_at","profile_picture","tagsearch"];
+
+  adminDataList_detail_skip:any=['_id','password','updated_at','id',"description_html","blogcat","created_at","profile_picture","tagsearch"]
 
 
    // use for Table Detail inside the modal image path 
@@ -112,7 +112,7 @@ sortdata:any={
   adminDataList_detail_datatype:any;
 
   custom_link:any;
-  adminDataList_detail_skip:any=['_id','password','updated_at','id',"description_html","blogcat","created_at","profile_picture","tagsearch"]
+ 
   brandarray: any = [];
   notpendingapplication_view: any = [];
   adminlist: any = [];
@@ -145,7 +145,7 @@ sortdata:any={
     }
 
     }
-        this.httpService.getDataforAdminListApi1(endpointc, data).subscribe((res:any) => {
+        this.httpService.getDataforBlogListApi1(endpointc, data).subscribe((res:any) => {
             // console.log('in constructor');
             // console.log(result);
             this.date_search_source_count =res.count;
@@ -155,7 +155,7 @@ sortdata:any={
             console.log('Oooops!');
         });
 
-        this.httpService.getDataforAdminListApi1(endpoint,data).subscribe((res:any) => {
+        this.httpService.getDataforBlogListApi1(endpoint,data).subscribe((res:any) => {
            
             this.adminDataList =res.results.res;
 

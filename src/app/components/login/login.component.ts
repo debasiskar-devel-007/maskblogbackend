@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   public signUpRouteingUrl: any = {
     "path": "",
-    "buttonName": "Not registered? Request Sign Up Here",
+    "buttonName": "",
     "customLink": "/",
     "customURl": ""
   };

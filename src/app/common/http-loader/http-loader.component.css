@@ -1,0 +1,33 @@
+.progress-loader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  height: 100vh;
+  z-index: 999;
+  width: 100%;
+}
+
+.dot {
+  background: #0FA1D2;
+}
+.dot, .dot:after {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  animation: a 1.5s calc(((var(--i) + var(--o, 0))/var(--n) - 1)*1.5s) infinite;
+}
+.dot:after {
+  --o: 1;
+  background: currentcolor;
+  fill:#F9594D;
+  content: "";
+}
+
+@keyframes a {
+  0%, 50% {
+    transform: scale(0);
+  }
+}

@@ -11,8 +11,9 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./list-admin.component.css']
 })
 export class ListAdminComponent implements OnInit {
+ 
 
-   
+
   public status: any = [{val: 1, name: 'Active'}, {val: 0, name: 'Inactive'}];
 
    // use for status search
@@ -46,7 +47,7 @@ export class ListAdminComponent implements OnInit {
 
 
     // use for Table Detail Field Skip 
-  adminDataList_skip: any = ['_id', 'name','type', 'password','created_at','updated_at','id'];
+  adminDataList_skip: any = ['_id', 'name','type', 'password','created_at','updated_at','id','created_at'];
 
 
    // use for Table Detail inside the modal image path 
