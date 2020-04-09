@@ -304,6 +304,51 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .AddEditBlog .files-view .mat-card .mat-card-title{font-size:16px;font-family:'NunitoRegular';width:100%;padding:0 10px;box-sizing:border-box;color:var(--c-t-primary);text-transform:capitalize}
 .AddEditBlog .button-group{width:100%!important}
 
+.AddEditBlog .mat-card-actions .mat-raised-button:first-child{
+  position: relative!important;
+    font-size: 14px!important;
+    text-transform: uppercase!important;
+    border: none!important;
+    padding: 5px 10px 10px!important;
+    line-height: 18px!important;
+    color: #fff!important;
+    border-radius: 0!important;
+    margin: 0 2px!important;
+    font-family: 'NunitoRegular',sans-serif;
+    background-color: var(--c-t-bg-w)!important;
+}
+
+.AddEditBlog .button-group .mat-raised-button.mat-primary, .AddEditBlog .mat-card-actions .mat-raised-button.mat-primary{
+  position: relative!important;
+    font-size: 14px!important;
+    text-transform: uppercase!important;
+    border: none!important;
+    padding: 5px 10px 10px!important;
+    line-height: 18px!important;
+    color: #fff!important;
+    border-radius: 0!important;
+    margin: 0 2px!important;
+    font-family: 'NunitoRegular',sans-serif;
+    background-color: var(--c-t-primary-btn_title)!important;
+}
+
+
+
+.AddEditBlog .button-group .mat-raised-button.mat-warn, .AddEditBlog .mat-card-actions .mat-raised-button.mat-warn{
+      position: relative!important;
+    font-size: 14px!important;
+    text-transform: uppercase!important;
+    border: none!important;
+    padding: 5px 10px 10px!important;
+    line-height: 18px!important;
+    color: #fff!important;
+    border-radius: 0!important;
+    margin: 0 2px!important;
+    font-family: 'NunitoRegular',sans-serif;
+    background-color: var(--c-t-bg-secondary);
+}
+
+
 .AddEditBlog .files-view { height: auto !important;display: flex;align-items: stretch;flex-wrap: wrap;justify-content: center;}
 .AddEditBlog .files-view .mat-card{
   flex: 1 1 18%;
