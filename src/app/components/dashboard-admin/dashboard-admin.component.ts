@@ -112,7 +112,7 @@ sortdata:any={
   adminDataList_detail_datatype:any;
 
   custom_link:any;
-  adminDataList_detail_skip:any=['_id','password','updated_at','id']
+  adminDataList_detail_skip:any=['_id','password','updated_at','id',"description_html","blogcat","created_at","profile_picture","tagsearch"]
   brandarray: any = [];
   notpendingapplication_view: any = [];
   adminlist: any = [];
@@ -120,7 +120,6 @@ sortdata:any={
   editroute1:any='modeledit';
     jwttoken:any;
   
-
 
 
   constructor(public activatedRoute:ActivatedRoute,public httpService:HttpService,private cookieService: CookieService) {
