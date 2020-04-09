@@ -108,8 +108,8 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 
 .generalcls .content_header_wrapper{display: flex;justify-content: space-between;align-items: center;}
 .generalcls .myaccountwrapper .content_header_wrapper{display: flex;justify-content: flex-end;align-items: center;}
-.generalcls .content_header_wrapper .headerSpan{font-family:'NunitoLight';font-size:24px!important;text-transform:capitalize;color:#535353}
-.generalcls .content_header_wrapper .buttonsetToolbar {width: auto;padding: 0;}
+.generalcls .content_header_wrapper .headerSpan{font-family:'NunitoLight';font-size:24px!important;text-transform:capitalize;color:#535353;margin: 0;line-height: 32px;margin-bottom: 10px;}
+.generalcls .content_header_wrapper .buttonsetToolbar {width: auto;padding: 0;margin-bottom: 10px;height: auto!important;}
 .generalcls .content_header_wrapper .buttonsetToolbar .mat-raised-button.mat-primary:first-child{margin-left: 0;}
 .generalcls .content_header_wrapper .buttonsetToolbar .mat-raised-button.mat-primary:last-child{margin-right: 0 !important;}
 
@@ -124,9 +124,6 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .listingnewstyle tr.mat-row:nth-child(even){background:var(--c-t-bg-w)}
 
 .listingnewstyle mat-toolbar-row.searchbar .mat-form-field-infix{background:var(--c-t-bg-w);border-radius:0;border-top:0;height: 24px;}
-/* .listingnewstyle mat-toolbar-row.searchbar .ng-star-inserted mat-form-field .mat-form-field-infix{width:262px} */
-/* .listingnewstyle mat-toolbar-row.searchbar .ng-star-inserted mat-form-field{margin-right:5px}
-.listingnewstyle mat-toolbar-row.searchbar .ng-star-inserted mat-form-field.pad-gap {margin-left: 0;} */
 .listingnewstyle mat-toolbar-row.searchbar{background: var(--c-t-primary);padding: 13px;justify-content: space-between;
 height: auto;display: flex;align-items: center;flex-wrap: wrap;}
 
@@ -346,11 +343,9 @@ position:relative!important;font-size:14px!important;text-transform:uppercase!im
 
 @media screen and (max-width: 1620px) {
 .listingnewstyle mat-toolbar-row.searchbar{justify-content:center!important;flex-wrap:wrap;height:auto}
-/* .listingnewstyle mat-toolbar-row.searchbar mat-form-field{margin:0 5px 0} */
 .listingnewstyle mat-toolbar-row.searchbar .mat-form-field.mat-form-field-type-mat-select {min-width: 13%;}
 }
 @media screen and (max-width: 1560px) {
-  /* .listingnewstyle mat-toolbar-row.searchbar .mat-raised-button.mat-primary{margin: 0 5px 0 !important;} */
 .dashboardcontainer{width:90%}
 .listingnewstyle mat-toolbar-row.searchbar .mat-form-field.mat-form-field-type-mat-select {min-width: 13%;}
 }
