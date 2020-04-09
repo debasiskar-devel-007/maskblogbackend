@@ -36,7 +36,10 @@ import { AccountSettingsComponent } from './components/account-settings/account-
 import { HttpLoaderComponent } from './common/http-loader/http-loader.component';
 import { LoaderService } from './services/loader.service';
 import { LoaderInterceptor } from './common/loader.interceptor';
+import { TestComponent } from './test/test.component';
 // End http-loader section
+import { FileUploadModule } from 'file-upload-lib-influxiq';
+
 
 @NgModule({
   declarations: [
@@ -55,7 +58,9 @@ import { LoaderInterceptor } from './common/loader.interceptor';
     DashboardAdminComponent,
     AccountSettingsComponent,
 
-    HttpLoaderComponent
+    HttpLoaderComponent,
+
+    TestComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +73,8 @@ import { LoaderInterceptor } from './common/loader.interceptor';
     FormsModule,
     ReactiveFormsModule,
     BlogModule,
-    CKEditorModule
+    CKEditorModule,
+    FileUploadModule
   ],
   
   providers: [CookieService,AuthGuard,LoaderService,

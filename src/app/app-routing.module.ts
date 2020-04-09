@@ -21,11 +21,13 @@ import { AuthGuard } from './services/auth.guard';
 import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
 //account-settings
 import { AccountSettingsComponent } from './components/account-settings/account-settings.component';
-
+import { TestComponent } from './test/test.component';
 const routes: Routes = [
   {path:'',component:LoginComponent},
   // {path:'dashboard',component:HeaderComponent},
-
+ {
+    path : 'test',component : TestComponent
+ },
 
   {path:'login',component:LoginComponent},
   {
