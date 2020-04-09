@@ -294,6 +294,10 @@ height: auto;display: flex;align-items: center;flex-wrap: wrap;}
 .mat-form-field-appearance-legacy .mat-form-field-underline {bottom: 0 !important;}
 .mat-form-field-appearance-legacy .mat-form-field-subscript-wrapper {margin-top: 15px !important;}
 
+.cdk-overlay-pane.custom-modalbox confirmdialog .mat-dialog-content .mat-card #dialogdata_id{display:none;}
+.cdk-overlay-pane.custom-modalbox confirmdialog .mat-dialog-content .mat-card #dialogdatadescription_html{display:none;}
+
+
 /* AddEditBlog */
 
 .AddEditBlog .mat_chip {display: block;}
