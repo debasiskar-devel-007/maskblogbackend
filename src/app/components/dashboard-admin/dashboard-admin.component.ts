@@ -9,6 +9,7 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./dashboard-admin.component.css']
 })
 export class DashboardAdminComponent implements OnInit {
+  public allData:any=[];
    public value:any=[];
   public status: any = [{val: 1, name: 'Active'}, {val: 0, name: 'Inactive'}];
 
@@ -168,10 +169,11 @@ sortdata:any={
 
         this.activatedRoute.data.forEach(res=>{
             let result:any=res;
-            this.adminDataList=result.adminlist.res;
-            for (let i in this.adminDataList) {
+            // this.adminDataList=result.adminlist.res;
+            this.allData = result.adminlist.res;
+            for (let i in this.allData) {
               this.value.push(
-                { 'name': this.adminDataList[i].blogcategory, val: this.adminDataList[i].blogcategory }
+                { 'name': this.allData[i].blogcategory, val: this.allData[i].blogcategory }
                 );
             
             }
