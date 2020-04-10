@@ -360,6 +360,8 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 
 .closecard {background: #f9594d !important;border: 1px solid #f9594d !important;}
 
+.AddEditBlog ck-editor {margin-bottom: 15px !important;display: block;}
+
 /* lib-preview-files */
 .cdk-overlay-pane lib-preview-files{display:block;background:#f9f9f9;position:relative;z-index:20;border-radius:0;color:#000;box-shadow:none;position:relative;padding:15px;-moz-box-shadow:inset 0 0 10px #000;-webkit-box-shadow:inset 0 0 5px #000;box-shadow:inset 0 0 5px #000;border:3px solid #fff}
 .cdk-overlay-pane lib-preview-files h2.mat-dialog-title{font-family: var(--main-bold-font);font-size: 29px;text-transform: uppercase;color: var(--c-t-primary-btn_title);text-align: center;border-bottom: 2px solid var(--c-t-bg);padding-bottom: 18px;}
@@ -381,6 +383,7 @@ position:relative!important;font-size:14px!important;text-transform:uppercase!im
 
 .uploadfilecontainer{box-sizing:border-box}
 .mat-dialog-container{padding:0!important}
+
 
 
 
