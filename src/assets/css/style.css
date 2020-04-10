@@ -1,44 +1,69 @@
+/* general class */
+
 .mat-card{padding: 0 !important; margin: 0 !important;}
-.login_wrapper{background:url(../images/background.jpg) no-repeat!important;background-position:center center!important;background-size:cover!important;height:100%;display:flex!important;align-items:center;justify-content:center;padding: 0 !important;}
-.logowrapper{margin:0 auto;display:block;text-align:center;background:#f5f5f5;border-bottom-right-radius:150px}
-.from{width:auto!important;margin:0 auto}
-.userimage{bottom:0;right:-58%;position:absolute;z-index:98;height:auto;width:440px;overflow:hidden}
-.userimage img{height: auto;width: 100%;}
-.login_lib_wrapper{width:700px;position:relative;margin-bottom:0!important}
-.loginimgright{position: absolute; right: 0; bottom: 0; height: 100vh;}
 
-.from{width:100%!important;margin:0 auto;text-align:center}
-.from.mat-card{background-color:rgba(0,0,0,0.6)}
-.content_wrapper .example-container button{background:linear-gradient(45deg,#1f6dc1,#15538a)!important;font-size:20px;text-transform:uppercase;padding:5px}
-.login_lib_wrapper .from h2{color:var(--c-t-bg-w);background:transparent!important;font-family:var(--main-black-font);font-size:80px;margin:0;margin-bottom:30px;display:inline-block;text-transform: uppercase;text-shadow: 0px 1px 9px rgba(0,0,0,0.81);}
-.login_lib_wrapper .example-container{display:flex;flex-direction:column;box-shadow:none;padding: 0px 16px 30px 16px;}
-
-.login_lib_wrapper .example-container button{margin-top:34px;font-size:30px;color:var(--c-t-bg-w);padding:10px 18px;display:block;box-shadow:none;cursor:pointer;outline:none;text-transform:uppercase;border:0;border-radius:0;background:-moz-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(25,198,254,1)),color-stop(100%,rgba(2,168,222,1)));background:-webkit-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);background:-o-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);background:-ms-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);background:linear-gradient(180deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#19c6fe',endColorstr='#02a8de',GradientType=0);font-family:var(--main-black-font)}
-
+#maincontent{background:url(../images/bodyBg.png) repeat #fff;margin-left:0;margin-right:0;margin-top:0px;padding:25px 15px;position:relative;min-height:450px;width:auto}
 .main_wrapper{padding:0!important;box-shadow:none!important}
 
+.content_wrapper .example-container button{background:linear-gradient(45deg,#1f6dc1,#15538a)!important;font-size:20px;text-transform:uppercase;padding:5px}
 
+.generalcls .btnblue{background-color:var(--c-t-primary-btn_title)!important}
+.generalcls .btnred{background-color:var(--c-t-bg-secondary)!important}
+.generalcls .singleButton{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif}
+.generalcls .content_header_wrapper{display:flex;justify-content:space-between;align-items:center}
+.generalcls .myaccountwrapper .content_header_wrapper{display:flex;justify-content:flex-end;align-items:center}
+.generalcls .content_header_wrapper .headerSpan{font-family:'NunitoLight';font-size:24px!important;text-transform:capitalize;color:#535353;margin:0;line-height:32px;margin-bottom:10px}
+.generalcls .content_header_wrapper .buttonsetToolbar{width:auto;padding:0;margin-bottom:10px;height:auto!important}
+.generalcls .content_header_wrapper .buttonsetToolbar .mat-raised-button.mat-primary:first-child{margin-left:0}
+.generalcls .content_header_wrapper .buttonsetToolbar .mat-raised-button.mat-primary:last-child{margin-right:0!important}
+
+.images{position:relative;margin-bottom:0!important}
+.images img{max-width:100%}
+
+
+/* login signup forgetpassword resetpassword css */
+
+.userimage{bottom:0;right:-58%;position:absolute;z-index:98;height:auto;width:440px;overflow:hidden}
+.userimage img{height: auto;width: 100%;}
+
+.loginimgright{position: absolute; right: 0; bottom: 0; height: 100vh;}
+.login_lib_wrapper{width:700px;position:relative;margin-bottom:0!important}
+.login_lib_wrapper .from h2{color:var(--c-t-bg-w);background:transparent!important;font-family:var(--main-black-font);font-size:80px;margin:0;margin-bottom:30px;display:inline-block;text-transform: uppercase;text-shadow: 0px 1px 9px rgba(0,0,0,0.81);}
+.login_lib_wrapper .example-container{display:flex;flex-direction:column;box-shadow:none;padding: 0px 16px 30px 16px;}
+.login_lib_wrapper .example-container button{margin-top:34px;font-size:30px;color:var(--c-t-bg-w);padding:10px 18px;display:block;box-shadow:none;cursor:pointer;outline:none;text-transform:uppercase;border:0;border-radius:0;background:-moz-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(25,198,254,1)),color-stop(100%,rgba(2,168,222,1)));background:-webkit-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);background:-o-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);background:-ms-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);background:linear-gradient(180deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#19c6fe',endColorstr='#02a8de',GradientType=0);font-family:var(--main-black-font)}
+
+.login_wrapper{background:url(../images/background.jpg) no-repeat!important;background-position:center center!important;background-size:cover!important;height:100%;display:flex!important;align-items:center;justify-content:center;padding: 0 !important;}
+.login_wrapper{overflow: hidden;}
+.login_wrapper .mat-form-field-flex {background: var(--c-t-bg-w);}
+.login_wrapper .mat-form-field-appearance-legacy .mat-form-field-underline {height: 1px;display: none;}
+.signupfooter a{font-family: var(--main-font); font-size: var(--base-font-size);color:var(--c-t-bg-w);}
+.signupfooter a:last-child{padding-right: 0px !important;}
+.login_wrapper .mat-form-field-appearance-legacy .mat-form-field-label span{color:var(--c-t-bg-zblack); font-family: var(--main-font); font-size: var(--base-font-size);padding-left: 10px;}
+.login_wrapper .from {padding: 16px 42px;}
+.login_wrapper input.mat-input-element {width: 96%;line-height: 26px;margin: 0 auto;
+  display: block;}
+.login_wrapper input.mat-input-element .mat-form-field-label-wrapper{line-height: 26px;}
+.login_wrapper .mat-form-field-appearance-legacy .mat-form-field-wrapper {padding-bottom: 10px;padding-top: 10px;}
+.login_wrapper .mat-form-field-subscript-wrapper .mat-error{margin-top: 0;}
+
+
+/* bredcram css*/
+#beadcamb {width: 100%;background: #49cced;position: relative;clear: both;display: block;padding: 2px;}
 .bred_cram_wrapper{background:#dde2e5;display:flex!important;padding:8px}
 .bred_cram_wrapper a{background:#b5bdbf;background:#b5bdbf;display:flex!important;color:#252525;padding:8px 20px;text-decoration:none;margin:0;justify-content:stretch;font-size:18px;text-transform:capitalize;cursor:pointer;font-family:"HelveticaRegular"}
 .activebread{background:var(--c-t-bg-w)!important;color:var(--c-t-bg-zblack)!important;position:relative}
 .activebread::before{content:'';width:15px;height:100%;background:#b5bdbf;display:inline-block;position:absolute;top:0;left:0;clip-path:polygon(0 0,0% 100%,100% 50%)}
 .activebread::after{content:'';width:15px;height:100%;background:var(--c-t-bg-w);display:inline-block;position:absolute;right:-15px;top:0;clip-path:polygon(0 0,0% 100%,100% 54%)}
-tr.mat-header-row{background:var(--c-t-alt-links)}
-.mat-sort-header-button{text-transform:uppercase}
-th.mat-header-cell{color:var(--c-t-sub-primary);text-transform:uppercase;font-family:"NunitoRegular";font-size:14px}
-tr td br{display:none}
-td.mat-cell{color:#465157;font-family:"NunitoLight"; line-height: 18px;}
-tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 
+
+/* paginator css */
 .mat-paginator{background:#105d9f!important;color:var(--c-t-bg-w)!important}
 .mat-button.mat-accent[disabled],.mat-button.mat-primary[disabled],.mat-button.mat-warn[disabled],.mat-button[disabled][disabled],.mat-icon-button.mat-accent[disabled],.mat-icon-button.mat-primary[disabled],.mat-icon-button.mat-warn[disabled],.mat-icon-button[disabled][disabled],.mat-stroked-button.mat-accent[disabled],.mat-stroked-button.mat-primary[disabled],.mat-stroked-button.mat-warn[disabled],.mat-stroked-button[disabled][disabled]{color:var(--c-t-bg-w)!important}
 .priceMark .searchdiv:last-child,.priceMark .cursor:last-child,.priceMark .cursor:nth-of-type(3){display:none}
 .mat-paginator-page-size-select{color:var(--c-t-bg-w)}
 
 
-.images{position:relative;margin-bottom:0!important}
-.images img{max-width:100%}
-
+/* search box css */
 .searchmainwrapper .mat-form-field .mat-form-field-wrapper{padding-bottom:0}
 .searchwrapper .mat-form-field-infix button{background:no-repeat;border:0;border-left:1px solid #566075}
 .searchwrapper .mat-form-field-infix .mat-form-field-label-wrapper .mat-form-field-label{transition:inherit;transform:inherit!important;padding-left:5px}
@@ -49,6 +74,11 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .mat-form-field-label.ng-star-inserted.mat-empty.mat-form-field-empty{display:block!important;padding-left: 10px;}
 .searchwrapper .mat-form-field-label.ng-star-inserted{display:none!important}
 
+/* form css */
+
+.from{width:auto!important;margin:0 auto}
+.from{width:100%!important;margin:0 auto;text-align:center}
+.from.mat-card{background-color:rgba(0,0,0,0.6)}
 
 .formmainwrapper .file_uploader .inner_wrapper .imageupload .uploadfilecontainer{height:100%;width:100%}
 .formmainwrapper .my_details_wrapper .mydetails_form_wrapper .forms .mat-form-field .mat-form-field-flex{background:none;padding:0!important}
@@ -95,26 +125,11 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .inputstyle .uploadfilecontainer{width:100%!important}
 .inputstyle .pb-20{padding-bottom:20px}
 
-.generalcls .btnblue{background-color: var(--c-t-primary-btn_title)!important;}
-.generalcls .btnred{background-color: var(--c-t-bg-secondary)!important;}
-
-.generalcls .singleButton {position: relative!important;font-size: 14px!important;text-transform: uppercase!important;
-  border: none!important;padding: 5px 10px 10px!important;line-height: 18px!important;color: white!important;
-  border-radius: 0!important;margin: 0 2px!important;font-family: 'NunitoRegular', sans-serif;}
-.submitbtn {position: relative!important;font-size: 14px!important;text-transform: uppercase!important;
-  border: none!important;padding: 5px 10px 10px!important;line-height: 18px!important;color: white!important;
-  border-radius: 0!important;margin: 0 2px!important;font-family: 'NunitoRegular', sans-serif;background-color: var(--c-t-primary-btn_title)!important;}
-  button.submitbtn.mat-raised-button.mat-primary {margin-right: 5px !important;display: inline;}
-
-.generalcls .content_header_wrapper{display: flex;justify-content: space-between;align-items: center;}
-.generalcls .myaccountwrapper .content_header_wrapper{display: flex;justify-content: flex-end;align-items: center;}
-.generalcls .content_header_wrapper .headerSpan{font-family:'NunitoLight';font-size:24px!important;text-transform:capitalize;color:#535353;margin: 0;line-height: 32px;margin-bottom: 10px;}
-.generalcls .content_header_wrapper .buttonsetToolbar {width: auto;padding: 0;margin-bottom: 10px;height: auto!important;}
-.generalcls .content_header_wrapper .buttonsetToolbar .mat-raised-button.mat-primary:first-child{margin-left: 0;}
-.generalcls .content_header_wrapper .buttonsetToolbar .mat-raised-button.mat-primary:last-child{margin-right: 0 !important;}
+.submitbtn{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-primary-btn_title)!important}
+button.submitbtn.mat-raised-button.mat-primary{margin-right:5px!important;display:inline}
 
 
-
+/* listing css */
 .listingnewstyle .content_header_wrapper .toolbar_header{font-family:'NunitoLight';font-size:24px!important;text-transform:capitalize;color:#535353}
 .listingnewstyle .content_header_wrapper{background:none!important;padding-bottom:0;width:100%;border-bottom:1px solid #566075;margin-bottom:15px!important;padding-left:0;padding-right:0}
 .listingnewstyle .container br{display:none}
@@ -167,14 +182,22 @@ height: auto;display: flex;align-items: center;flex-wrap: wrap;}
 .listingnewstyle mat-toolbar-row.searchbar .mat-form-field.mat-form-field-type-mat-select{min-width: 14%;}
 .listingnewstyle mat-toolbar-row.searchbar mat-form-field {margin: 2px;}
 
+/* table css extra */
+
+tr.mat-header-row{background:var(--c-t-alt-links)}
+.mat-sort-header-button{text-transform:uppercase}
+th.mat-header-cell{color:var(--c-t-sub-primary);text-transform:uppercase;font-family:"NunitoRegular";font-size:14px}
+tr td br{display:none}
+td.mat-cell{color:#465157;font-family:"NunitoLight"; line-height: 18px;}
+tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
+
+
 /* .mat-table thead .mat-column-Actions, .mat-table tbody .mat-column-Actions{    position: sticky;} */
 
-
-
+.logowrapper{margin:0 auto;display:block;text-align:center;background:#f5f5f5;border-bottom-right-radius:150px}
 .logo_wrapper{cursor:pointer;width:auto;display:block}
 .logo_wrapper img{max-width:100%}
 .logo_wrapper:focus{outline:none}
-
 
 .mat-form-field{font-family: var(--main-font) !important;}
 
@@ -203,72 +226,36 @@ height: auto;display: flex;align-items: center;flex-wrap: wrap;}
 .myaccount .mat-card-title {display: block;margin-bottom: 20px;}
 
 
-.success-modal{min-width:450px;max-width:96%;margin:0 auto;width:600px!important}
-/* .cdk-overlay-pane[style]{width:auto!important} */
-.cdk-overlay-pane.commonVideoDialogCls .mat-dialog-container{min-width:450px;max-width:96%;margin:0 auto;width:900px!important}
-.cdk-overlay-pane .mat-dialog-container{min-width:450px;max-width:96%;margin:0 auto;width:600px!important}
-.cdk-overlay-pane .mat-dialog-container lib-dialog-box{display:block;background:#f9f9f9;position:relative;z-index:20;border-radius:0;color:#000;box-shadow:none;position:relative;padding:15px;-moz-box-shadow:inset 0 0 10px #000;-webkit-box-shadow:inset 0 0 10px #000}
-.cdk-overlay-pane .mat-dialog-container lib-dialog-box .mat-dialog-title{background-color:#151519;padding:15px;margin-bottom:15px;text-align:center;color:#fff;font-size:24px}
-.cdk-overlay-pane .mat-dialog-container lib-dialog-box p{display:block;text-align:center;margin:0;padding:0;font-size:16px;color:#333;font-family:'Helvetica-Normal';white-space:normal;word-break:break-word}
-.cdk-overlay-pane .mat-dialog-container lib-dialog-box .mat-button{color:#fff;font-size:30px;text-transform:uppercase;font-family:'NunitoRegular';text-decoration:none;display:inline-block;padding:10px 15px 5px;border-radius:0;background-color:var(--c-t-bg-secondary)}
-.cdk-overlay-pane .mat-dialog-container lib-dialog-box .mat-button+.mat-button{color:#fff;font-size:30px;text-transform:uppercase;font-family:'NunitoRegular';text-decoration:none;display:inline-block;padding:10px 15px 5px;border-radius:0!important;background-color:#12c3e4}
-.cdk-overlay-pane .mat-dialog-container lib-dialog-box .mat-dialog-actions{-webkit-flex-wrap: wrap;-webkit-box-align: center;align-items: center;margin: 0 auto;display: block;text-align: center;}
+
+/* modal css */
 .cdk-global-scrollblock{top:0!important}
 .cdk-overlay-dark-backdrop{background:rgba(0,0,0,.60)}
-.generalmodalcls .modal-content{position: relative;}
-.generalmodalcls .material-icons.closeicon{position: absolute;top: -7px;right: -7px;background-color: #ff0000;padding: 5px;font-size: 20px;z-index: 99;border-radius: 100%;color: #fff;
-  font-weight: bold; cursor: pointer;}
-.generalmodalcls .videoWrapper{position:relative;padding-bottom:56.25%;padding-top:25px;height:0}
-.generalmodalcls .videoWrapper iframe,.generalmodalcls .videoWrapper object,.generalmodalcls .videoWrapper embed{position:absolute;top:0;left:0;width:100%;height:100%}
-.generalmodalcls .mat-dialog-content{margin:0!important;padding:0!important;overflow: auto !important;}
-.generalmodalcls .mat-dialog-content .mat-card-header .mat-card-header-text{margin:0!important}
-.generalmodalcls .emailwrapper form .mat-card-header .mat-card-header-text{margin:0!important}
-.generalmodalcls .mat-dialog-content .mat-card-header h2{font-size:24px;margin-bottom:5px}
-.generalmodalcls .modal-content{background:#f9f9f9;position:relative;z-index:20;border-radius:0;color:#000;box-shadow:none;position:relative;-ms-flex:1 1 auto;flex:1 1 auto;padding:15px;-moz-box-shadow:inset 0 0 10px #000;-webkit-box-shadow:inset 0 0 10px #000}
-.mat-dialog-container{width:100%;box-shadow:0 1px 4px 0 rgba(168,168,168,0.5);box-sizing:border-box;transition:all .4s ease-in-out;-moz-transition:all .4s ease-in-out;-webkit-transition:all .4s ease-in-out;padding:10px!important;border-radius:0!important;height:inherit!important;margin-top:20px;margin-bottom:20px}
-.mat-dialog-actions{display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-align: center;-moz-box-align: center;-ms-flex-align: center;
-  -webkit-align-items: center;align-items: center;-ms-flex-pack:end;justify-content:flex-end;padding:0}
-.generalmodalcls .mat-dialog-actions{padding:8px 0;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;flex-wrap: wrap;  -webkit-flex-wrap: wrap;min-height:52px;-webkit-box-align: center;-moz-box-align: center;-ms-flex-align: center;-webkit-box-align: center;-moz-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;margin-bottom:0;justify-content:center}
-.generalmodalcls .mat-dialog-actions button{margin:2px}
-.generalmodalcls .btnredcls{color:#fff;font-size:20px;text-transform:uppercase;font-family:'NunitoRegular';text-decoration:none;display:inline-block;padding:10px 15px 5px;border-radius:0;background-color:var(--c-t-bg-secondary)}
-.generalmodalcls .btnbluecls{color:#fff;font-size:20px;text-transform:uppercase;font-family:'NunitoRegular';text-decoration:none;display:inline-block;padding:10px 15px 5px;border-radius:0!important;background-color:#12c3e4}
-.generalmodalcls .logowrapperouter{background-color:#151519;padding:15px;margin-bottom:15px}
-.generalmodalcls .logowrapper{text-align:center;width:350px;margin:0 auto!important}
-.generalmodalcls .infomodal{max-width:96vw}
-.generalmodalcls h2{display:block;text-align:center;margin:0;padding:0;font-size:30px;color:var(--c-t-bg-secondary);font-family:NunitoRegular}
-.generalmodalcls p{display:block;text-align:center;margin:0;padding:0;font-size:16px;color:#333;font-family:'Helvetica-Normal'}
-.generalmodalcls h3{display:block;text-align:center;margin:0;padding:10px 0 15px;font-size:18px;color:#111;font-family:Helvetica-Normal;font-weight:400}
-.generalmodalcls .mat-form-field-appearance-legacy .mat-form-field-infix{width:auto;padding:0 15px!important;height:36px!important;background:#e1e0e6!important;margin:5px 0;height:50px!important}
-.generalmodalcls .mat-form-field-appearance-legacy .mat-form-field-infix input{height:50px!important}
-.generalmodalcls .mat-form-field{display:block!important}
-.generalmodalcls .mat-form-field-flex{display:block!important;border:none!important;padding:0!important}
-.generalmodalcls h4{display:block;text-align:center;margin:0;padding:10px 0 0;font-size:22px;color:#111;font-family:'Helvetica-Normal';font-weight:400}
-
-.newsletter_modalsuccess{padding-top:25px!important;padding-bottom:25px!important}
-.success-modal .mat-dialog-container{padding:10px!important;border-radius:0!important;overflow:hidden!important;position:relative;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-flex-direction: column;-moz-flex-direction: column;-ms-flex-direction: column;flex-direction: column;width:100%;pointer-events:auto;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:.3rem;outline:0}
-.generalmodalcls .actions{margin:0 auto;display:block;text-align:center}
-.generalmodalcls .actions .btnblue{color:#fff;font-size:30px;text-transform:uppercase;font-family:'NunitoRegular';text-decoration:none;display:inline-block;padding:10px 15px 5px;border-radius:0!important;background-color:#12c3e4;margin:10px auto;display:block}
-
-.cdk-overlay-pane.custom-modalbox[style]{width:inherit!important}
-.cdk-overlay-pane.custom-modalbox .mat-dialog-container{min-width:450px;max-width:96%;margin:0 auto;width:600px!important}
-.cdk-overlay-pane.custom-modalbox confirmdialog{display:block;background:#f9f9f9;position:relative;z-index:20;border-radius:0;color:#000;box-shadow:none;position:relative;padding:15px;-moz-box-shadow: inset 0 0 10px #000;
-  -webkit-box-shadow: inset 0 0 5px #000;box-shadow: inset 0 0 5px #000;border: 3px solid #fff;}
-.cdk-overlay-pane.custom-modalbox .mat-dialog-content{margin:0!important;padding:0!important}
-.cdk-overlay-pane.custom-modalbox .mat-dialog-title{background-color:#151519;padding:15px;margin-bottom:15px;text-align:center;color:#fff;font-size:24px}
-.cdk-overlay-pane.custom-modalbox .mat-dialog-actions{padding:8px 0;flex-wrap: wrap;  -webkit-flex-wrap: wrap;-webkit-box-align: center;-moz-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;margin:0 auto;display:block;text-align:center;min-height: 1px !important;margin-top: 10px;}
-.cdk-overlay-pane.custom-modalbox .mat-button{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-bg-secondary)}
-.cdk-overlay-pane.custom-modalbox .mat-button:last-child{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-primary-btn_title)!important}
-.cdk-overlay-pane.custom-modalbox .mat-button+.mat-button{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-primary-btn_title)!important}
-.cdk-overlay-pane.custom-modalbox p{display:block;text-align:center;margin:0;padding:0;font-size:16px;color:#333;white-space:normal;word-break:break-word}
-.cdk-overlay-pane.custom-modalbox p h2{font-size:16px;;margin:0;padding:0;}
-.cdk-overlay-pane.custom-modalbox confirmdialog .mat-dialog-content .mat-card{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;justify-content:flex-start;-webkit-box-align:stretch;-moz-box-align:stretch;-ms-flex-align:stretch;-webkit-align-items:stretch;align-items:stretch;padding:0;background:#f1f1f1!important;margin-bottom:2px}
-.cdk-overlay-pane.custom-modalbox confirmdialog .mat-dialog-content .mat-card .mat-card-header{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center;background:#3a3a3a;color:#fff;width:34%;padding:5px}
-.cdk-overlay-pane.custom-modalbox confirmdialog .mat-dialog-content .mat-card .mat-card-header .mat-card-title{font-size:16px;margin-bottom:0; text-transform: capitalize;padding-bottom: 5px;}
-.cdk-overlay-pane.custom-modalbox confirmdialog .mat-dialog-content .mat-card .mat-card-header .mat-card-header-text{margin:0;padding:0;width:100%}
-.cdk-overlay-pane.custom-modalbox confirmdialog .mat-dialog-content .mat-card .mat-card-content{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center;color:#333;width:66%;padding:2px 10px}
-.cdk-overlay-pane.custom-modalbox confirmdialog .mat-dialog-content .mat-card .mat-card-content p{text-align:left!important}
-.cdk-overlay-pane bottom-sheet{display:block;background:#f9f9f9;position:relative;z-index:20;border-radius:0;color:#000;box-shadow:none;position:relative;padding:15px;-moz-box-shadow:inset 0 0 10px #000;-webkit-box-shadow:inset 0 0 5px #000;box-shadow:inset 0 0 5px #000;border:3px solid #fff}
+.cdk-overlay-pane[style]{width:inherit!important}
 .cdk-global-overlay-wrapper .mat-bottom-sheet-container{padding:0!important}
+.success-modal, .cdk-overlay-pane .mat-dialog-container, .cdk-overlay-pane .mat-bottom-sheet-container{min-width:450px;max-width:96%;margin:0 auto;width:600px!important}
+.cdk-overlay-pane .mat-dialog-content{margin:0!important;padding:0!important}
+.cdk-overlay-pane .mat-dialog-title{background-color:#151519;padding:15px;margin-bottom:15px;text-align:center;color:#fff;font-size:24px}
+.cdk-overlay-pane .mat-dialog-actions{padding:8px 0;flex-wrap: wrap;  -webkit-flex-wrap: wrap;-webkit-box-align: center;-moz-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;margin:0 auto;display:block;text-align:center;min-height: 1px !important;margin-top: 10px;}
+.cdk-overlay-pane .mat-button{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-bg-secondary)}
+
+.cdk-overlay-pane .mat-button:last-child{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-primary-btn_title)!important}
+.cdk-overlay-pane .mat-button+.mat-button{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-primary-btn_title)!important}
+
+.cdk-overlay-pane p{display:block;text-align:center;margin:0;padding:0;font-size:16px;color:#333;white-space:normal;word-break:break-word}
+.cdk-overlay-pane p h2{font-size:16px;;margin:0;padding:0;}
+
+.cdk-overlay-pane confirmdialog, .cdk-overlay-pane lib-dialog-box, .cdk-overlay-pane bottom-sheet{display:block;background:#f9f9f9;position:relative;z-index:20;border-radius:0;color:#000;box-shadow:none;position:relative;padding:15px;-moz-box-shadow: inset 0 0 10px #000;-webkit-box-shadow: inset 0 0 5px #000;box-shadow: inset 0 0 5px #000;border: 3px solid #fff;}
+
+.cdk-overlay-pane confirmdialog .mat-dialog-content .mat-card #dialogdata_id{display:none;}
+.cdk-overlay-pane confirmdialog .mat-dialog-content .mat-card #dialogdatadescription_html{display:none;}
+.cdk-overlay-pane confirmdialog .mat-dialog-content .mat-card{display:-webkit-box;display:-moz-box;display:- ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;justify-content:flex-start;-webkit-box-align:stretch;-moz-box-align:stretch;-ms-flex-align:stretch;-webkit-align-items:stretch;align-items:stretch;padding:0;background:#f1f1f1!important;margin-bottom:2px}
+.cdk-overlay-pane confirmdialog .mat-dialog-content .mat-card .mat-card-header{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center;background:#3a3a3a;color:#fff;width:34%;padding:5px}
+.cdk-overlay-pane confirmdialog .mat-dialog-content .mat-card .mat-card-header .mat-card-title{font-size:16px;margin-bottom:0; text-transform: capitalize;padding-bottom: 5px;}
+.cdk-overlay-pane confirmdialog .mat-dialog-content .mat-card .mat-card-header .mat-card-header-text{margin:0;padding:0;width:100%}
+.cdk-overlay-pane confirmdialog .mat-dialog-content .mat-card .mat-card-content{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center;color:#333;width:66%;padding:2px 10px}
+.cdk-overlay-pane confirmdialog .mat-dialog-content .mat-card .mat-card-content p{text-align:left!important}
+
+
 .cdk-overlay-pane bottom-sheet .mat-nav-list{display:flex;box-sizing:border-box;padding:0 16px;width:100%;flex-direction:row;align-items:center;white-space:nowrap}
 .cdk-overlay-pane bottom-sheet .mat-nav-list a.mat-list-item:first-child{position:relative!important;height:auto;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-primary-btn_title)!important}
 .cdk-overlay-pane bottom-sheet .mat-nav-list .mat-list-text{text-align:center}
@@ -291,8 +278,6 @@ height: auto;display: flex;align-items: center;flex-wrap: wrap;}
 .mat-form-field-appearance-legacy .mat-form-field-underline {bottom: 0 !important;}
 .mat-form-field-appearance-legacy .mat-form-field-subscript-wrapper {margin-top: 15px !important;}
 
-.cdk-overlay-pane.custom-modalbox confirmdialog .mat-dialog-content .mat-card #dialogdata_id{display:none;}
-.cdk-overlay-pane.custom-modalbox confirmdialog .mat-dialog-content .mat-card #dialogdatadescription_html{display:none;}
 
 
 /* AddEditBlog */
@@ -314,40 +299,10 @@ height: auto;display: flex;align-items: center;flex-wrap: wrap;}
 .AddEditBlog .button-group .mat-raised-button.mat-primary,.AddEditBlog .mat-card-actions .mat-raised-button.mat-primary{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-primary-btn_title)!important}
 .AddEditBlog .button-group .mat-raised-button.mat-warn,.AddEditBlog .mat-card-actions .mat-raised-button.mat-warn{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-bg-secondary)}
 .AddEditBlog .files-view{height:auto!important;display:flex!important;align-items:stretch!important;flex-wrap:wrap!important;justify-content:center!important;}
-.AddEditBlog .files-view .mat-card{
-  flex: 1 1 18%!important;
-    display: flex!important;
-    flex-direction: column!important;
-    margin: 1%!important;
-    justify-content: center!important;
-    text-align: center!important;
-    border: 1px solid #c9c9c9!important;
-    padding: 10px!important;
-    flex-wrap: initial !important;
-    margin-top:0 !important;
-    }
-.AddEditBlog .files-view .mat-card .viewUrlwrapper{    width: 200px;
-    height: 200px;
-    display: block;
-    margin: 0 auto;
-    background: #fff;
-    position: relative;
-    border-radius: 100%;
-    overflow: hidden;
-    border-top: 1px solid #d3d4d4;
-    border-left: 1px solid #d3d4d4;
-    border-right: 5px solid #0eb8ef;
-    border-bottom: 7px solid #0eb8ef;
-    }
+.AddEditBlog .files-view .mat-card{flex:1 1 18%!important;display:flex!important;flex-direction:column!important;margin:1%!important;justify-content:center!important;text-align:center!important;border:1px solid #c9c9c9!important;padding:10px!important;flex-wrap:initial!important;margin-top:0!important}
+.AddEditBlog .files-view .mat-card .viewUrlwrapper{width:200px;height:200px;display:block;margin:0 auto;background:#fff;position:relative;border-radius:100%;overflow:hidden;border-top:1px solid #d3d4d4;border-left:1px solid #d3d4d4;border-right:5px solid #0eb8ef;border-bottom:7px solid #0eb8ef}
 .AddEditBlog .files-view .mat-card .viewUrlcontent .mat-card-content{margin-bottom:5px}
-.AddEditBlog .files-view .mat-card .viewUrlwrapper img{
-  max-width: inherit !important;
-    margin: 0 !important;
-    width: 100% !important;
-    object-fit: scale-down !important;
-    height: 100% !important;
-        margin-top: 0!important;
-}
+.AddEditBlog .files-view .mat-card .viewUrlwrapper img{max-width:inherit!important;margin:0!important;width:100%!important;object-fit:scale-down!important;height:100%!important;margin-top:0!important}
 .AddEditBlog .files-view .mat-card .viewUrlcontent{background-color:#dbdbdb;margin-top:16px;padding-top:10px;border-top:2px solid #1297c1;    flex: 1 !important;}
 .AddEditBlog .files-view .mat-card .viewUrlcontent .mat-card-header{justify-content:center}
 .AddEditBlog .formspan mat-label{line-height: 18px; font-size: 14px;margin-bottom: 10px;display: block;}
@@ -379,11 +334,54 @@ position:relative!important;font-size:14px!important;text-transform:uppercase!im
 .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {background-color: #f9594d !important;}
 .myaccount .mat-tab-group .mat-form-field-appearance-legacy .mat-form-field-infix {line-height: 23px;}
 
+.uploadfilecontainer{box-sizing:border-box}
+.mat-dialog-container{padding:0!important}
+
+
+
+/* .emailModal{width:700px}
+.email_wrapper .mat-card-title{font-family:'NunitoRegular';font-size:30px;color:var(--c-t-bg-w);text-align:center;text-transform:uppercase;background:var(--c-t-primary);padding:10px;margin-bottom:16px}
+.emailModal .mat-dialog-container{border:2px solid var(--c-t-primary);padding:0}
+.email_wrapper{padding:0!important}
+.email_wrapper .mat-form-field{width:100%}
+.email_wrapper .button_send{background:transparent;height:auto;padding:0;justify-content:flex-end}
+.email_wrapper .button_send button{background:var(--c-t-primary);color:var(--c-t-bg-w);font-size:24px;min-width:150px;text-transform:uppercase;border-radius:25px;margin-right:10px}
+.email_wrapper .button_send button:last-child{background:var(--c-t-primary-btn_title);margin:0}
+.email_wrapper .mat-form-field .mat-form-field-flex{border:1px solid var(--c-t-bg-w);padding:6px 10px}
+.email_wrapper .mat-form-field-appearance-legacy .mat-form-field-underline{height:0}
+.email_wrapper form{padding:16px} */
+
+
+/* .Login_confirm{width:600px}
+.Login_confirm .mat-dialog-container{background:#f2f9ff;border:4px solid #40a2f5;padding:0} */
+
+/* .changepassword{width:550px}
+.changepassword .mat-dialog-container{border:4px solid var(--c-t-primary);padding:10px!important;box-sizing:border-box}
+.changepassword .mat-dialog-container .modal .mat-dialog-title{font-size:20px;font-family:'AvenirBlack';color:var(--c-t-bg-w);text-align:center;text-transform:uppercase;background:var(--c-t-primary);padding:5px}
+.changepassword .mat-dialog-container .modal form{display:flex;flex-direction:column}
+.changepassword .mat-dialog-container .mat-dialog-actions{padding:16px;display:flex;flex-wrap:wrap;min-height:inherit;align-items:center;margin-bottom:0;justify-content:flex-end}
+.changepassword .mat-dialog-container .mat-dialog-actions button{background:var(--c-t-primary);color:var(--c-t-bg-w);font-family:'NunitoRegular';border-radius:0;font-size:18px}
+.changepassword .mat-dialog-container .mat-dialog-actions button:last-child{background:var(--c-t-primary-btn_title)} */
+
+
+
+
+
+/* media css */
+
+@media screen and (max-width: 1666px) {
+  .userimage {right: -56%;width: 430px;}
+}
 
 @media screen and (max-width: 1620px) {
 .listingnewstyle mat-toolbar-row.searchbar{justify-content:center!important;flex-wrap:wrap;height:auto}
 .listingnewstyle mat-toolbar-row.searchbar .mat-form-field.mat-form-field-type-mat-select {min-width: 13%;}
 }
+
+@media screen and (max-width: 1600px) {
+.userimage {right: -50%;width: 390px;}
+}
+
 @media screen and (max-width: 1560px) {
 .dashboardcontainer{width:90%}
 .listingnewstyle mat-toolbar-row.searchbar .mat-form-field.mat-form-field-type-mat-select {min-width: 13%;}
@@ -391,6 +389,11 @@ position:relative!important;font-size:14px!important;text-transform:uppercase!im
 @media screen and (max-width: 1460px) {
 .listingnewstyle mat-toolbar-row.searchbar .mat-form-field.mat-form-field-type-mat-select {min-width: 20%;}
 }
+
+@media screen and (max-width: 1360px) {
+.userimage {right: -40%;width: 328px;}
+}
+
 @media screen and (max-width: 1300px) {
 .dashboardcontainer{width:94%}
 }
@@ -400,6 +403,12 @@ position:relative!important;font-size:14px!important;text-transform:uppercase!im
 .searchwrapper .mat-form-field-infix{width:260px}
 .nav_wrapper .listing_container a .mat-list-item-content{justify-content:center;padding:0}
 }
+
+@media screen and (max-width: 1199px) {
+.userimage{display: none;}
+.login_wrapper .from{padding: 16px;}
+}
+
 @media screen and (max-width: 991px) {
 .block2content .mat-list-item .mat-list-item-content{justify-content:center;flex-wrap:wrap}
 .mat-table .mat-cell:first-child {margin-top: 4px;padding-left: 0;}
@@ -422,125 +431,6 @@ position:relative!important;font-size:14px!important;text-transform:uppercase!im
 .mat-table .mat-cell:before{content:attr(title);float:left;text-transform:uppercase;font-weight:400;font-size:.85em}
 .mat-table .mat-cell:last-child{border-bottom:0;padding:0}
 .mat-table .mat-cell:first-child{margin-top:4px;padding-left:0}
-
-}
-@media screen and (max-width: 620px) {
-.addlistingInventory_button_wrapper{display:flex;flex-wrap:wrap}
-}
-@media screen and (max-width: 576px) {
-  .cdk-overlay-pane.custom-modalbox .mat-dialog-container {min-width: 1px;max-width: 96%;margin: 0 auto;width: 96% !important;}
-.formstylemainwrapper .col-1-3{width:100%;margin:0}
-}
-.uploadfilecontainer{box-sizing:border-box}
-.mat-dialog-container{padding:0!important}
-
-/* .custom-modalbox{width:100%;margin-bottom:0!important}
-.modal_wrapper .modal_para{background:linear-gradient(0deg,#052f5d,#04f7f9);min-height:170px;padding:20px;margin-bottom:0}
-.modal_wrapper .modal_para .icon{width:150px;height:150px;border-radius:50%;display:flex;overflow:hidden;margin:auto}
-.modal_wrapper .modal_para .icon img{max-width:100%;object-fit:cover;object-position:center}
-.modal_wrapper .modal_para h1{font-family:'NunitoRegular';text-shadow:1px 1px 1px #807b0f;font-size:24px;text-transform:uppercase;text-align:center;color:var(--c-t-bg-w)}
-.modal_wrapper .login_button button{background:#01274a;color:var(--c-t-bg-w);border-radius:0;font-family:"NunitoRegular";font-size:20px;min-width:140px}
-.modal_wrapper .login_button button:last-child{background:#13b3f3;margin-left:10px}
-.login_button{display:flex;min-height:120px;align-items:center;justify-content:center;background:#e6e6e6} */
-
-/* .emailModal{width:700px}
-.email_wrapper .mat-card-title{font-family:'NunitoRegular';font-size:30px;color:var(--c-t-bg-w);text-align:center;text-transform:uppercase;background:var(--c-t-primary);padding:10px;margin-bottom:16px}
-.emailModal .mat-dialog-container{border:2px solid var(--c-t-primary);padding:0}
-.email_wrapper{padding:0!important}
-.email_wrapper .mat-form-field{width:100%}
-.email_wrapper .button_send{background:transparent;height:auto;padding:0;justify-content:flex-end}
-.email_wrapper .button_send button{background:var(--c-t-primary);color:var(--c-t-bg-w);font-size:24px;min-width:150px;text-transform:uppercase;border-radius:25px;margin-right:10px}
-.email_wrapper .button_send button:last-child{background:var(--c-t-primary-btn_title);margin:0}
-.email_wrapper .mat-form-field .mat-form-field-flex{border:1px solid var(--c-t-bg-w);padding:6px 10px}
-.email_wrapper .mat-form-field-appearance-legacy .mat-form-field-underline{height:0}
-.email_wrapper form{padding:16px} */
-
-/* .listingnewstyle{display:block;background-color:#edf1f4;width:100%;overflow:hidden}
-.listingnewstyle .main_wrapper{background:var(--c-t-bg-w);box-shadow:0 1px 10px rgba(0,0,0,.30)!important;padding:20px!important}
-.listingnewstyle .main_wrapper table{width:100%}
-.listingnewstyle .main_wrapper .purchase_quotes td.mat-cell:last-of-type{text-align:inherit}
-.listingnewstyle .main_wrapper .purchase_quotes td button{background:var(--c-t-primary);padding:4px;line-height:inherit;margin:0;color:var(--c-t-bg-w);font-family:"NunitoRegular";text-transform:capitalize;border-radius:0}
-.listingnewstyle .main_wrapper .purchase_quotes td button:last-child{background:var(--c-t-primary-btn_title);margin-left:5px}
-.listingnewstyle .main_wrapper .purchase_quotes th.mat-header-cell:last-of-type,.listingnewstyle .main_wrapper .purchase_quotes td.mat-cell:last-of-type{text-align:center}
-.puchase_quotes .mat-form-field-infix{display:flex;width:324px;border:1px solid #d6d6d6;margin:0 3px!important;align-items:center;border-radius:5px}
-.listingnewstyle .content_header_wrapper .toolbar_header{font-family:'NunitoLight';font-size:24px!important;text-transform:capitalize;color:#535353}
-.listingnewstyle .content_header_wrapper{background:none!important;padding-bottom:0;width:100%;border-bottom:1px solid #566075;margin-bottom:15px!important;padding-left:0;padding-right:0}
-.listingnewstyle .container .mat-card{padding:0;box-shadow:none;padding:7px;border:1px solid #d6d6d6;border-radius:0}
-.listingnewstyle table.mat-table{box-shadow:none}
-.listingnewstyle .container br{display:none}
-.listingnewstyle tr.mat-row:nth-child(even){background:var(--c-t-bg-w)}
-.listingnewstyle .mat-paginator .mat-select-value-text{color:var(--c-t-bg-w)}
-.listingnewstyle .mat-paginator .mat-select-arrow{color:var(--c-t-bg-w)}
-.listingnewstyle .mat-paginator{background:var(--c-t-paragraph)!important;color:var(--c-t-bg-w)!important}
-.listingnewstyle .mat-paginator .mat-paginator-range-label{margin:0 5px;font-family:'NunitoLight'}
-.listingnewstyle .mat-paginator-container{justify-content:center;align-items:center}
-.listingnewstyle .mat-paginator-page-size-select{margin:0 4px}
-.listingnewstyle tr.mat-header-row{background:var(--c-t-alt-links)}
-.listingnewstyle .mat-sort-header-button,.listingnewstyle th.mat-header-cell:last-of-type{font-family:'NunitoRegular';font-size:16px}
-.listingnewstyle .mat-table{font-family:'NunitoLight';font-size:14px;color:#465157}
-.listingnewstyle .ng-star-inserted .cursor{display:none}
-.listingnewstyle .ng-star-inserted .cursor:nth-child(1){display:inline-block;background:var(--c-t-primary);padding:5px;color:var(--c-t-bg-w);margin-right:5px}
-.listingnewstyle .ng-star-inserted .cursor:nth-child(1):after{content:'View Details'}
-.nodetails .ng-star-inserted .cursor:nth-child(1){display:none}
-.listingnewstyle .ng-star-inserted .cursor:nth-child(1) i{display:none}
-.listingnewstyle .ng-star-inserted .cursor:nth-child(2){display:inline-block;background:var(--c-t-primary-btn_title);padding:5px;color:var(--c-t-bg-w);margin-right:0}
-.listingnewstyle .ng-star-inserted .cursor:nth-child(2):after{content:'Delete'}
-.listingnewstyle .ng-star-inserted .cursor:nth-child(2) i{display:none}
-.listingnewstyle td.mat-cell:last-of-type{padding-right:0;text-align:right} */
-
-
-/* .Login_confirm{width:600px}
-.Login_confirm .mat-dialog-container{background:#f2f9ff;border:4px solid #40a2f5;padding:0} */
-
-/* .changepassword{width:550px}
-.changepassword .mat-dialog-container{border:4px solid var(--c-t-primary);padding:10px!important;box-sizing:border-box}
-.changepassword .mat-dialog-container .modal .mat-dialog-title{font-size:20px;font-family:'AvenirBlack';color:var(--c-t-bg-w);text-align:center;text-transform:uppercase;background:var(--c-t-primary);padding:5px}
-.changepassword .mat-dialog-container .modal form{display:flex;flex-direction:column}
-.changepassword .mat-dialog-container .mat-dialog-actions{padding:16px;display:flex;flex-wrap:wrap;min-height:inherit;align-items:center;margin-bottom:0;justify-content:flex-end}
-.changepassword .mat-dialog-container .mat-dialog-actions button{background:var(--c-t-primary);color:var(--c-t-bg-w);font-family:'NunitoRegular';border-radius:0;font-size:18px}
-.changepassword .mat-dialog-container .mat-dialog-actions button:last-child{background:var(--c-t-primary-btn_title)} */
-
-
-
-.login_wrapper{overflow: hidden;}
-.login_wrapper .mat-form-field-flex {background: var(--c-t-bg-w);}
-.login_wrapper .mat-form-field-appearance-legacy .mat-form-field-underline {height: 1px;display: none;}
-.signupfooter a{font-family: var(--main-font); font-size: var(--base-font-size);color:var(--c-t-bg-w);}
-.signupfooter a:last-child{padding-right: 0px !important;}
-.login_wrapper .mat-form-field-appearance-legacy .mat-form-field-label span{color:var(--c-t-bg-zblack); font-family: var(--main-font); font-size: var(--base-font-size);padding-left: 10px;}
-/* .login_wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {height: 36px;} */
-.login_wrapper .from {padding: 16px 42px;}
-.login_wrapper input.mat-input-element {width: 96%;line-height: 26px;margin: 0 auto;
-  display: block;}
-.login_wrapper input.mat-input-element .mat-form-field-label-wrapper{line-height: 26px;}
-.login_wrapper .mat-form-field-appearance-legacy .mat-form-field-wrapper {padding-bottom: 10px;padding-top: 10px;}
-.login_wrapper .mat-form-field-subscript-wrapper .mat-error{margin-top: 0;}
-
-
-#maincontent{background:url(../images/bodyBg.png) repeat #fff;margin-left:0;margin-right:0;margin-top:0px;padding:25px 15px;position:relative;min-height:450px;width:auto}
-#beadcamb {
-  width: 100%;
-  background: #49cced;
-  position: relative;
-  clear: both;
-  display: block;
-  padding: 2px;
-}
-
-
-@media screen and (max-width: 1666px) {
-  .userimage {right: -56%;width: 430px;}
-}
-@media screen and (max-width: 1600px) {
-.userimage {right: -50%;width: 390px;}
-}
-@media screen and (max-width: 1360px) {
-.userimage {right: -40%;width: 328px;}
-}
-
-@media screen and (max-width: 1199px) {
-.userimage{display: none;}
-.login_wrapper .from{padding: 16px;}
 }
 
 @media screen and (max-width: 700px) {
@@ -548,13 +438,26 @@ position:relative!important;font-size:14px!important;text-transform:uppercase!im
 .login_lib_wrapper {width: 94%;}
 .from a {padding-right: 0 !important;padding-top: 10px;}
 }
+
 @media screen and (max-width: 640px) {
-  .login_lib_wrapper .from h2 {font-size: 55px;}
-  .signupfooter {flex-wrap: wrap;}
-  .login_wrapper .from {padding: 16px;width: 90% !important;display: block;}
-  .login_lib_wrapper .example-container button {line-height: 24px;font-size: 22px;}
+.login_lib_wrapper .from h2 {font-size: 55px;}
+.signupfooter {flex-wrap: wrap;}
+.login_wrapper .from {padding: 16px;width: 90% !important;display: block;}
+.login_lib_wrapper .example-container button {line-height: 24px;font-size: 22px;}
 }
+
+@media screen and (max-width: 620px) {
+.addlistingInventory_button_wrapper{display:flex;flex-wrap:wrap}
+}
+@media screen and (max-width: 576px) {
+.cdk-overlay-pane .mat-dialog-container {min-width: 1px;max-width: 96%;margin: 0 auto;width: 96% !important;}
+.formstylemainwrapper .col-1-3{width:100%;margin:0}
+}
+
+
 @media screen and (max-width: 480px) {
   .signupfooter a {text-align: left;}
   .login_lib_wrapper .from h2 {font-size: 32px;margin-bottom: 15px;}
 }
+
+
