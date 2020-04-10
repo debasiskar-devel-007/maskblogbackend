@@ -3,6 +3,8 @@ import { FormGroup, FormBuilder, Validators, FormGroupDirective } from '@angular
 import { CookieService } from 'ngx-cookie-service';
 import { HttpService } from '../../services/http.service';
 import { MatSnackBar } from '@angular/material';
+import { MetaService } from '@ngx-meta/core';
+
 @Component({
   selector: 'app-account-settings',
   templateUrl: './account-settings.component.html',
@@ -29,8 +31,24 @@ export class AccountSettingsComponent implements OnInit {
   public cities: any;
   public allCities: any;
 
-  constructor(public fb: FormBuilder,
+  constructor(public meta: MetaService, public fb: FormBuilder,
     public apiService: HttpService, public cook: CookieService,public snackBar :MatSnackBar) { 
+
+    this.meta.setTitle('Virus Barrier Medical Face Mask Blog backend');
+    this.meta.setTag('og:description', 'Virus Barrier Medical Face Mask Blog backend to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
+    this.meta.setTag('twitter:description', 'Virus Barrier Medical Face Mask Blog backend to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
+
+    this.meta.setTag('og:keyword', 'Virus Barrier Medical Face Mask Blog backend, Medical Face Mask Blog backend, Medical Face Mask Blog backend for Virus');
+    this.meta.setTag('twitter:keyword', 'Virus Barrier Medical Face Mask Blog backend, Medical Face Mask Blog backend, Medical Face Mask Blog backend for Virus');
+
+    this.meta.setTag('og:title', 'Virus Barrier Medical Face Mask Blog backend');
+    this.meta.setTag('twitter:title', 'Virus Barrier Medical Face Mask Blog backend');
+    this.meta.setTag('og:type', 'website');
+    this.meta.setTag('og:url','https://mask-blog-backend.influxiq.com/');    
+    this.meta.setTag('og:image', '../../assets/images/logo-fb.jpg');
+    this.meta.setTag('twitter:image', '../../assets/images/logo-twitter.jpg');
+
+
       this.allStateCityData();
       let allcookies: any;
     allcookies = cook.getAll();
