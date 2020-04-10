@@ -3,7 +3,7 @@ import { Router,ActivatedRoute } from '@angular/router';
 import { HttpService } from '../../../../services/http.service';
 import {environment} from '../../../../../environments/environment';
 import { CookieService } from 'ngx-cookie-service';
-
+import { MetaService } from '@ngx-meta/core';
 
 @Component({
   selector: 'app-list-admin',
@@ -128,7 +128,23 @@ sortdata:any={
   // status_gretterthan_zero_detail_datatype:any=[{key:"images",value:'image',fileurl:this.httpService }];
 
 
-  constructor(public activatedRoute:ActivatedRoute,public httpService:HttpService,private cookieService: CookieService) {
+  constructor(public meta: MetaService, public activatedRoute:ActivatedRoute,public httpService:HttpService,private cookieService: CookieService) {
+    
+        this.meta.setTitle('Virus Barrier Medical Face Mask Blog backend');
+    this.meta.setTag('og:description', 'Virus Barrier Medical Face Mask Blog backend to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
+    this.meta.setTag('twitter:description', 'Virus Barrier Medical Face Mask Blog backend to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
+
+    this.meta.setTag('og:keyword', 'Virus Barrier Medical Face Mask Blog backend, Medical Face Mask Blog backend, Medical Face Mask Blog backend for Virus');
+    this.meta.setTag('twitter:keyword', 'Virus Barrier Medical Face Mask Blog backend, Medical Face Mask Blog backend, Medical Face Mask Blog backend for Virus');
+
+    this.meta.setTag('og:title', 'Virus Barrier Medical Face Mask Blog backend');
+    this.meta.setTag('twitter:title', 'Virus Barrier Medical Face Mask Blog backend');
+    this.meta.setTag('og:type', 'website');
+    this.meta.setTag('og:url','https://mask-blog-backend.influxiq.com/');    
+    this.meta.setTag('og:image', '../../assets/images/logo-fb.jpg');
+    this.meta.setTag('twitter:image', '../../assets/images/logo-twitter.jpg');
+    
+    
     //   this.cookieService.set('jwttoken','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJleHAiOjE1ODU2NTM1MzksImlhdCI6MTU4NTU2NzEzOX0.ErmNEt1IOnbKQMfTveF2Tt0PY0TprflzQ1DngaGGUhA');
       this.jwttoken=this.cookieService.get('jwtToken');
 

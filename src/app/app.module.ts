@@ -40,6 +40,8 @@ import { TestComponent } from './test/test.component';
 // End http-loader section
 import { FileUploadModule } from 'file-upload-lib-influxiq';
 
+import { MetaModule } from '@ngx-meta/core';
+
 
 @NgModule({
   declarations: [
@@ -74,7 +76,8 @@ import { FileUploadModule } from 'file-upload-lib-influxiq';
     ReactiveFormsModule,
     BlogModule,
     CKEditorModule,
-    FileUploadModule
+    FileUploadModule,
+    MetaModule.forRoot()
   ],
   
   providers: [CookieService,AuthGuard,LoaderService,

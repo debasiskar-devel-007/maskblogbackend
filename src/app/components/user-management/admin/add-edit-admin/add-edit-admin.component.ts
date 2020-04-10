@@ -5,7 +5,7 @@ import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material';
 import { ActivatedRoute, Router } from '@angular/router';
 import {CookieService} from 'ngx-cookie-service';
 import {MatSnackBar} from '@angular/material/snack-bar';
-
+import { MetaService } from '@ngx-meta/core';
 
 @Component({
   selector: 'app-add-edit-admin',
@@ -27,7 +27,21 @@ export class AddEditAdminComponent implements OnInit {
 
   @ViewChild(FormGroupDirective, {static: false}) formDirective: FormGroupDirective;
 
-  constructor(public activatedRoute:ActivatedRoute, public httpService: HttpService, public fb: FormBuilder,public dialog: MatDialog,public router:Router,public cookieService:CookieService,public snackBar:MatSnackBar) { 
+  constructor(public meta: MetaService, public activatedRoute:ActivatedRoute, public httpService: HttpService, public fb: FormBuilder,public dialog: MatDialog,public router:Router,public cookieService:CookieService,public snackBar:MatSnackBar) { 
+
+    this.meta.setTitle('Virus Barrier Medical Face Mask Blog backend');
+    this.meta.setTag('og:description', 'Virus Barrier Medical Face Mask Blog backend to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
+    this.meta.setTag('twitter:description', 'Virus Barrier Medical Face Mask Blog backend to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
+
+    this.meta.setTag('og:keyword', 'Virus Barrier Medical Face Mask Blog backend, Medical Face Mask Blog backend, Medical Face Mask Blog backend for Virus');
+    this.meta.setTag('twitter:keyword', 'Virus Barrier Medical Face Mask Blog backend, Medical Face Mask Blog backend, Medical Face Mask Blog backend for Virus');
+
+    this.meta.setTag('og:title', 'Virus Barrier Medical Face Mask Blog backend');
+    this.meta.setTag('twitter:title', 'Virus Barrier Medical Face Mask Blog backend');
+    this.meta.setTag('og:type', 'website');
+    this.meta.setTag('og:url','https://mask-blog-backend.influxiq.com/');    
+    this.meta.setTag('og:image', '../../assets/images/logo-fb.jpg');
+    this.meta.setTag('twitter:image', '../../assets/images/logo-twitter.jpg');
 
 
     this.activatedRoute.params.subscribe(params => {
