@@ -301,6 +301,9 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .cdk-overlay-pane bottom-sheet .mat-nav-list a.mat-list-item .mat-line{font-size:14px}
 .mat-raised-button:not([class*=mat-elevation-z]){box-shadow:none!important}
 
+.cdk-overlay-pane.custom-modalbox confirmdialog .mat-dialog-content .mat-card #dialogdata_id{display:none;}
+.cdk-overlay-pane.custom-modalbox confirmdialog .mat-dialog-content .mat-card #dialogdatadescription_html{display:none;}
+
 
 /* form */
 .formspan{background-color:#e7e9ea;border:6px solid #fff;border-bottom:10px solid #fff;display:inline-block;width:100%;position:relative;z-index:9}
