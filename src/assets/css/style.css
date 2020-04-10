@@ -9,7 +9,7 @@
 
 .generalcls .btnblue{background-color:var(--c-t-primary-btn_title)!important}
 .generalcls .btnred{background-color:var(--c-t-bg-secondary)!important}
-.generalcls .singleButton{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif}
+.generalcls .singleButton{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:6px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif}
 .generalcls .content_header_wrapper{display:flex;justify-content:space-between;align-items:center}
 .generalcls .myaccountwrapper .content_header_wrapper{display:flex;justify-content:flex-end;align-items:center}
 .generalcls .content_header_wrapper .headerSpan{font-family:'NunitoLight';font-size:24px!important;text-transform:capitalize;color:#535353;margin:0;line-height:32px;margin-bottom:10px}
@@ -30,7 +30,8 @@
 .login_lib_wrapper{width:700px;position:relative;margin-bottom:0!important}
 .login_lib_wrapper .from h2{color:var(--c-t-bg-w);background:transparent!important;font-family:var(--main-black-font);font-size:80px;margin:0;margin-bottom:30px;display:inline-block;text-transform: uppercase;text-shadow: 0px 1px 9px rgba(0,0,0,0.81);}
 .login_lib_wrapper .example-container{display:flex;flex-direction:column;box-shadow:none;padding: 0px 16px 30px 16px;}
-.login_lib_wrapper .example-container button{margin-top:34px;font-size:30px;color:var(--c-t-bg-w);padding:10px 18px;display:block;box-shadow:none;cursor:pointer;outline:none;text-transform:uppercase;border:0;border-radius:0;background:-moz-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(25,198,254,1)),color-stop(100%,rgba(2,168,222,1)));background:-webkit-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);background:-o-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);background:-ms-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);background:linear-gradient(180deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#19c6fe',endColorstr='#02a8de',GradientType=0);font-family:var(--main-black-font)}
+.login_lib_wrapper .example-container button{margin-top: 34px;font-size: 30px;color: var(--c-t-bg-w);padding: 3px 18px 11px;display: block;box-shadow: none;cursor: pointer;outline: none;text-transform: uppercase;border: 0;border-radius: 0;background: -moz-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(25,198,254,1)),color-stop(100%,rgba(2,168,222,1)));
+background: -webkit-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);background: -o-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);background: -ms-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);background: linear-gradient(180deg,rgba(25,198,254,1) 0%,rgba(2,168,222,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#19c6fe',endColorstr='#02a8de',GradientType=0);font-family: var(--main-black-font);line-height: 36px;}
 
 .login_wrapper{background:url(../images/background.jpg) no-repeat!important;background-position:center center!important;background-size:cover!important;height:100%;display:flex!important;align-items:center;justify-content:center;padding: 0 !important;}
 .login_wrapper{overflow: hidden;}
@@ -40,7 +41,7 @@
 .signupfooter a:last-child{padding-right: 0px !important;}
 .login_wrapper .mat-form-field-appearance-legacy .mat-form-field-label span{color:var(--c-t-bg-zblack); font-family: var(--main-font); font-size: var(--base-font-size);padding-left: 10px;}
 .login_wrapper .from {padding: 16px 42px;}
-.login_wrapper input.mat-input-element {width: 96%;line-height: 26px;margin: 0 auto;
+.login_wrapper input.mat-input-element {width: 100%;line-height: 26px;margin: 0 auto;
   display: block;}
 .login_wrapper input.mat-input-element .mat-form-field-label-wrapper{line-height: 26px;}
 .login_wrapper .mat-form-field-appearance-legacy .mat-form-field-wrapper {padding-bottom: 10px;padding-top: 10px;}
@@ -147,7 +148,7 @@ height: auto;display: flex;align-items: center;flex-wrap: wrap;}
 .listingnewstyle mat-toolbar-row.searchbar .material-icons.cursor{order: 4;color: #fff;}
 .listingnewstyle mat-toolbar-row.searchbar .mat-raised-button.mat-primary{order: 3;}
 
-.listingnewstyle mat-toolbar-row.searchbar .mat-raised-button.mat-primary{margin: 0!important;border-radius: 0;background-color: var(--c-t-primary-btn_title);text-transform: uppercase;font-family: 'NunitoRegular'!important;padding: 5px 10px 10px;line-height: 23px;margin: 0 5px 0 0 !important;}
+.listingnewstyle mat-toolbar-row.searchbar .mat-raised-button.mat-primary{margin: 0!important;border-radius: 0;background-color: var(--c-t-primary-btn_title);text-transform: uppercase;font-family: 'NunitoRegular'!important;padding: 6px 10px 10px;line-height: 22px;margin: 0 5px 0 0 !important;}
 .listingnewstyle .mat-form-field-appearance-legacy .mat-form-field-wrapper{padding-bottom:0}
 .listingnewstyle mat-toolbar-row.searchbar .mat-form-field-label.ng-star-inserted.mat-empty.mat-form-field-empty{display:block!important;width:98%;padding:0 20px 0 8px;transition:none!important;transform:inherit!important;text-transform:capitalize;font-family:'NunitoRegular'!important;font-size: 15px;line-height: 20px;}
 .listingnewstyle .mat-paginator-page-size{font-family:'NunitoLight'!important;text-transform:capitalize}
@@ -308,7 +309,7 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 /* form */
 .formspan{background-color:#e7e9ea;border:6px solid #fff;border-bottom:10px solid #fff;display:inline-block;width:100%;position:relative;z-index:9}
 .formspan .form-field-span,.formspan .mat-form-field{display:block;position:relative;text-align:left;width:98%!important;background:#fff;padding:1px 0!important;margin:0 auto 18px!important}
-.formspan .bottompart .mat-raised-button.mat-primary{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-primary-btn_title)!important;margin-bottom:1%!important;}
+.formspan .bottompart .mat-raised-button.mat-primary{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:6px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-primary-btn_title)!important;margin-bottom:1%!important;}
 .formspan .example-container{display:flex;flex-direction:column;width:98%;padding:14px;margin-bottom:0}
 .formspan .example-container,.formspan,.formspan .mat-form-field{box-sizing:border-box;width: 100% !important;}
 .formspan .form-field-span, .formspan .mat-form-field {width: 100% !important;}
@@ -336,7 +337,7 @@ tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 .AddEditBlog .button-group{width:100%!important}
 
 .AddEditBlog .mat-card-actions .mat-raised-button:first-child{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:var(--c-t-bg-black)!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-bg-w)!important}
-.AddEditBlog .button-group .mat-raised-button.mat-primary,.AddEditBlog .mat-card-actions .mat-raised-button.mat-primary{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-primary-btn_title)!important}
+.AddEditBlog .button-group .mat-raised-button.mat-primary,.AddEditBlog .mat-card-actions .mat-raised-button.mat-primary{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:6px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-primary-btn_title)!important}
 .AddEditBlog .button-group .mat-raised-button.mat-warn,.AddEditBlog .mat-card-actions .mat-raised-button.mat-warn{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:5px 10px 10px!important;line-height:18px!important;color:#fff!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif;background-color:var(--c-t-bg-secondary)}
 .AddEditBlog .files-view{height:auto!important;display:flex!important;align-items:stretch!important;flex-wrap:wrap!important;justify-content:center!important;}
 .AddEditBlog .files-view .mat-card{flex:1 1 18%!important;display:flex!important;flex-direction:column!important;margin:1%!important;justify-content:center!important;text-align:center!important;border:1px solid #c9c9c9!important;padding:10px!important;flex-wrap:initial!important;margin-top:0!important}
