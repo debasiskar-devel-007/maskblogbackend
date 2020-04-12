@@ -14,26 +14,26 @@
               </a>
             </mat-list-item>
     
-            <mat-list-item class="nav-item" routerLinkActive="activemenu">
-              <a class="nav-item-hold" mat-menu-item routerLinkActive="activemenu" [routerLink]="['/dashboard']">
-                <span class="nav-text">Dashboard</span>
+            <mat-list-item fxFlex class="nav-item" routerLinkActive="activemenu">
+              <a mat-menu-item routerLinkActive="activemenu" [routerLink]="['/dashboard']">
+                Dashboard
               </a>
             </mat-list-item>          
     
-            <mat-list-item class="nav-item" routerLinkActive="activemenu">
-              <a class="nav-item-hold" mat-menu-item routerLinkActive="activemenu" [routerLink]="['/admin/list']"><span class="nav-text">Admin Management</span></a>
+            <mat-list-item fxFlex class="nav-item" routerLinkActive="activemenu">
+              <a mat-menu-item routerLinkActive="activemenu" [routerLink]="['/admin/list']">Admin Management</a>
             </mat-list-item>
-            <mat-list-item class="nav-item" routerLinkActive="activemenu">
-              <a class="nav-item-hold" mat-menu-item routerLinkActive="activemenu" [routerLink]="['/blog/category/list']"><span class="nav-text">Blog Management</span></a>
+            <mat-list-item fxFlex class="nav-item" routerLinkActive="activemenu">
+              <a mat-menu-item routerLinkActive="activemenu" [routerLink]="['/blog/category/list']">Blog Management</a>
             </mat-list-item>
             
-            <mat-list-item class="nav-item" routerLinkActive="activemenu">
-              <a class="nav-item-hold" mat-menu-item routerLinkActive="activemenu" [routerLink]="['/account-settings']">
-                <span class="material-icons">account_circle</span> <span class="nav-text">My Account</span></a>
+            <mat-list-item fxFlex class="nav-item" routerLinkActive="activemenu">
+              <a mat-menu-item routerLinkActive="activemenu" [routerLink]="['/account-settings']">
+                <span class="material-icons">account_circle</span> My Account</a>
             </mat-list-item>
-            <mat-list-item class="nav-item" routerLinkActive="activemenu">
-              <a class="nav-item-hold" mat-menu-item routerLinkActive="activemenu" (click)="logout()">
-                <span class="material-icons">exit_to_app</span> <span class="nav-text">Logout</span></a>
+            <mat-list-item fxFlex class="nav-item" routerLinkActive="activemenu">
+              <a mat-menu-item routerLinkActive="activemenu" (click)="logout()">
+                <span class="material-icons">exit_to_app</span> Logout</a>
             </mat-list-item>
           </mat-list>
         </div>      

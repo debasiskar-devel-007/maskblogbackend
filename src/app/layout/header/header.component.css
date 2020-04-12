@@ -1,7 +1,7 @@
 .admcls.mat-card{padding:0}
 .admcls .mat-card{padding:0!important;border-radius:0!important;box-shadow:none}
 .admcls .header.mat-toolbar-multiple-rows{width:100%;background-color:#2e363f}
-.admcls .header .toolbar-row{padding:0!important;overflow:hidden;height:100%;justify-content:space-between}
+.admcls .header .toolbar-row{padding:0!important;overflow:hidden;height:100%;justify-content:space-between;background-color: #2e363f;}
 .admcls .header .toolbar-row .logo{width:auto;background:#222f3d;padding:16px 20px;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center}
 .admcls .header .toolbar-row .logo img{max-width:100%}
 .admcls .header .toolbar-row .logo h2 span{margin:0 3px}
@@ -23,13 +23,41 @@
 .clear{padding:0!important;display:block!important}
 .topmenulist .navigation-left{display:flex;flex-wrap:nowrap;align-items:center;justify-content:center;padding-top:0}
 .topmenulist .navigation-left .mat-list-item{padding:8px 0;background:#2e363f;border-left:1px solid #363e48}
-.topmenulist .navigation-left .mat-list-item:focus{border:0;}
-.topmenulist .navigation-left a,.topmenulist .navigation-left a:hover{color:#999;text-shadow:0 -1px 0 rgba(0,0,0,0.25);font-family:var(--NunitoRegular);font-size:14px;text-transform:capitalize;padding:15px 10px;display:block;line-height:normal;height:auto;cursor: pointer;text-decoration: none;}
+.topmenulist .navigation-left a,.topmenulist .navigation-left a:hover{ outline: none; color:#999;text-shadow:0 -1px 0 rgba(0,0,0,0.25);font-family:var(--NunitoRegular);font-size:14px;text-transform:capitalize;padding:15px 10px;display:block;line-height:normal;height:auto;cursor: pointer;     text-decoration: none;
+    font-weight: normal;}
 .topmenulist .navigation-left a:hover{color:#08b1e7}
+.topmenulist .activemenu{color:#08b1e7}
 .topmenulist .navigation-left .mat-list-item .mat-icon{color:#08b1e7}
 .virus{color:#d7e01a}
 .barrier{color:#df5352}
-.blog{color:#fff}
 .medical{color:#5fc5df}
+.blog{color:#ffffff}
 .topmenulist .navigation-left a, .topmenulist .navigation-left a:hover{display: flex; align-items: center;}
 .topmenulist .navigation-left a span{margin-right: 5px;}
+
+
+@media screen and (max-width:991px) {
+.topmenulist{ position: initial;}
+
+.admcls .header .toolbar-row{ display: block;}
+
+.admcls .header .toolbar-row .logo{ display: block;}
+.admcls .header .toolbar-row .logo h2{ display: block; text-align: center;}
+
+.topmenulist .navigation-left a, .topmenulist .navigation-left a:hover{ display: block; text-align: center;     width: 100%;}
+
+.topmenulist .mat-list-item-content{display: block; text-align: center;}
+
+.topmenulist .navigation-left a span{    float: left;
+    margin-top: -3px;}
+}
+
+@media screen and (max-width:660px) {
+    .topmenulist .navigation-left{ display: block;}
+
+    .topmenulist .navigation-left .mat-list-item{    border-left: none;
+        border-bottom: solid 1px #fff; padding: 0px;}
+
+        .topmenulist .navigation-left a span{    float: none;
+            margin-top: 0px; display: block;}
+}
