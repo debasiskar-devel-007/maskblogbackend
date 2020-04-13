@@ -215,7 +215,7 @@ export class DashboardAdminComponent implements OnInit {
        this.websites.website2=response.website2[0].blog_count;
        this.websites.website3=response.website3[0].blog_count;
        this.total_blogs = response.total_blogs;
-       console.log(this.websites);
+       
      }
    }); 
   }
