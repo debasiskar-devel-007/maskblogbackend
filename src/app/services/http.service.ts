@@ -99,6 +99,7 @@ getDataForDatalist(endpoint: any) {
 }
 // getData end
 
+
 getDatalist(requestdata: any) {
   const httpOptions = {
     headers: new HttpHeaders({
@@ -331,6 +332,17 @@ postdata(requestdata: any) {
   
     // this.isTokenExpired()
     var result = this._http.post(this.serverUrlDemo + endpoint, httpOptions).pipe(map(res => res));
+  
+    return result;
+  }
+  getDataForEndpointApi1(endpoint: any) {
+    const httpOptions = {
+             headers: new HttpHeaders({
+            'Content-Type':  'application/json'
+        })
+    };
+    // this.isTokenExpired()
+    var result = this._http.post(this.serverUrlDemo1 + endpoint, httpOptions).pipe(map(res => res));
   
     return result;
   }

@@ -1,8 +1,86 @@
 <div class="adminwrappercls">
     <app-header></app-header>
-    <!-- <div id="beadcamb">
-      
-    </div> -->
+
+
+    <mat-card class="countdiv" style="padding: 0 !important;">
+      <!-- <mat-card class="bg-cyan box-shadow" *ngIf="cookieUserallData.type=='admin'">
+        <span class="content">
+          <mat-card-title>Total Number Of Blogs</mat-card-title>
+          <mat-card-subtitle>{{this.total_blogs}}</mat-card-subtitle>
+        </span>
+        <span class="icon">
+          <i class="material-icons">person_add</i>
+        </span>
+        <span class="detailbtn">
+          <button class="singleButton">Detail</button>
+        </span>
+      </mat-card> -->
+      <mat-card class="bg-light-green box-shadow">
+        <span class="content">
+          <mat-card-title>Total Number Of Blogs</mat-card-title>
+          <mat-card-subtitle>{{this.total_blogs}}</mat-card-subtitle>
+        </span>
+        <!-- <span class="icon">
+          <i class="material-icons">playlist_add_check</i>
+        </span>
+        <span class="detailbtn">
+          <button class="singleButton">Detail</button>
+        </span> -->
+      </mat-card>
+      <mat-card class="bg-pink box-shadow" >
+        <span class="content">
+          <mat-card-title>Number Of Blogs For Website 1</mat-card-title>
+          <mat-card-subtitle>{{this.websites.website1}}</mat-card-subtitle>
+        </span>
+        <!-- <span class="icon">
+          <i class="material-icons">eject</i>
+        </span>
+        <span class="detailbtn">
+          <button class="singleButton">Detail</button>
+        </span> -->
+      </mat-card>
+      <mat-card class="bg-orange box-shadow" >
+        <span class="content">
+          <mat-card-title>Number Of Blogs For Website 2</mat-card-title>
+        <mat-card-subtitle>{{this.websites.website2}}</mat-card-subtitle>
+        </span>
+        <!-- <span class="icon">
+          <i class="material-icons">add_shopping_cart</i>
+        </span>     
+        <span class="detailbtn">
+          <button class="singleButton">Detail</button>
+        </span> -->
+      </mat-card>
+      <mat-card class="bg-deep-blue box-shadow" >
+        <span class="content">
+          <mat-card-title>Number Of Blogs For Website 3 </mat-card-title>
+          <mat-card-subtitle>{{this.websites.website3}}</mat-card-subtitle>
+        </span>
+        <!-- <span class="icon">
+          <i class="material-icons">credit_card</i>
+        </span>     
+        <span class="detailbtn">
+          <button class="singleButton">Detail</button>
+        </span>        -->
+      </mat-card>
+      <!-- <mat-card class="bg-deep-green box-shadow" *ngIf="cookieUserallData.type=='admin'">
+        <span class="content">
+          <mat-card-title>Transaction Live </mat-card-title>
+        <mat-card-subtitle>{{adminCount.transaction_type_live}}</mat-card-subtitle>
+        </span>
+        <span class="icon">
+          <i class="material-icons">card_membership</i>
+        </span>    
+        <span class="detailbtn">
+          <button class="singleButton">Detail</button>
+        </span>        
+      </mat-card> -->
+    </mat-card>
+
+
+
+
+
     <div id="maincontent">
       <div class="main-content-wrap">
         
