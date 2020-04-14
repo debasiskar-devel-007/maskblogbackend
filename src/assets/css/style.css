@@ -13,7 +13,7 @@
 .generalcls .singleButton{position:relative!important;font-size:14px!important;text-transform:uppercase!important;border:none!important;padding:6px 10px 10px!important;line-height:18px!important;color:var(--c-t-bg-w)!important;border-radius:0!important;margin:0 2px!important;font-family:'NunitoRegular',sans-serif}
 .generalcls .content_header_wrapper{display:flex;justify-content:space-between;align-items:center}
 .generalcls .myaccountwrapper .content_header_wrapper{display:flex;justify-content:center;align-items:center}
-.generalcls .content_header_wrapper .headerSpan{font-family:'NunitoLight';font-size:24px!important;text-transform:uppercase;color:#535353;margin:0;line-height:32px;margin-bottom:10px}
+.generalcls .content_header_wrapper .headerSpan{font-family:'NunitoLight';font-size:24px!important;text-transform:uppercase;color:#535353;margin:0;line-height:32px;margin-bottom:10px;margin-top: 10px;}
 .generalcls .content_header_wrapper .buttonsetToolbar{width:auto;padding:0;margin-bottom:10px;height:auto!important}
 .generalcls .content_header_wrapper .buttonsetToolbar .mat-raised-button.mat-primary:first-child{margin-left:0}
 .generalcls .content_header_wrapper .buttonsetToolbar .mat-raised-button.mat-primary:last-child{margin-right:0!important}
@@ -206,7 +206,7 @@ tr.mat-header-row{background:var(--c-t-alt-links)}
 .mat-sort-header-button{text-transform:uppercase}
 th.mat-header-cell{color:var(--c-t-sub-primary);text-transform:uppercase;font-family:"NunitoRegular";font-size:14px}
 tr td br{display:none}
-td.mat-cell{color:#465157;font-family:"NunitoLight"; line-height: 18px;text-align:left;}
+td.mat-cell{color:#465157;font-family:"NunitoLight"; line-height: 18px;text-align: left;}
 tr.mat-footer-row, tr.mat-row:nth-child(odd){background-color: #f2f2f2;}
 
 
@@ -552,7 +552,7 @@ table.mat-table {width: 100%;}
 .formmainwrapper .file_uploader .uploadtextwrapper{font-family:'NunitoRegular'}
 
 @media screen and (max-width: 960px) {
-.mat-table{border:0;vertical-align:middle} 
+.mat-table{border:0;vertical-align:middle}
 .mat-table caption{font-size:1em}
 .mat-table .mat-header-cell{border:10px solid;clip:rect(0 0 0 0);height:1px;margin:-1px;padding:0;position:absolute;width:1px}
 .mat-table .mat-row{border-bottom:5px solid #ddd;display:block;height:auto}
@@ -565,6 +565,11 @@ table.mat-table {width: 100%;}
 .mat-table .mat-cell:last-child:before {content: attr(data-label);float: left;text-transform: uppercase;font-weight: 400;font-size: .85em;text-align: left;width: 48%;}
 .listingnewstyle td.mat-column-Actions > span span.cursor {display: inline-block;}
 .listingnewstyle td.mat-column-Actions > span {display: inline-block;}
+}
+
+@media screen and (max-width: 800px) {
+.countdiv .mat-card {width: 48.333%;}
+.countdiv .mat-card .icon i {font-size: 84px;}
 }
 
 @media screen and (max-width: 700px) {
@@ -582,7 +587,10 @@ table.mat-table {width: 100%;}
 }
 
 @media screen and (max-width: 620px) {
+.countdiv .mat-card {width: 100%;}
 .addlistingInventory_button_wrapper{display:flex;flex-wrap:wrap}
+.countdiv .mat-card .icon {width: 84px;}
+.countdiv .mat-card .icon i {font-size: 54px;}
 }
 @media screen and (max-width: 576px) {
 .cdk-overlay-pane .mat-dialog-container {min-width: 1px;max-width: 96%;margin: 0 auto;width: 96% !important;}
