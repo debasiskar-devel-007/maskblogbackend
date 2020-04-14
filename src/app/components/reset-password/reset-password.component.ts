@@ -15,6 +15,15 @@ export class ResetPasswordComponent implements OnInit {
     endpoint:'resetpassword',
     source:'users'
   };
+  
+  public loginRouteingUrl: any = {
+    // "path":"login",
+    "path":"",
+    "buttonName":"Login",
+    "customLink":"/login",
+    "customURl":""
+  };
+
   constructor(public meta: MetaService) { 
         this.meta.setTitle('Virus Barrier Medical Face Mask Blog backend | Reset Password');
     this.meta.setTag('og:description', 'Virus Barrier Medical Face Mask Blog backend to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
