@@ -587,7 +587,6 @@ table.mat-table {width: 100%;}
 .generalcls .content_header_wrapper {flex-wrap: wrap;justify-content: space-between;}  
 .generalcls .content_header_wrapper .buttonsetToolbar {justify-content: center;flex-wrap: wrap;}
 .generalcls .content_header_wrapper .buttonsetToolbar .mat-raised-button.mat-primary{margin-top: 10px !important;}
-/* .generalcls .content_header_wrapper .buttonsetToolbar .mat-raised-button.mat-primary:first-child{margin-top: 0px !important;} */
 .login_lib_wrapper .from h2 {font-size: 55px;}
 .signupfooter {flex-wrap: wrap;}
 .login_wrapper .from {padding: 16px;width: 90% !important;display: block;}
