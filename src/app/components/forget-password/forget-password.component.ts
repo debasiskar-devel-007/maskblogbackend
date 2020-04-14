@@ -9,7 +9,7 @@ import { MetaService } from '@ngx-meta/core';
 })
 export class ForgetPasswordComponent implements OnInit {
   public logo: any = './assets/images/logo.png';
-  public fromTitle: any = 'FORGOTTEN PASSWORD'
+  public fromTitle: any = 'FORGOT PASSWORD'
     // public signUpRouteingUrl: any = 'sign-up';
   public serverUrl:any =environment["API_URL"];  // server url
   ;
@@ -31,8 +31,8 @@ export class ForgetPasswordComponent implements OnInit {
     "customURl":""
   };
   public buttonName: any = 'Reset Password';
-
   public domainUrl: any = 'http://localhost:6601/reset-password';
+
   constructor(public meta: MetaService) {
         this.meta.setTitle('Virus Barrier Medical Face Mask Blog backend | Forget Password');
     this.meta.setTag('og:description', 'Virus Barrier Medical Face Mask Blog backend to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
