@@ -552,7 +552,7 @@ table.mat-table {width: 100%;}
 .formmainwrapper .file_uploader .uploadtextwrapper{font-family:'NunitoRegular'}
 
 @media screen and (max-width: 960px) {
-.mat-table{border:0;vertical-align:middle}
+.mat-table{border:0;vertical-align:middle} 
 .mat-table caption{font-size:1em}
 .mat-table .mat-header-cell{border:10px solid;clip:rect(0 0 0 0);height:1px;margin:-1px;padding:0;position:absolute;width:1px}
 .mat-table .mat-row{border-bottom:5px solid #ddd;display:block;height:auto}
