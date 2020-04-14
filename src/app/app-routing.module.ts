@@ -97,7 +97,7 @@ data: {
   {
     path : 'blog-management/list',component :  ListBlogsComponent,canActivate: [AuthGuard],
     resolve: { blogList: ResolveService }, 
-    data: { requestcondition: { source: 'blogs_desc_priority', condition: { } }, endpoint: 'datalist' }
+    data: { requestcondition: { source: '', condition: { } ,limit:10,skip:0}, endpoint: 'getbloglistdata' }
   },
   {
     path : 'blog-management/add',component : AddEditBlogComponent,canActivate: [AuthGuard]
