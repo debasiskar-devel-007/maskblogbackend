@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { MetaService } from '@ngx-meta/core';
+import { getTreeControlMissingError } from '@angular/cdk/tree';
 
 @Component({
   selector: 'app-list-blogs',
@@ -47,7 +48,8 @@ export class ListBlogsComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.data.subscribe((resolveData:any) => {
-      this.blogListConfig.datasource = resolveData.blogList.res;
+     console.log("hggshdgsugdugs",resolveData);
+      this.blogListConfig.datasource = resolveData.blogList.results;
      this.blogListConfig.jwtToken = this.cookieService.get('jwtToken');
     //  this.blogListConfig.jwtToken ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJleHAiOjE1ODYxNzk3MzcsImlhdCI6MTU4NjA5MzMzN30.62F_1FAIekcBiBYaVnAFvEMeLN1Z5_CP3lJZcgEnfe4"
 
