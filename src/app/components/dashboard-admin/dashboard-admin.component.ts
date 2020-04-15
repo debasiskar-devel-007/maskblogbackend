@@ -129,7 +129,7 @@ export class DashboardAdminComponent implements OnInit {
   editroute1: any = 'modeledit';
   jwttoken: any;
 
-
+ public user_cookies:any;
 
   constructor(public meta: MetaService, public activatedRoute: ActivatedRoute, public httpService: HttpService, private cookieService: CookieService) {
     this.countfunction();
@@ -146,10 +146,11 @@ export class DashboardAdminComponent implements OnInit {
     this.meta.setTag('og:url', 'https://mask-blog-backend.influxiq.com/');
     this.meta.setTag('og:image', '../../assets/images/logo-fb.jpg');
     this.meta.setTag('twitter:image', '../../assets/images/logo-twitter.jpg');
-
-
-    //   this.cookieService.set('jwttoken','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJleHAiOjE1ODU2NTM1MzksImlhdCI6MTU4NTU2NzEzOX0.ErmNEt1IOnbKQMfTveF2Tt0PY0TprflzQ1DngaGGUhA');
     this.jwttoken = this.cookieService.get('jwtToken');
+    let allcookies: any;
+    allcookies = cookieService.getAll();
+    this.user_cookies = JSON.parse(allcookies.user_details);
+    console.log("cookies data",this.user_cookies.firstname,this.user_cookies.lastname);
     this.datasource = '';
     let endpoint = 'getblogmanagementlistdata';
     let endpointc = 'getblogmanagementlistdata-count';
