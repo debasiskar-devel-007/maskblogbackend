@@ -126,10 +126,12 @@ sortdata:any={
 //   status_gretterthan_zero_modify_header: any = { 'dateformat': 'Date','status':'Status','email':'Email', 'name':'Full Name', 'bodytype' : 'Bodytype', 'shatterblok agreement date': 'Shatterblok Agreement Date', 'audiodeadline agreement date': 'Audiodeadline Agreement Date' };
 //   status_gretterthan_zero_detail_skip:any=['_id','email','name','type','status'];
   // status_gretterthan_zero_detail_datatype:any=[{key:"images",value:'image',fileurl:this.httpService }];
-
+public user_cookies:any;
 
   constructor(public meta: MetaService, public activatedRoute:ActivatedRoute,public httpService:HttpService,private cookieService: CookieService) {
-    
+    let allcookies: any;
+    allcookies = cookieService.getAll();
+    this.user_cookies = JSON.parse(allcookies.user_details);
     this.meta.setTitle('Virus Barrier Medical Face Mask Blog backend | Admin Listing');
     this.meta.setTag('og:description', 'Virus Barrier Medical Face Mask Blog backend to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
     this.meta.setTag('twitter:description', 'Virus Barrier Medical Face Mask Blog backend to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');

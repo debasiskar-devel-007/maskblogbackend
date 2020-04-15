@@ -24,11 +24,13 @@ export class AddEditAdminComponent implements OnInit {
   public condition:any;
   public action:any='add';
   public adminData:any;
-
+  public user_cookies:any;
   @ViewChild(FormGroupDirective, {static: false}) formDirective: FormGroupDirective;
 
   constructor(public meta: MetaService, public activatedRoute:ActivatedRoute, public httpService: HttpService, public fb: FormBuilder,public dialog: MatDialog,public router:Router,public cookieService:CookieService,public snackBar:MatSnackBar) { 
-
+    let allcookies: any;
+    allcookies = cookieService.getAll();
+    this.user_cookies = JSON.parse(allcookies.user_details);
     this.meta.setTitle('Virus Barrier Medical Face Mask Blog backend | Add Edit Listing');
     this.meta.setTag('og:description', 'Virus Barrier Medical Face Mask Blog backend to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
     this.meta.setTag('twitter:description', 'Virus Barrier Medical Face Mask Blog backend to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
