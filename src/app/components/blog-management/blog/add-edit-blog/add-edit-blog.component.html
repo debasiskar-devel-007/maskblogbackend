@@ -5,6 +5,17 @@
     <!-- <div id="beadcamb">
       
     </div> -->
+    <mat-card class="breadcrumbs-top">
+      <h3 class="page-header-title">Welcome <span>Souresh Banerjee</span></h3>
+      <mat-card-content class="breadcrumb-wrapper">
+        <mat-list class="breadcrumb">
+          <mat-list-item class="breadcrumb-item"><a [routerLink]="['/dashboard']"><span class="material-icons">home</span></a></mat-list-item>
+          <mat-list-item class="breadcrumb-item"><a [routerLink]="['/blog-management/list']">Blog</a></mat-list-item>
+          <mat-list-item class="breadcrumb-item">{{action}}</mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+
     <div id="maincontent">
       <div class="main-content-wrap">
         <mat-card class="generalcls" style="padding: 0 !important;">

@@ -16,8 +16,8 @@ export class AddEditBlogComponent implements OnInit {
   addUrl: any = 'addorupdatedata';
   getDataUrl: any= 'datalist';
   public editdata: any = [];
-  action:any="add";
-  listURL:any="blog-management/list";
+  action:any="Add";
+  listURL:any="blog-management/list";  
 
 public configData: any = {
       baseUrl: "https://fileupload.influxhostserver.com/",
@@ -69,11 +69,11 @@ public configData: any = {
     // console.log("gggggg",this.configData)
     
     this.activatedRoute.params.subscribe(params => {
+      
       if (params._id) {
         this.activatedRoute.data.subscribe(resolveData => {         
           this.editdata= resolveData.blogList.res[0];  
-          this.action="edit";    
-          
+          this.action="edit";   
         });
       }
     });
