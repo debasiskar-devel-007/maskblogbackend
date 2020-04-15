@@ -150,7 +150,7 @@ export class DashboardAdminComponent implements OnInit {
     let allcookies: any;
     allcookies = cookieService.getAll();
     this.user_cookies = JSON.parse(allcookies.user_details);
-    console.log("cookies data",this.user_cookies.firstname,this.user_cookies.lastname);
+    
     this.datasource = '';
     let endpoint = 'getblogmanagementlistdata';
     let endpointc = 'getblogmanagementlistdata-count';

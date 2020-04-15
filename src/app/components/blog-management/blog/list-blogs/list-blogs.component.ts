@@ -30,8 +30,13 @@ export class ListBlogsComponent implements OnInit {
     view: "blogs_desc_priority"
 
   }
+  public user_cookies:any;
   constructor(public meta: MetaService, public activatedRoute:ActivatedRoute,public cookieService:CookieService) {
-        this.meta.setTitle('Virus Barrier Medical Face Mask Blog backend | Blog Listing');
+    let allcookies: any;
+    allcookies = cookieService.getAll();
+    this.user_cookies = JSON.parse(allcookies.user_details);
+    
+    this.meta.setTitle('Virus Barrier Medical Face Mask Blog backend | Blog Listing');
     this.meta.setTag('og:description', 'Virus Barrier Medical Face Mask Blog backend to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
     this.meta.setTag('twitter:description', 'Virus Barrier Medical Face Mask Blog backend to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
 
@@ -48,7 +53,7 @@ export class ListBlogsComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.data.subscribe((resolveData:any) => {
-     console.log("hggshdgsugdugs",resolveData);
+    
       this.blogListConfig.datasource = resolveData.blogList.results;
      this.blogListConfig.jwtToken = this.cookieService.get('jwtToken');
     //  this.blogListConfig.jwtToken ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJleHAiOjE1ODYxNzk3MzcsImlhdCI6MTU4NjA5MzMzN30.62F_1FAIekcBiBYaVnAFvEMeLN1Z5_CP3lJZcgEnfe4"

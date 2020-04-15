@@ -45,8 +45,11 @@ public configData: any = {
       conversionNeeded: 0,
       bucketName: "crmfiles.influxhostserver"
     }
-  constructor(public meta: MetaService, public router:Router,public activatedRoute:ActivatedRoute) {
-
+    public user_cookies:any;
+  constructor(public meta: MetaService, public router:Router,public activatedRoute:ActivatedRoute,public cookieService:CookieService) {
+    let allcookies: any;
+    allcookies = cookieService.getAll();
+    this.user_cookies = JSON.parse(allcookies.user_details);
     this.meta.setTitle('Virus Barrier Medical Face Mask Blog backend | Blog Add Edit');
     this.meta.setTag('og:description', 'Virus Barrier Medical Face Mask Blog backend to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
     this.meta.setTag('twitter:description', 'Virus Barrier Medical Face Mask Blog backend to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
