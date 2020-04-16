@@ -687,5 +687,4 @@ table.mat-table {width: 100%;}
 .paymentstatus .mat-list-item .mat-list-item-content span {font-size: 16px;}
 .cdk-overlay-pane.custom-modalbox confirmdialog .mat-dialog-content .mat-card {flex-wrap: wrap;}
 .cdk-overlay-pane.custom-modalbox confirmdialog .mat-dialog-content .mat-card .mat-card-header {width: 100%;padding: 5px;margin-top: 7px;}
-
 }
