@@ -16,8 +16,8 @@
           <span class="column4">
             <mat-card class="bg-light-green box-shadow">
               <span class="content">
-                <mat-card-title>Total Number Of Blogs</mat-card-title>
-                <mat-card-subtitle>{{this.total_blogs}}</mat-card-subtitle>
+                <mat-card-title>Total Number Of Active Blogs</mat-card-title>
+                <mat-card-subtitle>{{total_blogs}}</mat-card-subtitle>
               </span>
               <span class="icon">
                 <img src="../../../assets/images/blog-icon-dashboard.png">
@@ -26,10 +26,25 @@
                 <button class="singleButton">Detail</button>
               </span> -->
             </mat-card>
+
+            <mat-card class="bg-light-green box-shadow">
+              <span class="content">
+                <mat-card-title>Total Number Of Inactive Blogs</mat-card-title>
+                <mat-card-subtitle>{{websites.inactiveBlogs}}</mat-card-subtitle>
+              </span>
+              <span class="icon">
+                <img src="../../../assets/images/blog-icon-dashboard.png">
+              </span>
+              <!-- <span class="detailbtn">
+                <button class="singleButton">Detail</button>
+              </span> -->
+            </mat-card>
+
+
             <mat-card class="bg-pink box-shadow" >
               <span class="content">
                 <mat-card-title>Number Of Blogs For Website 1</mat-card-title>
-                <mat-card-subtitle>{{this.websites.website1}}</mat-card-subtitle>
+                <mat-card-subtitle>{{websites.website1}}</mat-card-subtitle>
               </span>
               <span class="icon">
                 <img src="../../../assets/images/blog-icon2-dashboard.png">
@@ -41,7 +56,7 @@
             <mat-card class="bg-orange box-shadow" >
               <span class="content">
                 <mat-card-title>Number Of Blogs For Website 2</mat-card-title>
-              <mat-card-subtitle>{{this.websites.website2}}</mat-card-subtitle>
+              <mat-card-subtitle>{{websites.website2}}</mat-card-subtitle>
               </span>
               <span class="icon">
                 <img src="../../../assets/images/blog-icon2-dashboard.png">
@@ -53,7 +68,7 @@
             <mat-card class="bg-deep-blue box-shadow" >
               <span class="content">
                 <mat-card-title>Number Of Blogs For Website 3 </mat-card-title>
-                <mat-card-subtitle>{{this.websites.website3}}</mat-card-subtitle>
+                <mat-card-subtitle>{{websites.website3}}</mat-card-subtitle>
               </span>
               <span class="icon">
                 <img src="../../../assets/images/blog-icon2-dashboard.png">
