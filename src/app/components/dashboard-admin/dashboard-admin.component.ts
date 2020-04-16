@@ -16,7 +16,8 @@ export class DashboardAdminComponent implements OnInit {
   public websites:any={
     "website1":"",
     "website2":"",
-    "website3":""
+    "website3":"",
+    "inactiveBlogs":""
   }
   public total_blogs:any;
   public status: any = [{ val: 1, name: 'Active' }, { val: 0, name: 'Inactive' }];
@@ -215,6 +216,7 @@ export class DashboardAdminComponent implements OnInit {
        this.websites.website1=response.website1[0].blog_count;
        this.websites.website2=response.website2[0].blog_count;
        this.websites.website3=response.website3[0].blog_count;
+       this.websites.inactiveBlogs=response.total_inactive_blogs;
        this.total_blogs = response.total_blogs;       
      }
    }); 
