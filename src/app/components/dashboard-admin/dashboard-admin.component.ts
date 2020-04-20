@@ -59,10 +59,10 @@ export class DashboardAdminComponent implements OnInit {
 
   // use for Table Detail Field Skip 
   adminDataList_skip: any = ["_id", "userId", "created_at", "updated_at", "image", "metatitle", "metadesc", "description", "credentials", "blogs_file", "blogs_image", "blogtitle_search", "author_search", "video", "blogcat", "profile_picture", "tagsearch", "featured", "description_html", "blogcat", "created_at", "profile_picture", "tagsearch", "author"];
-  ipBlogDataList_skip:any=[];
+  ipBlogDataList_skip:any=["city_search","country_search","region_search","timezone_search"];
 
   adminDataList_detail_skip: any = ['_id', 'password', 'updated_at', 'id', "description_html", "blogcat", "created_at", "profile_picture", "tagsearch"]
-  blogdatabyip_detail_skip:any=[];
+  blogdatabyip_detail_skip:any=["city_search","country_search","region_search","timezone_search"];
 
 
   // use for Table Detail inside the modal image path 
@@ -142,6 +142,7 @@ export class DashboardAdminComponent implements OnInit {
 
   };
   ip_search_settings:any={
+    textsearch: [{ label: "Search By City", field: 'city_search' }, { label: "Search By Region", field: 'region_search' },{ label: "Search By Country", field: 'country_search' },{ label: "Search By Time Zone", field: 'timezone_search' }],
     selectsearch: [{
       label: 'Search By Blog Website', field: 'website', values: [{ val: "Mask Blog 1", name: "Mask Blog 1" }, { val: "Mask Blog 2", name: 'Mask Blog 2' }, { val: "Mask Blog 3", name: "Mask Blog 3" }]
 
