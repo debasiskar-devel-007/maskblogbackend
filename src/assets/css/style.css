@@ -66,7 +66,7 @@ background: -webkit-linear-gradient(270deg,rgba(25,198,254,1) 0%,rgba(2,168,222,
 .breadcrumb .mat-list-item .material-icons {line-height: 30px;}
 
 /* paginator css */
-.mat-paginator{background:#105d9f!important;color:var(--c-t-bg-w)!important}
+.lib-pager-class{background:#59747d!important;color:var(--c-t-bg-w)!important;float: inherit !important;}
 .mat-button.mat-accent[disabled],.mat-button.mat-primary[disabled],.mat-button.mat-warn[disabled],.mat-button[disabled][disabled],.mat-icon-button.mat-accent[disabled],.mat-icon-button.mat-primary[disabled],.mat-icon-button.mat-warn[disabled],.mat-icon-button[disabled][disabled],.mat-stroked-button.mat-accent[disabled],.mat-stroked-button.mat-primary[disabled],.mat-stroked-button.mat-warn[disabled],.mat-stroked-button[disabled][disabled]{color:var(--c-t-bg-w)!important}
 .priceMark .searchdiv:last-child,.priceMark .cursor:last-child,.priceMark .cursor:nth-of-type(3){display:none}
 .mat-paginator-page-size-select{color:var(--c-t-bg-w)}
