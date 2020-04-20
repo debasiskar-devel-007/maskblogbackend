@@ -48,7 +48,10 @@ export class DashboardAdminComponent implements OnInit {
     "author": "Author", "blogcat": "Blog Category", "date": "Date", "blogcategory": "Blog Category",
     "featured search": "Featured", "website": "Website"
   };
-  ipBlogDataList_modify_header:any={};
+
+  ipBlogDataList_modify_header:any={
+    " id ":"ip"
+  };
   //   api url from environment
   apiurl: any = environment.API_URL1
 
@@ -138,7 +141,13 @@ export class DashboardAdminComponent implements OnInit {
 
 
   };
-  ip_search_settings:any={};
+  ip_search_settings:any={
+    selectsearch: [{
+      label: 'Search By Blog Website', field: 'website', values: [{ val: "Mask Blog 1", name: "Mask Blog 1" }, { val: "Mask Blog 2", name: 'Mask Blog 2' }, { val: "Mask Blog 3", name: "Mask Blog 3" }]
+
+    }
+  ]
+  };
 
   // this is search block 
   adminDataList_detail_datatype: any;
