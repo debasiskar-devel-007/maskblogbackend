@@ -512,6 +512,7 @@ table.mat-table {width: 100%;}
 
 .formmainwrapper .file_uploader .uploadtextwrapper{font-family:'NunitoRegular'}
 
+.ipblock .mat-column-_id span::after {content: 'IP';}
 
 /* media css */
 

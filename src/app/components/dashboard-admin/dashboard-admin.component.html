@@ -139,9 +139,18 @@
             [date_search_source_count]="date_search_source_count"
             [limitcond]="limitcond"></lib-listing>
 
-
+          
+        </div>
+        </mat-card>
         <!--ip list start here  -->
             <!-- <div class="listingnewstyle"> -->
+        <mat-card class="generalcls ipblock" style="padding: 0 !important;">
+
+                <div class="content_header_wrapper">
+                  <h2 class="headerSpan" >IP Info</h2>                     
+                </div>
+      
+                <div class="listingnewstyle">
             <lib-listing *ngIf="ipwiseblogdata!=null && ipwiseblogdata.length>0" 
               [datasource]="ipwiseblogdata"
               [skip]="ipBlogDataList_skip"
@@ -171,8 +180,8 @@
 
 
         </mat-card>
-      </div>
-    </div>    
+      </div>    
+  </div>
 </div>
 
 
