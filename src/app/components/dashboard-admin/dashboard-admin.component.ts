@@ -11,6 +11,7 @@ import { MetaService } from '@ngx-meta/core';
   styleUrls: ['./dashboard-admin.component.css']
 })
 export class DashboardAdminComponent implements OnInit {
+  public ipwiseblogdata:any=[];
   public allData: any = [];
   public value: any = [];
   public websites:any={
@@ -47,7 +48,7 @@ export class DashboardAdminComponent implements OnInit {
     "author": "Author", "blogcat": "Blog Category", "date": "Date", "blogcategory": "Blog Category",
     "featured search": "Featured", "website": "Website"
   };
-
+  ipBlogDataList_modify_header:any={};
   //   api url from environment
   apiurl: any = environment.API_URL1
 
@@ -55,8 +56,10 @@ export class DashboardAdminComponent implements OnInit {
 
   // use for Table Detail Field Skip 
   adminDataList_skip: any = ["_id", "userId", "created_at", "updated_at", "image", "metatitle", "metadesc", "description", "credentials", "blogs_file", "blogs_image", "blogtitle_search", "author_search", "video", "blogcat", "profile_picture", "tagsearch", "featured", "description_html", "blogcat", "created_at", "profile_picture", "tagsearch", "author"];
+  ipBlogDataList_skip:any=[];
 
   adminDataList_detail_skip: any = ['_id', 'password', 'updated_at', 'id', "description_html", "blogcat", "created_at", "profile_picture", "tagsearch"]
+  blogdatabyip_detail_skip:any=[];
 
 
   // use for Table Detail inside the modal image path 
@@ -91,19 +94,32 @@ export class DashboardAdminComponent implements OnInit {
     "skip": 0,
     "pagecount": 1
   };
+  limitcond_ip: any = {
+    "limit": 10,
+    "skip": 0,
+    "pagecount": 1
+  };
   // send basic sort data
   sortdata: any = {
     "type": 'desc',
     "field": 'priority',
     "options": ['author', 'blogcategory', 'blogtitle', 'priority']
   };
+  sortdata_by_ip:any={
+    "type": 'desc',
+    "field": 'blogtitle',
+    "options": []
+  };
 
   // this is a database collection or view name
   date_search_source: any = 'blogs_desc_priority';
+  date_search_source_ip: any = 'blogs_by_ip_desc_blogtitle';
   // datacollection
   datacollection: any = 'getblogmanagementlistdata';
+  datacollection_ip: any = 'getblogipdata';
   //source count
   date_search_source_count: any = 0;
+  date_search_source_count_ip: any = 0;
 
 
   search_settings: any = {
@@ -122,6 +138,7 @@ export class DashboardAdminComponent implements OnInit {
 
 
   };
+  ip_search_settings:any={};
 
   // this is search block 
   adminDataList_detail_datatype: any;
@@ -213,6 +230,8 @@ export class DashboardAdminComponent implements OnInit {
 
 
   ngOnInit() {
+    this.getipblogdata();
+    this.ippaginationdata();
   }
   countfunction() {
    let endpoint : any="blogs-count";
@@ -228,6 +247,55 @@ export class DashboardAdminComponent implements OnInit {
        this.total_blogs = response.total_blogs;       
      }
    }); 
+  }
+  getipblogdata(){
+    let endpoint : any="getbloglistdatabyip";
+    let data:any= {
+       limit:10,
+       skip:0
+     }
+   this.httpService.postDatawithoutToken(endpoint,data).subscribe((response:any)=>{
+     if(response.status=='success'){
+       this.ipwiseblogdata = response.results;
+            //  console.log("souresh",this.ipwiseblogdata);
+     }
+   }); 
+  }
+
+
+  ippaginationdata(){
+    let endpoint = 'getblogipdata';
+    let endpointc = 'getblogipdata-count';
+    let data: any = {
+      "condition": {
+        "limit": 10,
+        "skip": 0
+      },
+      sort: {
+        "type": 'desc',
+        "field": 'blogtitle'
+      }
+
+    }
+    this.httpService.getDataforBlogListApi1(endpointc, data).subscribe((res: any) => {
+     
+      this.date_search_source_count_ip = res.count;
+       console.log('in ngonitttttt',this.date_search_source_count_ip);
+      //console.warn('blogData c',res);
+
+    }, error => {
+      console.log('Oooops!');
+    });
+
+    this.httpService.getDataforBlogListApi1(endpoint, data).subscribe((res: any) => {
+
+      this.ipwiseblogdata = res.results.res;
+      console.log('in ngonitttttt',this.ipwiseblogdata);
+
+    }, error => {
+      console.log('Oooops!');
+    });
+
   }
 
 

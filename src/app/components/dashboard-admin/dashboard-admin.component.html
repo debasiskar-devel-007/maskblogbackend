@@ -138,6 +138,33 @@
             [datacollection]="datacollection"
             [date_search_source_count]="date_search_source_count"
             [limitcond]="limitcond"></lib-listing>
+
+
+        <!--ip list start here  -->
+            <!-- <div class="listingnewstyle"> -->
+            <lib-listing *ngIf="ipwiseblogdata!=null && ipwiseblogdata.length>0" 
+              [datasource]="ipwiseblogdata"
+              [skip]="ipBlogDataList_skip"
+              [modify_header_array]="ipBlogDataList_modify_header"
+              [apiurl]="apiurl"
+              [deleteendpoint]="deleteendpoint"
+              [updateendpoint]="updateendpoint"
+              [date_search_source]="date_search_source_ip"
+              [date_search_endpoint]="date_search_endpoint"
+              [sourcedata]="tablename"
+              [detail_datatype]="adminDataList_detail_datatype"
+              [editroute]="editroute"
+              [statusarr]="statusarray"
+              [detail_skip_array]="blogdatabyip_detail_skip"
+              [url]="custom_link"
+              [jwttoken]="jwttoken"
+              [search_settings]="ip_search_settings"
+              [searchendpoint]="searchendpoint"
+              [sortdata]="sortdata_by_ip"
+              [datacollection]="datacollection_ip"
+              [date_search_source_count]="date_search_source_count_ip"
+              [limitcond]="limitcond_ip"></lib-listing>
+            <!-- </div> -->
           </div>
 
 
@@ -147,6 +174,35 @@
       </div>
     </div>    
 </div>
+
+
+<!-- <mat-card class="generalcls" style="padding: 0 !important;">
+<div class="listingnewstyle">
+  <lib-listing *ngIf="ipwiseblogdata!=null && ipwiseblogdata.length>0" 
+    [datasource]="ipwiseblogdata"
+    [skip]="ipBlogDataList_skip"
+    [modify_header_array]="ipBlogDataList_modify_header"
+    [apiurl]="apiurl"
+    [deleteendpoint]="deleteendpoint"
+    [updateendpoint]="updateendpoint"
+    [date_search_source]="date_search_source_ip"
+    [date_search_endpoint]="date_search_endpoint"
+    [sourcedata]="tablename"
+    [detail_datatype]="adminDataList_detail_datatype"
+    [editroute]="editroute"
+    [statusarr]="statusarray"
+    [detail_skip_array]="blogdatabyip_detail_skip"
+    [url]="custom_link"
+    [jwttoken]="jwttoken"
+    [search_settings]="ip_search_settings"
+    [searchendpoint]="searchendpoint"
+    [sortdata]="sortdata_by_ip"
+    [datacollection]="datacollection_ip"
+    [date_search_source_count]="date_search_source_count_ip"
+    [limitcond]="limitcond_ip"></lib-listing>
+  </div>
+</mat-card> -->
+
 <app-footer></app-footer>
 
 
