@@ -50,7 +50,7 @@ export class DashboardAdminComponent implements OnInit {
   };
 
   ipBlogDataList_modify_header:any={
-    " id ":"ip"
+    " id ":"ip","visitor added date":"Added Date"
   };
   //   api url from environment
   apiurl: any = environment.API_URL1
@@ -59,7 +59,9 @@ export class DashboardAdminComponent implements OnInit {
 
   // use for Table Detail Field Skip 
   adminDataList_skip: any = ["_id", "userId", "created_at", "updated_at", "image", "metatitle", "metadesc", "description", "credentials", "blogs_file", "blogs_image", "blogtitle_search", "author_search", "video", "blogcat", "profile_picture", "tagsearch", "featured", "description_html", "blogcat", "created_at", "profile_picture", "tagsearch", "author"];
-  ipBlogDataList_skip:any=["city_search","country_search","region_search","timezone_search"];
+
+
+  ipBlogDataList_skip:any=["city_search","country_search","region_search","timezone_search","date_search"];
 
   adminDataList_detail_skip: any = ['_id', 'password', 'updated_at', 'id', "description_html", "blogcat", "created_at", "profile_picture", "tagsearch"]
   blogdatabyip_detail_skip:any=["city_search","country_search","region_search","timezone_search"];
@@ -142,6 +144,7 @@ export class DashboardAdminComponent implements OnInit {
 
   };
   ip_search_settings:any={
+    datesearch:[{startdatelabel:"Start Date",enddatelabel:"End Date",submit:"Search",  field:"date_search"}],
     textsearch: [{ label: "Search By City", field: 'city_search' }, { label: "Search By Region", field: 'region_search' },{ label: "Search By Country", field: 'country_search' },{ label: "Search By Time Zone", field: 'timezone_search' }],
     selectsearch: [{
       label: 'Search By Blog Website', field: 'website', values: [{ val: "Mask Blog 1", name: "Mask Blog 1" }, { val: "Mask Blog 2", name: 'Mask Blog 2' }, { val: "Mask Blog 3", name: "Mask Blog 3" }]
