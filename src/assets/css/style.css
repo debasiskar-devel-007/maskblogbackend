@@ -512,7 +512,8 @@ table.mat-table {width: 100%;}
 
 .formmainwrapper .file_uploader .uploadtextwrapper{font-family:'NunitoRegular'}
 
-.ipblock .mat-column-_id span::after {content: 'IP';}
+.ipblock .mat-column-_id span {text-indent: -9999px !important;}
+.ipblock .mat-column-_id span::after {content: 'IP';text-indent: 0 !important;}
 
 /* media css */
 
