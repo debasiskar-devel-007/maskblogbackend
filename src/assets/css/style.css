@@ -207,6 +207,19 @@ height: auto;display: flex;align-items: center;flex-wrap: wrap;}
 .listingnewstyle.orderlistdashboard td.mat-column-Actions > span span.cursor:nth-child(2) {display: none;}
 .listingnewstyle.myordersdashboard td.mat-column-Actions > span span.cursor:nth-child(2), .listingnewstyle.myordersdashboard td.mat-column-Actions > span span.cursor:nth-child(4) {display: none;}
 
+.listingnewstyle td.mat-column-Actions > button{
+  text-transform: uppercase;
+  font-size: 10px;
+  display: flex;
+  max-width: 100%;
+  white-space: normal;
+  line-height: normal;
+  padding: 4px 9px;
+  margin: 2px;
+  border-radius: 0px;
+  background-color: #28b779;
+}
+
 /* table css extra */
 
 tr.mat-header-row{background:var(--c-t-alt-links)}
@@ -515,6 +528,10 @@ table.mat-table {width: 100%;}
 .ipblock .mat-column-_id span::after {content: 'IP';text-indent: 0 !important;}
 .ipblock .td-cell-center.mat-column-_id span::after{display: none;}
 .ipblock .listingnewstyle td.mat-column-Actions > span span.cursor:nth-child(1), .ipblock .listingnewstyle td.mat-column-Actions > span span.cursor:nth-child(2), .ipblock .listingnewstyle td.mat-column-Actions > span span.cursor:nth-child(4) {display: none;}
+
+
+
+
 
 /* media css */
 
