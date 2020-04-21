@@ -189,6 +189,21 @@ app-order-listing .mat-column-Actions span span.cursor:nth-child(2){display:none
 /* media css */
 
 
+
+@media screen and (max-width: 1560px) {
+.listingnewstyle mat-toolbar-row.searchbar .mat-form-field {min-width: 353px;}
+}
+@media screen and (max-width: 1440px) {
+.listingnewstyle mat-toolbar-row.searchbar .mat-form-field {min-width: 334px;}
+}
+
+@media screen and (max-width: 1366px) {
+.listingnewstyle mat-toolbar-row.searchbar .mat-form-field {min-width: 307px;}
+}
+@media screen and (max-width: 1280px) {
+.listingnewstyle mat-toolbar-row.searchbar .mat-form-field {min-width: 292px;}
+}
+
 @media screen and (max-width: 1199px) {
   .listingnewstyle mat-toolbar-row.searchbar .mat-form-field {min-width: 257px;}
   .listingnewstyle mat-toolbar-row.searchbar span {flex: 1 1 100%;flex-wrap: wrap;display: inline-flex;}
