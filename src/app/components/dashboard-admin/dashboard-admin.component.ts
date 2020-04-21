@@ -58,12 +58,12 @@ export class DashboardAdminComponent implements OnInit {
 
 
   // use for Table Detail Field Skip 
-  adminDataList_skip: any = ["_id", "userId", "created_at", "updated_at", "image", "metatitle", "metadesc", "description", "credentials", "blogs_file", "blogs_image", "blogtitle_search", "author_search", "video", "blogcat", "profile_picture", "tagsearch", "featured", "description_html", "blogcat", "created_at", "profile_picture", "tagsearch", "author"];
+  adminDataList_skip: any = ["_id", "userId", "created_at", "updated_at", "image", "metatitle", "metadesc", "description", "credentials", "blogs_file", "blogs_image", "blogtitle_search", "author_search", "video", "blogcat", "profile_picture", "tagsearch", "featured", "description_html", "blogcat", "created_at", "profile_picture", "tagsearch", "author","masblog1","masblog2","masblog3"];
 
 
   ipBlogDataList_skip:any=["city_search","country_search","region_search","timezone_search","date_search"];
 
-  adminDataList_detail_skip: any = ['_id', 'password', 'updated_at', 'id', "description_html", "blogcat", "created_at", "profile_picture", "tagsearch"]
+  adminDataList_detail_skip: any = ['_id', 'password', 'updated_at', 'id', "description_html", "blogcat", "created_at", "profile_picture", "tagsearch","featured","blogtitle_search","author","featured_search","author_search","masblog1","masblog2","masblog3"]
   blogdatabyip_detail_skip:any=["city_search","country_search","region_search","timezone_search"];
 
 
@@ -125,10 +125,10 @@ export class DashboardAdminComponent implements OnInit {
   //source count
   date_search_source_count: any = 0;
   date_search_source_count_ip: any = 0;
-
+  public authval:any= [];
 
   search_settings: any = {
-    textsearch: [{ label: "Search By Blog Title", field: 'blogtitle_search' }, { label: "Search By Tags", field: 'tagsearch' }],
+    textsearch: [{ label: "Search By Blog Title", field: 'blogtitle_search' }],
 
     selectsearch: [
       { label: 'Status', field: 'status', values: [{ val: 1, name: "Active" }, { val: 0, name: 'Inactive' }] }, { label: "Search By Blog Category", field: 'blogcategory', values: this.value },
@@ -138,8 +138,8 @@ export class DashboardAdminComponent implements OnInit {
       {
         label: 'Search By Blog Website', field: 'website', values: [{ val: "Mask Blog 1", name: "Mask Blog 1" }, { val: "Mask Blog 2", name: 'Mask Blog 2' }, { val: "Mask Blog 3", name: "Mask Blog 3" }]
       }
-    ]
-
+    ],
+    search:[{label:"Search By Tags",field:'tagsearch',values:this.authval}]
 
 
   };
@@ -164,9 +164,45 @@ export class DashboardAdminComponent implements OnInit {
 
   editroute1: any = 'modeledit';
   jwttoken: any;
+  libdata:any={
+    basecondition:{status:1},
+    // updateendpoint:'statusupdate1',
+    hideeditbutton:true,// all these button options are optional not mandatory
+    
+    // tableheaders:['author','priority','blogtitle','status','wrongone'], //not required
+    custombuttons:[
+        {
+            label:"Preview Blog 1",
+            link:"https://mask-blog1.influxiq.com/blog-details",
+            type:'externallink',
+            paramtype:'angular',
+            param:['blogtitle','_id'],
+            cond:'masblog1',
+            condval: 1
+        },
+        {
+          label:"Preview Blog 2",
+          link:"https://mask-blog2.influxiq.com/blog-details",
+          type:'externallink',
+          paramtype:'angular',
+          param:['blogtitle','_id'],
+          cond:'masblog2',
+          condval: 1
+      },
+      {
+        label:"Preview Blog 3",
+        link:"https://mask-blog3.influxiq.com/blog-details",
+        type:'externallink',
+        paramtype:'angular',
+        param:['blogtitle','_id'],
+        cond:'masblog3',
+        condval: 1
+    }
+    ]
+}
 
  public user_cookies:any;
-
+public tag_data:any=[];
   constructor(public meta: MetaService, public activatedRoute: ActivatedRoute, public httpService: HttpService, private cookieService: CookieService) {
     this.countfunction();
     this.meta.setTitle('Virus Barrier Medical Face Mask Blog backend | Blog backend');
@@ -226,15 +262,28 @@ export class DashboardAdminComponent implements OnInit {
       let result: any = res;
       // this.adminDataList=result.adminlist.res;
       this.allData = result.adminlist.res;
+      this.tag_data = result.adminlist.res;
       for (let i in this.allData) {
         this.value.push(
           { 'name': this.allData[i].blogcategory, val: this.allData[i].blogcategory }
         );
 
       }
-      // console.log(this.adminDataList)    
+      for (let i in this.tag_data) {
+        for (let val in this.tag_data[i].tags) {
+          this.authval.push(
+            { 'name': this.tag_data[i].tags[val], val: this.tag_data[i].tags[val] }
+          );
+        }
+        
+
+      }
+      
 
     })
+
+    this.getipblogdata();
+    this.ippaginationdata();
 
 
   }
@@ -243,8 +292,6 @@ export class DashboardAdminComponent implements OnInit {
 
 
   ngOnInit() {
-    this.getipblogdata();
-    this.ippaginationdata();
   }
   countfunction() {
    let endpoint : any="blogs-count";
