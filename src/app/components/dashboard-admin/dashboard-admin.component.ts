@@ -58,12 +58,12 @@ export class DashboardAdminComponent implements OnInit {
 
 
   // use for Table Detail Field Skip 
-  adminDataList_skip: any = ["_id", "userId", "created_at", "updated_at", "image", "metatitle", "metadesc", "description", "credentials", "blogs_file", "blogs_image", "blogtitle_search", "author_search", "video", "blogcat", "profile_picture", "tagsearch", "featured", "description_html", "blogcat", "created_at", "profile_picture", "tagsearch", "author","masblog1","masblog2","masblog3"];
+  adminDataList_skip: any = ["_id", "userId", "created_at", "updated_at", "image", "metatitle", "metadesc", "description", "credentials", "blogs_file", "blogs_image", "blogtitle_search", "author_search", "video", "blogcat", "profile_picture", "tagsearch", "featured", "description_html", "blogcat", "created_at", "profile_picture", "tagsearch", "author","maskblog1","maskblog2","maskblog3","tags_search"];
 
 
   ipBlogDataList_skip:any=["city_search","country_search","region_search","timezone_search","date_search"];
 
-  adminDataList_detail_skip: any = ['_id', 'password', 'updated_at', 'id', "description_html", "blogcat", "created_at", "profile_picture", "tagsearch","featured","blogtitle_search","author","featured_search","author_search","masblog1","masblog2","masblog3"]
+  adminDataList_detail_skip: any = ['_id', 'password', 'updated_at', 'id', "description_html", "blogcat", "created_at", "profile_picture", "tagsearch","featured","blogtitle_search","author","featured_search","author_search","maskblog1","maskblog2","maskblog3","tags_search"]
   blogdatabyip_detail_skip:any=["city_search","country_search","region_search","timezone_search"];
 
 
@@ -139,7 +139,7 @@ export class DashboardAdminComponent implements OnInit {
         label: 'Search By Blog Website', field: 'website', values: [{ val: "Mask Blog 1", name: "Mask Blog 1" }, { val: "Mask Blog 2", name: 'Mask Blog 2' }, { val: "Mask Blog 3", name: "Mask Blog 3" }]
       }
     ],
-    search:[{label:"Search By Tags",field:'tagsearch',values:this.authval}]
+    search:[{label:"Search By Tags",field:'tags_search',values:this.authval}]
 
 
   };
@@ -177,7 +177,7 @@ export class DashboardAdminComponent implements OnInit {
             type:'externallink',
             paramtype:'angular',
             param:['blogtitle','_id'],
-            cond:'masblog1',
+            cond:'maskblog1',
             condval: 1
         },
         {
@@ -186,7 +186,7 @@ export class DashboardAdminComponent implements OnInit {
           type:'externallink',
           paramtype:'angular',
           param:['blogtitle','_id'],
-          cond:'masblog2',
+          cond:'maskblog2',
           condval: 1
       },
       {
@@ -195,7 +195,7 @@ export class DashboardAdminComponent implements OnInit {
         type:'externallink',
         paramtype:'angular',
         param:['blogtitle','_id'],
-        cond:'masblog3',
+        cond:'maskblog3',
         condval: 1
     }
     ]
