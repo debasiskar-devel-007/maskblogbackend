@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "~8.2.11",
     "@angular/router": "~8.2.11",
     "@ngx-meta/core": "^8.0.2",
-    "blog-lib-influxiq": "0.0.23",
+    "blog-lib-influxiq": "0.0.24",
     "file-upload-lib-influxiq": "0.0.19",
     "hammerjs": "^2.0.8",
     "listing-angular7": "^0.1.7",
